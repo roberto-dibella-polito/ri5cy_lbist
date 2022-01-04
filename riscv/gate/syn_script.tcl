@@ -16,8 +16,8 @@ set OPER_COND typical
 # VARIABLES for SCAN CONFIGURATION
 # Change it here
 
-set scanChains 10
-set scanCompress 10
+set scanChains 5
+set scanCompress 20
 
 ##############################################
 
@@ -33,23 +33,12 @@ set scanCompress 10
 # Read DDC
 read_ddc riscv_core.ddc 
 
-# How to insert multiple scan clocks?
-# TRY 1:
-# - Create the ports for clocks
-# - Create the clocks
-# - With set_dft_signals, declare them as SCAN CLOCK
-#
-# THEN
-# - Can the insert_dft or set_scan_configuration automatically connect 
-# scan chains and clock ports?
-# - Do I have to set the scan chains manually AFTER the dft insertion?
-
 # Compile ULTRA
 compile_ultra -incremental -gate_clock -scan -no_autoungroup
 
-set_dft_clock_gating_pin [get_cells * -hierarchical -filr "@ref_name =~ SNPS_CLOCK_GATE*"] -pin_name TE
+set_dft_clock_gating_pin [get_cells * -hierarchical -filter "@ref_name =~ SNPS_CLOCK_GATE*"] -pin_name TE
 
-report_area
+report_area > area_pre_dft.txt
 set_dft_configuration -scan_compression enable
 
 set test_default_scan_style multiplexed_flip_flop
@@ -68,7 +57,8 @@ insert_dft
 change_names -rules verilog -hierarchy
 
 report_scan_path -test_mode all
-report_area
+report_scan_path -view existing -chain all > chains.txt
+report_area > area_post_dft.txt
 
 write -hierarchy -format verilog -output "riscv_scan.v"
 write_sdf -version 3.0 "riscv_scan.sdf"

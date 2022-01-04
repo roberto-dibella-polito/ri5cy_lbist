@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
+Version: R-2020.09-SP2
+Date   : Tue Jan  4 19:12:55 2022
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/s267517/assignment/riscv/gate/techlib/NangateOpenCellLibrary_typical_ccs_scan.db)
+
+Number of ports:                         8807
+Number of nets:                         48531
+Number of cells:                        39583
+Number of combinational cells:          36310
+Number of sequential cells:              3125
+Number of macros/black boxes:               0
+Number of buf/inv:                       6081
+Number of references:                      20
+
+Combinational area:              39968.894090
+Buf/Inv area:                     3515.988017
+Noncombinational area:           20634.152202
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 60603.046291
+Total area:                 undefined
+1
