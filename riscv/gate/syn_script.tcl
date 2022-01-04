@@ -6,7 +6,7 @@ set synthetic_library dw_foundation.sldb
 set target_library {../techlib/NangateOpenCellLibrary_typical_ccs_scan.db}
 set link_library [list $target_library $synthetic_library]
 #set link_library {../techlib/NangateOpenCellLibrary_typical_ccs_scan.db}
-read_db ../techLib/NangateOpenCellLibrary_typical_ccs_scan.db
+read_db ../techlib/NangateOpenCellLibrary_typical_ccs_scan.db
 
 set DFF_CELL DFF_X2
 set LIB_DFF_D NangateOpenCellLibrary/DFF_X2/D
@@ -50,9 +50,9 @@ read_ddc riscv_core.ddc
 ###############################################################################
 
 create_port -direction "in" {sclk1 sclk2 sclk3}
-create_clock sclk1
-create_clock sclk2
-create_clock sclk3
+create_clock sclk1 -period 2 -name SCAN_CLOCK_1
+create_clock sclk2 -period 2 -name SCAN_CLOCK_2
+create_clock sclk3 -period 2 -name SCAN_CLOCK_3
 
 # Compile ULTRA
 compile_ultra -incremental -gate_clock -scan -no_autoungroup

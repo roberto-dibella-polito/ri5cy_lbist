@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version R-2020.09-SP2 for linux64 -- Dec 03, 2020
-#@ # Date:   Sun Jan  2 18:06:31 2022
+#@ # Date:   Tue Jan  4 18:32:54 2022
 #@ # Run by: s267517@po.polito.it
 #@ 
 
@@ -43052,61 +43052,14 @@ set synthetic_library dw_foundation.sldb
 set target_library {../techlib/NangateOpenCellLibrary_typical_ccs_scan.db}
 set link_library [list $target_library $synthetic_library]
 #set link_library {../techlib/NangateOpenCellLibrary_typical_ccs_scan.db}
-read_db ../techLib/NangateOpenCellLibrary_typical_ccs_scan.db
+read_db ../techlib/NangateOpenCellLibrary_typical_ccs_scan.db
 set DFF_CELL DFF_X2
 set LIB_DFF_D NangateOpenCellLibrary/DFF_X2/D
 set OPER_COND typical
-##############################################
-# VARIABLES for SCAN CONFIGURATION
-# Change it here
-set scanChains 3
-set scanCompress 50
-##############################################
-# Read the netlist
-#read_verilog ../riscv_core.v
-#current_design riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
-#link
-# From now on, the top-level is the entire core (name retrieved from netlist)
-#
-# Now, how to optimize?
-# Read DDC
 read_ddc riscv_core.ddc
 create_port -direction "in" {sclk1 sclk2 sclk3}
-create_clock sclk1
-create_clock sclk2
-create_clock sclk3
-# Compile ULTRA
+create_clock sclk1 -period 2 -name SCAN_CLOCK_1
+create_clock sclk2 -period 2 -name SCAN_CLOCK_2
+create_clock sclk3 -period 2 -name SCAN_CLOCK_3
 compile_ultra -incremental -gate_clock -scan -no_autoungroup
-set_dft_clock_gating_pin [get_cells * -hierarchical -filter "@ref_name =~ SNPS_CLOCK_GATE*"] -pin_name TE
-report_area
-set_dft_configuration -scan_compression enable
-set test_default_scan_style multiplexed_flip_flop
-set_dft_signal -view existing_dft -type ScanEnable -port test_en_i
-set_dft_signal -view spec -type ScanEnable -port test_en_i
-###############################################################################
-# Scan Clock ports definition
-#set_dft_signal -view existing_dft -type ScanClock -port sclk1
-set_dft_signal -view spec -type ScanClock -port sclk1
-#set_dft_signal -view existing_dft -type ScanClock -port sclk2
-set_dft_signal -view spec -type ScanClock -port sclk2
-#set_dft_signal -view existing_dft -type ScanClock -port sclk3
-set_dft_signal -view spec -type ScanClock -port sclk3
-set_scan_configuration -chain_count $scanChains
-set_scan_compression_configuration -chain_count $scanCompress
-gui_show_man_page set_scan_path
-set_scan_pathset_scan_path I1 -scan_master_clock sclk1
-set_scan_path I1 -scan_master_clock sclk1
-set_scan_path I2 -scan_master_clock sclk2
-set_scan_path I3 -scan_master_clock sclk3
-set_scan_configuration -chain_count $scanChains
-set_scan_compression_configuration -chain_count $scanCompress
-report_scan_path -view spec -chain all
-create_test_protocol -infer_asynch -infer_clock
-report_scan_path -view spec -chain all
-dft_drc
-man preview_dft
-preview_dft -show scan_clocks
-man create_test_protocol
-preview_dft -show scan_clocks
-change_selection [get_cells if_stage_i]
 exit
