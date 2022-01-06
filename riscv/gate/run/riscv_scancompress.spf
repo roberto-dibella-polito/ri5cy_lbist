@@ -5,7 +5,7 @@ Header {
     Title 
     "Minimal STIL for design `riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800'"
     ;
-    Date "Tue Jan  4 19:12:26 2022";
+    Date "Thu Jan  6 01:28:58 2022";
     Source "DFT Compiler R-2020.09-SP2";
 }
 Signals {
@@ -512,7 +512,6 @@ Signals {
     "test_so4" Out;
     "test_si5" In;
     "test_so5" Out;
-    "test_se" In;
     "test_mode" In;
 }
 SignalGroups {
@@ -611,7 +610,7 @@ SignalGroups {
     "instr_rdata_i[9]" + "instr_rvalid_i" + "irq_i" + "irq_id_i[0]" + 
     "irq_id_i[1]" + "irq_id_i[2]" + "irq_id_i[3]" + "irq_id_i[4]" + "irq_sec_i" 
     + "rst_ni" + "test_en_i" + "test_si1" + "test_si2" + "test_si3" + "test_si4" 
-    + "test_si5" + "test_se" + "test_mode"';
+    + "test_si5" + "test_mode"';
     "all_outputs" = '"apu_master_flags_o[0]" + "apu_master_flags_o[10]" + 
     "apu_master_flags_o[11]" + "apu_master_flags_o[12]" + 
     "apu_master_flags_o[13]" + "apu_master_flags_o[14]" + 
@@ -793,7 +792,7 @@ SignalGroups {
     "instr_rdata_i[9]" + "instr_rvalid_i" + "irq_i" + "irq_id_i[0]" + 
     "irq_id_i[1]" + "irq_id_i[2]" + "irq_id_i[3]" + "irq_id_i[4]" + "irq_sec_i" 
     + "rst_ni" + "test_en_i" + "test_si1" + "test_si2" + "test_si3" + "test_si4" 
-    + "test_si5" + "test_se" + "test_mode"';
+    + "test_si5" + "test_mode"';
     "_po" = '"apu_master_flags_o[0]" + "apu_master_flags_o[10]" + 
     "apu_master_flags_o[11]" + "apu_master_flags_o[12]" + 
     "apu_master_flags_o[13]" + "apu_master_flags_o[14]" + 
@@ -890,102 +889,102 @@ SignalGroups {
 ScanStructures {
     ScanChain "1" {
         ScanLength 152;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "2" {
         ScanLength 152;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "3" {
         ScanLength 152;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "4" {
         ScanLength 152;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "5" {
         ScanLength 152;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "6" {
         ScanLength 152;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "7" {
         ScanLength 152;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "8" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "9" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "10" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "11" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "12" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "13" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "14" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "15" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "16" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "17" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "18" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "19" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "20" {
         ScanLength 151;
-        ScanEnable "test_se";
+        ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "sccompin0" {
@@ -1448,56 +1447,56 @@ Procedures {
     "multiclock_capture" {
         W "_multiclock_capture_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r7 N 1;
+            "all_inputs" = \r71 N 0 \r187 N 1 \r6 N 1;
             "all_outputs" = \r237 X;
         }
         F {
             "test_mode" = 1;
         }
         V {
-            "_pi" = \r268 #;
+            "_pi" = \r267 #;
             "_po" = \r237 #;
         }
     }
     "allclock_capture" {
         W "_allclock_capture_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r7 N 1;
+            "all_inputs" = \r71 N 0 \r187 N 1 \r6 N 1;
             "all_outputs" = \r237 X;
         }
         F {
             "test_mode" = 1;
         }
         V {
-            "_pi" = \r268 #;
+            "_pi" = \r267 #;
             "_po" = \r237 #;
         }
     }
     "allclock_launch" {
         W "_allclock_launch_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r7 N 1;
+            "all_inputs" = \r71 N 0 \r187 N 1 \r6 N 1;
             "all_outputs" = \r237 X;
         }
         F {
             "test_mode" = 1;
         }
         V {
-            "_pi" = \r268 #;
+            "_pi" = \r267 #;
             "_po" = \r237 #;
         }
     }
     "allclock_launch_capture" {
         W "_allclock_launch_capture_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r7 N 1;
+            "all_inputs" = \r71 N 0 \r187 N 1 \r6 N 1;
             "all_outputs" = \r237 X;
         }
         F {
             "test_mode" = 1;
         }
         V {
-            "_pi" = \r268 #;
+            "_pi" = \r267 #;
             "_po" = \r237 #;
         }
     }
@@ -1505,12 +1504,11 @@ Procedures {
         W "_default_WFT_";
         ActiveScanChains core_group;
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r7 N 1;
+            "all_inputs" = \r71 N 0 \r187 N 1 \r6 N 1;
             "all_outputs" = \r237 X;
         }
         "ScanCompression_mode_pre_shift" : V {
             "test_en_i" = 1;
-            "test_se" = 1;
         }
         Shift {
             V {
@@ -1525,7 +1523,7 @@ MacroDefs {
     "test_setup" {
         W "_default_WFT_";
         C {
-            "all_inputs" = \r268 N;
+            "all_inputs" = \r267 N;
             "all_outputs" = \r237 X;
         }
         V {

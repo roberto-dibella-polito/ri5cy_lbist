@@ -3,7 +3,7 @@
 Report : area
 Design : riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
 Version: R-2020.09-SP2
-Date   : Tue Jan  4 19:12:55 2022
+Date   : Thu Jan  6 01:29:40 2022
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -12,8 +12,8 @@ Library(s) Used:
 
     NangateOpenCellLibrary (File: /home/s267517/assignment/riscv/gate/techlib/NangateOpenCellLibrary_typical_ccs_scan.db)
 
-Number of ports:                         8807
-Number of nets:                         48531
+Number of ports:                         8806
+Number of nets:                         48530
 Number of cells:                        39583
 Number of combinational cells:          36310
 Number of sequential cells:              3125

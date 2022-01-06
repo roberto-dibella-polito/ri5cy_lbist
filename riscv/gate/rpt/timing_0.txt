@@ -1,0 +1,132 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
+Version: R-2020.09-SP2
+Date   : Wed Jan  5 23:30:59 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: id_stage_i/bmask_a_ex_o_reg_4_
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: id_stage_i/hwloop_regs_i/hwlp_counter_q_reg_0__10_
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  id_stage_i/bmask_a_ex_o_reg_4_/CK (SDFFR_X2)            0.00       0.00 r
+  id_stage_i/bmask_a_ex_o_reg_4_/Q (SDFFR_X2)             0.14       0.14 f
+  id_stage_i/bmask_a_ex_o[4] (riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+                                                          0.00       0.14 f
+  ex_stage_i/bmask_a_i[4] (riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+                                                          0.00       0.14 f
+  ex_stage_i/alu_i/bmask_a_i[4] (riscv_alu_SHARED_INT_DIV0_FPU0)
+                                                          0.00       0.14 f
+  ex_stage_i/alu_i/U136/ZN (INV_X1)                       0.14       0.28 r
+  ex_stage_i/alu_i/U921/ZN (NAND3_X1)                     0.07       0.35 f
+  ex_stage_i/alu_i/U568/ZN (OAI21_X1)                     0.09       0.44 r
+  ex_stage_i/alu_i/U1015/ZN (OR2_X1)                      0.05       0.49 r
+  ex_stage_i/alu_i/U1016/ZN (OR2_X1)                      0.06       0.55 r
+  ex_stage_i/alu_i/U1017/ZN (NOR2_X1)                     0.03       0.58 f
+  ex_stage_i/alu_i/U1018/ZN (OR2_X1)                      0.07       0.65 f
+  ex_stage_i/alu_i/U1023/ZN (AOI21_X1)                    0.05       0.70 r
+  ex_stage_i/alu_i/U430/ZN (OAI21_X1)                     0.04       0.74 f
+  ex_stage_i/alu_i/U429/ZN (NAND2_X1)                     0.03       0.78 r
+  ex_stage_i/alu_i/U474/ZN (NAND2_X1)                     0.03       0.81 f
+  ex_stage_i/alu_i/U1040/ZN (AOI21_X1)                    0.05       0.86 r
+  ex_stage_i/alu_i/U1050/ZN (OAI21_X1)                    0.04       0.90 f
+  ex_stage_i/alu_i/U1060/ZN (AOI21_X1)                    0.05       0.95 r
+  ex_stage_i/alu_i/U1071/ZN (OAI21_X1)                    0.04       0.99 f
+  ex_stage_i/alu_i/U1075/ZN (NAND2_X1)                    0.04       1.03 r
+  ex_stage_i/alu_i/U516/ZN (NAND2_X1)                     0.03       1.06 f
+  ex_stage_i/alu_i/U2423/ZN (AND2_X1)                     0.04       1.10 f
+  ex_stage_i/alu_i/U1084/ZN (AOI21_X1)                    0.05       1.14 r
+  ex_stage_i/alu_i/U1087/ZN (OAI21_X1)                    0.04       1.18 f
+  ex_stage_i/alu_i/U445/ZN (NAND2_X1)                     0.03       1.22 r
+  ex_stage_i/alu_i/U444/ZN (NAND2_X1)                     0.03       1.25 f
+  ex_stage_i/alu_i/U1097/ZN (AOI21_X1)                    0.05       1.30 r
+  ex_stage_i/alu_i/U1106/ZN (OAI21_X1)                    0.04       1.34 f
+  ex_stage_i/alu_i/U1115/ZN (NAND2_X1)                    0.04       1.38 r
+  ex_stage_i/alu_i/U2437/ZN (NAND2_X1)                    0.03       1.41 f
+  ex_stage_i/alu_i/U573/ZN (NAND3_X1)                     0.03       1.44 r
+  ex_stage_i/alu_i/U572/ZN (AND2_X1)                      0.04       1.48 r
+  ex_stage_i/alu_i/U1152/ZN (OAI21_X1)                    0.03       1.51 f
+  ex_stage_i/alu_i/U1162/ZN (AOI21_X1)                    0.05       1.57 r
+  ex_stage_i/alu_i/U1173/ZN (OAI21_X1)                    0.04       1.61 f
+  ex_stage_i/alu_i/U27/ZN (NAND2_X1)                      0.04       1.64 r
+  ex_stage_i/alu_i/U386/ZN (AOI21_X1)                     0.04       1.68 f
+  ex_stage_i/alu_i/U1444/CO (FA_X1)                       0.09       1.77 f
+  ex_stage_i/alu_i/U376/ZN (NAND2_X1)                     0.05       1.82 r
+  ex_stage_i/alu_i/U62/ZN (OAI21_X1)                      0.04       1.85 f
+  ex_stage_i/alu_i/U1240/ZN (AOI21_X1)                    0.05       1.90 r
+  ex_stage_i/alu_i/U1259/ZN (OAI21_X1)                    0.04       1.94 f
+  ex_stage_i/alu_i/U382/ZN (AOI21_X1)                     0.07       2.01 r
+  ex_stage_i/alu_i/U380/ZN (XNOR2_X1)                     0.08       2.09 r
+  ex_stage_i/alu_i/U3750/ZN (NAND2_X1)                    0.06       2.15 f
+  ex_stage_i/alu_i/U1403/ZN (NAND2_X1)                    0.05       2.20 r
+  ex_stage_i/alu_i/U1380/ZN (AOI22_X1)                    0.04       2.24 f
+  ex_stage_i/alu_i/U1381/ZN (OAI21_X1)                    0.07       2.31 r
+  ex_stage_i/alu_i/U1909/ZN (OAI21_X1)                    0.05       2.36 f
+  ex_stage_i/alu_i/U2080/ZN (OAI21_X1)                    0.06       2.42 r
+  ex_stage_i/alu_i/U2085/ZN (OAI21_X1)                    0.04       2.47 f
+  ex_stage_i/alu_i/U565/ZN (OAI211_X1)                    0.07       2.54 r
+  ex_stage_i/alu_i/U2350/Z (MUX2_X1)                      0.08       2.62 r
+  ex_stage_i/alu_i/U2351/ZN (NAND2_X1)                    0.04       2.65 f
+  ex_stage_i/alu_i/U1634/ZN (NAND4_X1)                    0.04       2.69 r
+  ex_stage_i/alu_i/U24/ZN (AOI21_X1)                      0.03       2.73 f
+  ex_stage_i/alu_i/U436/ZN (OAI21_X1)                     0.07       2.80 r
+  ex_stage_i/alu_i/U2009/ZN (NAND3_X1)                    0.05       2.86 f
+  ex_stage_i/alu_i/U2440/ZN (INV_X1)                      0.06       2.92 r
+  ex_stage_i/alu_i/U2441/Z (BUF_X2)                       0.06       2.98 r
+  ex_stage_i/alu_i/U3270/ZN (OAI21_X1)                    0.04       3.02 f
+  ex_stage_i/alu_i/U138/ZN (NAND2_X1)                     0.03       3.05 r
+  ex_stage_i/alu_i/result_o[10] (riscv_alu_SHARED_INT_DIV0_FPU0)
+                                                          0.00       3.05 r
+  ex_stage_i/U40/ZN (NAND2_X1)                            0.03       3.08 f
+  ex_stage_i/U34/ZN (NAND2_X1)                            0.04       3.12 r
+  ex_stage_i/regfile_alu_wdata_fw_o[10] (riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+                                                          0.00       3.12 r
+  id_stage_i/regfile_alu_wdata_fw_i[10] (riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+                                                          0.00       3.12 r
+  id_stage_i/U108/ZN (AOI21_X1)                           0.04       3.16 f
+  id_stage_i/U1640/ZN (OAI222_X1)                         0.07       3.23 r
+  id_stage_i/hwloop_regs_i/hwlp_cnt_data_i[10] (riscv_hwloop_regs_N_REGS2)
+                                                          0.00       3.23 r
+  id_stage_i/hwloop_regs_i/U49/ZN (INV_X1)                0.03       3.26 f
+  id_stage_i/hwloop_regs_i/U52/ZN (AOI22_X1)              0.05       3.31 r
+  id_stage_i/hwloop_regs_i/hwlp_counter_q_reg_0__10_/D (SDFFR_X2)
+                                                          0.01       3.32 r
+  data arrival time                                                  3.32
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  id_stage_i/hwloop_regs_i/hwlp_counter_q_reg_0__10_/CK (SDFFR_X2)
+                                                          0.00       0.00 r
+  library setup time                                     -0.07      -0.07
+  data required time                                                -0.07
+  --------------------------------------------------------------------------
+  data required time                                                -0.07
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -3.39
+
+
+1
