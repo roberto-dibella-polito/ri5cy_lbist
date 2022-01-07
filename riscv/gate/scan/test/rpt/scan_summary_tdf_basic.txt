@@ -1,0 +1,29 @@
+   Uncollapsed Transition Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT     267142
+   detected_by_simulation         DS    (254676)
+   detected_by_implication        DI     (12466)
+ Possibly detected                PT          0
+ Undetectable                     UD       1149
+   undetectable-unused            UU        (86)
+   undetectable-tied              UT       (264)
+   undetectable-blocked           UB        (10)
+   undetectable-redundant         UR       (789)
+ ATPG untestable                  AU       2182
+   atpg_untestable-not_detected   AN      (2182)
+ Not detected                     ND        329
+   not-observed                   NO       (329)
+ -----------------------------------------------
+ total faults                            270802
+ test coverage                            99.07%
+ fault coverage                           98.65%
+ -----------------------------------------------
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                        4991
+     #basic_scan patterns                     1
+     #fast_sequential patterns             4548
+     #full_sequential patterns              442
+ -----------------------------------------------
