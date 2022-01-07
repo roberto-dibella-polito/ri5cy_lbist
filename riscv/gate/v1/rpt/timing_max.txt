@@ -1,0 +1,69 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
+Version: R-2020.09-SP2
+Date   : Wed Jan  5 23:59:12 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: id_stage_i/registers_i/riscv_register_file_i/waddr_onehot_b_q_reg_1_
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: id_stage_i/registers_i/riscv_register_file_i/mem_reg_1__0_
+            (positive level-sensitive latch clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  id_stage_i/registers_i/riscv_register_file_i/waddr_onehot_b_q_reg_1_/CK (SDFFR_X1)
+                                                          0.00       0.00 r
+  id_stage_i/registers_i/riscv_register_file_i/waddr_onehot_b_q_reg_1_/QN (SDFFR_X1)
+                                                          0.23       0.23 r
+  id_stage_i/registers_i/riscv_register_file_i/U3538/ZN (INV_X2)
+                                                          0.11       0.34 f
+  id_stage_i/registers_i/riscv_register_file_i/U3539/ZN (AOI22_X1)
+                                                          0.07       0.40 r
+  id_stage_i/registers_i/riscv_register_file_i/mem_reg_1__0_/D (DLH_X1)
+                                                          0.01       0.41 r
+  data arrival time                                                  0.41
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  id_stage_i/registers_i/riscv_register_file_i/mem_reg_1__0_/G (DLH_X1)
+                                                          0.00       0.00 r
+  time borrowed from endpoint                             0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  REF_CLK nominal pulse width                             1.67   
+  library setup time                                     -0.02   
+  --------------------------------------------------------------
+  max time borrow                                         1.65   
+  actual time borrow                                      0.41   
+  --------------------------------------------------------------
+
+
+1
