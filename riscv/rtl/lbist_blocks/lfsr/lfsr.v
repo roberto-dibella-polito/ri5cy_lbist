@@ -1,23 +1,27 @@
+// created by : Meher Krishna Patel
+// date : 22-Dec-2016
+// Modified by : Roberto Di Bella
+
 module lfsr
 #(
-	parameter N = 16,
+    parameter N = 20,
     parameter SEED = 1
 )
- 
+
 (
-    input wire clk, reset, 
-    output wire [N:0] q
+    input wire clk, rst_n, en, 
+    output wire [N:0] dout
 );
 
 reg [N:0] r_reg;
 wire [N:0] r_next;
 wire feedback_value;
                         
-always @(posedge clk, posedge reset)
+always @(posedge clk,negedge rst_n)
 begin 
-    if (reset)
+    if (rst_n)
         r_reg <= SEED;  // use this or uncomment below two line
-    else if (clk == 1'b1)
+    else if (clk == 1'b1 & en == 1'b1)
         r_reg <= r_next;
 end
 
@@ -33,11 +37,16 @@ case (N)
 5:  //maximum length = 28 (not 31)
 	assign feedback_value = r_reg[5] ~^ r_reg[3] ~^ r_reg[0];
 
+7:	assign feedback_value = r_reg[7] ~^ r_reg[3] ~^ r_reg[0];
+
 9:	assign feedback_value = r_reg[9] ~^ r_reg[5] ~^ r_reg[0];
 
-10: assign feedback_value = r_reg[10] ~^ r_reg[7] ~^ r_reg[0];
+10:	assign feedback_value = r_reg[10] ~^ r_reg[7] ~^ r_reg[0];
 
-16: assign feedback_value = r_reg[16] ~^ r_reg[15] ~^ r_reg[13] ~^ r_reg[4] ~^ r_reg[0];
+16: 	assign feedback_value = r_reg[16] ~^ r_reg[15] ~^ r_reg[13] ~^ r_reg[4] ~^ r_reg[0];
+
+20: 	assign feedback_value = r_reg[20] ~^ r_reg[3] ~^ r_reg[0];
+
 
 default: 
 	begin
@@ -50,5 +59,5 @@ endgenerate
 
 
 assign r_next = {feedback_value, r_reg[N:1]};
-assign q = r_reg;
+assign dout = r_reg;
 endmodule
