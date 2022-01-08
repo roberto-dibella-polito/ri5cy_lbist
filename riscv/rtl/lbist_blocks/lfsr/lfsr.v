@@ -19,7 +19,7 @@ wire feedback_value;
                         
 always @(posedge clk,negedge rst_n)
 begin 
-    if (rst_n)
+    if (rst_n == 1'b0)
         r_reg <= SEED;  // use this or uncomment below two line
     else if (clk == 1'b1 & en == 1'b1)
         r_reg <= r_next;

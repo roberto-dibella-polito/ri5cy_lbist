@@ -2,7 +2,7 @@
  * TESTBENCH for 24-bit LFSR
  *****************************/
 
-module tb_lfsr ();
+module tb_lfsr (dout_i);
 
 	wire clk_i;
 	reg end_sim_i;
@@ -10,7 +10,7 @@ module tb_lfsr ();
 	reg en_i;
 
 	//reg [24:1] seed_i;
-	wire [20:0] dout_i;
+	output wire [20:0] dout_i;
 
 	clk_gen CG(
 		.END_SIM(end_sim_i),

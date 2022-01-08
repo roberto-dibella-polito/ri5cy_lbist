@@ -8,5 +8,4 @@ vlog -work ./work ../tb_lfsr.v
 vsim work.tb_lfsr
 
 add wave *
-add wave sim:/tb_lfsr/DUT/*
-run 50 ns
+run 200 ns
