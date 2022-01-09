@@ -67,6 +67,8 @@ case (N)
 
 20: 	assign feedback_value = r_reg[20] ~^ r_reg[3];
 
+24: 	assign feedback_value = r_reg[24] ~^ r_reg[7] ~^ r_reg[2] ~^ r_reg[1];
+
 default: 
 	begin
 		 initial
