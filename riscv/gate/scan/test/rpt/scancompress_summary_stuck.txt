@@ -2,27 +2,27 @@
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT     286946
-   detected_by_simulation         DS    (261542)
-   detected_by_implication        DI     (25404)
+ Detected                         DT     287337
+   detected_by_simulation         DS    (261566)
+   detected_by_implication        DI     (25771)
  Possibly detected                PT          0
- Undetectable                     UD       1619
+ Undetectable                     UD       1618
    undetectable-unused            UU        (86)
    undetectable-tied              UT       (139)
    undetectable-blocked           UB         (5)
-   undetectable-redundant         UR      (1389)
- ATPG untestable                  AU        720
-   atpg_untestable-not_detected   AN       (720)
- Not detected                     ND        139
-   not-observed                   NO       (139)
+   undetectable-redundant         UR      (1388)
+ ATPG untestable                  AU        808
+   atpg_untestable-not_detected   AN       (808)
+ Not detected                     ND        127
+   not-observed                   NO       (127)
  -----------------------------------------------
- total faults                            289424
- test coverage                            99.70%
- fault coverage                           99.14%
+ total faults                            289890
+ test coverage                            99.68%
+ fault coverage                           99.12%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                        2791
-     #basic_scan patterns                  2749
-     #full_sequential patterns               42
+ #internal patterns                        2722
+     #basic_scan patterns                  2669
+     #full_sequential patterns               53
  -----------------------------------------------

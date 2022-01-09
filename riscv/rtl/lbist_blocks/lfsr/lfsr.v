@@ -1,6 +1,13 @@
-// created by : Meher Krishna Patel
-// date : 22-Dec-2016
-// Modified by : Roberto Di Bella
+/*****************************************************************************
+ * LFSR - Linear Feedback Shift Register
+ * - Polynomials are pre-computed and structured in tables
+ * - The feedback connects to the MSB
+ *
+ * README
+ * ------
+ *  The provided template was not compliant with the informations provided
+ *  by the course slide. It was decided to use the last ones as reference.
+ ****************************************************************************/
 
 module lfsr
 #(
@@ -10,11 +17,14 @@ module lfsr
 
 (
     input wire clk, rst_n, en, 
-    output wire [N:0] dout
+    output wire [N-1:0] dout
 );
 
-reg [N:0] r_reg;
-wire [N:0] r_next;
+
+// Register is indexed backwards for compliancy with taps
+// indication given during the course.
+reg [1:N] r_reg;
+wire [1:N] r_next;
 wire feedback_value;
                         
 always @(posedge clk,negedge rst_n)
@@ -27,15 +37,16 @@ end
 
 generate
 case (N)
-3:
-	//// Feedback polynomial : x^3 + x^2 + 1
+/*
+3:	//// Feedback polynomial : x^3 + x^1 + 1
 	////total sequences (maximum) : 2^3 - 1 = 7
 	assign feedback_value = r_reg[3] ~^ r_reg[2] ~^ r_reg[0];
 
 4:	assign feedback_value = r_reg[4] ~^ r_reg[3] ~^ r_reg[0];
 
-5:  //maximum length = 28 (not 31)
-	assign feedback_value = r_reg[5] ~^ r_reg[3] ~^ r_reg[0];
+5:  	assign feedback_value = r_reg[5] ~^ r_reg[3] ~^ r_reg[0];
+
+6: 	assign feedback_value = r_reg[6] ~^ r_reg[1] ~^ r_reg[0];
 
 7:	assign feedback_value = r_reg[7] ~^ r_reg[3] ~^ r_reg[0];
 
@@ -45,8 +56,16 @@ case (N)
 
 16: 	assign feedback_value = r_reg[16] ~^ r_reg[15] ~^ r_reg[13] ~^ r_reg[4] ~^ r_reg[0];
 
-20: 	assign feedback_value = r_reg[20] ~^ r_reg[3] ~^ r_reg[0];
+19: 	assign feedback_value = r_reg[19] ~^ r_reg[5] ~^ r_reg[2] ~^ r_reg[1] ~^ r_reg[0];
 
+20: 	assign feedback_value = r_reg[20] ~^ r_reg[3] ~^ r_reg[0];
+*/
+
+7: 	assign feedback_value = r_reg[7] ~^ r_reg[3];
+
+19: 	assign feedback_value = r_reg[19] ~^ r_reg[5] ~^ r_reg[2] ~^ r_reg[1];
+
+20: 	assign feedback_value = r_reg[20] ~^ r_reg[3];
 
 default: 
 	begin

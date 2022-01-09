@@ -2,28 +2,28 @@
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT     267142
-   detected_by_simulation         DS    (254676)
-   detected_by_implication        DI     (12466)
+ Detected                         DT     267319
+   detected_by_simulation         DS    (254725)
+   detected_by_implication        DI     (12594)
  Possibly detected                PT          0
- Undetectable                     UD       1149
+ Undetectable                     UD       1147
    undetectable-unused            UU        (86)
    undetectable-tied              UT       (264)
    undetectable-blocked           UB        (10)
-   undetectable-redundant         UR       (789)
- ATPG untestable                  AU       2182
-   atpg_untestable-not_detected   AN      (2182)
- Not detected                     ND        329
-   not-observed                   NO       (329)
+   undetectable-redundant         UR       (787)
+ ATPG untestable                  AU       2451
+   atpg_untestable-not_detected   AN      (2451)
+ Not detected                     ND        321
+   not-observed                   NO       (321)
  -----------------------------------------------
- total faults                            270802
- test coverage                            99.07%
- fault coverage                           98.65%
+ total faults                            271238
+ test coverage                            98.97%
+ fault coverage                           98.56%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                        4991
+ #internal patterns                        4989
      #basic_scan patterns                     1
-     #fast_sequential patterns             4548
-     #full_sequential patterns              442
+     #fast_sequential patterns             4568
+     #full_sequential patterns              420
  -----------------------------------------------

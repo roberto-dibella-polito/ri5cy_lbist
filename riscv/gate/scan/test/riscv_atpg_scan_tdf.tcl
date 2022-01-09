@@ -26,3 +26,5 @@ run_atpg -auto_compression
 set_faults -summary verbose -fault_coverage
 report_summaries > ../rpt/scan_summary_tdf_basic.txt
 write_faults ../rpt/scan_tdf_faults.txt -all -uncollapsed -replace
+
+quit

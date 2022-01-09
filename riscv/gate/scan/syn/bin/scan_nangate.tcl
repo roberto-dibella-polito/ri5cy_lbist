@@ -23,8 +23,8 @@ source ../bin/$TECH.dc_setup_scan.tcl
 # VARIABLES for SCAN INSERTION
 # Change it here
 
-set scanChains 5
-set scanCompress 20
+set scanChains 7
+set scanCompress 25
 
 ##########################################
 
@@ -51,8 +51,8 @@ set_scan_element false NangateOpenCellLibrary/DLH_X1
 
 
 set_scan_configuration -chain_count $scanChains
-set_scan_compression_configuration -chain_count $scanCompress
-
+#set_scan_compression_configuration -chain_count $scanCompress
+set_scan_compression_configuration -max_length 100
 
 create_test_protocol -infer_asynch -infer_clock
 dft_drc

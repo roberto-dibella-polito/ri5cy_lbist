@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version R-2020.09-SP2 for linux64 -- Dec 03, 2020
-#@ # Date:   Fri Jan  7 12:19:56 2022
+#@ # Date:   Sat Jan  8 22:16:45 2022
 #@ # Run by: s267517@po.polito.it
 #@ 
 
@@ -6724,8 +6724,8 @@ source -echo -verbose /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/sc
 #@ # VARIABLES for SCAN INSERTION
 #@ # Change it here
 #@ 
-#@ set scanChains 5
-#@ set scanCompress 20
+#@ set scanChains 7
+#@ set scanCompress 25
 #@ 
 #@ ##########################################
 #@ 
@@ -6752,8 +6752,8 @@ source -echo -verbose /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/sc
 #@ 
 #@ 
 #@ set_scan_configuration -chain_count $scanChains
-#@ set_scan_compression_configuration -chain_count $scanCompress
-#@ 
+#@ #set_scan_compression_configuration -chain_count $scanCompress
+#@ set_scan_compression_configuration -max_length 100
 #@ 
 #@ create_test_protocol -infer_asynch -infer_clock
 #@ dft_drc
@@ -6777,5 +6777,5 @@ source -echo -verbose /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/sc
 #@ #quit
 #@ # -- End source /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/scan_nangate.tcl
 
-report_scan_path -test_mode all
+report_timing > ../rpt/timing.txt
 exit

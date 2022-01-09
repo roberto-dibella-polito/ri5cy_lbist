@@ -21,3 +21,5 @@ run_atpg -auto_compression
 set_faults -summary verbose -fault_coverage
 report_summaries > ../rpt/scancompress_summary_stuck.txt
 write_faults ../rpt/scancompress_stuck_faults.txt -all -uncollapsed -replace
+
+quit
