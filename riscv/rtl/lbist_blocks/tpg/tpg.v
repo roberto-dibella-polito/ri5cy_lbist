@@ -11,10 +11,14 @@
  ****************************************************************************/
 
 module tpg
-(	input wire clk, en, rst_n;
-	output wire pi_dout[259:0], sc_dout[6:0] );
+(	input wire clk, en, rst_n,
+	output wire [259:0] pi_dout, 
+	output wire [6:0] sc_dout );
 
 	// Generate the LFSRs for PI
+	
+	genvar i;
+	
 	generate
 		for(i=0; i < 260; i = i+20) begin
 			lfsr #( .N(20), .SEED(i) )
@@ -22,7 +26,7 @@ module tpg
 				.clk(clk),
 				.en(en),
 				.rst_n(rst_n),
-				.dout( pi_dout[i+19,i] )
+				.dout( pi_dout[i+19:i] )
 			);
 		end
 	endgenerate

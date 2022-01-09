@@ -77,6 +77,6 @@ endcase
 endgenerate
 
 
-assign r_next = {feedback_value, r_reg[N:1]};
+assign r_next = {feedback_value, r_reg[1:N-1]};
 assign dout = r_reg;
 endmodule
