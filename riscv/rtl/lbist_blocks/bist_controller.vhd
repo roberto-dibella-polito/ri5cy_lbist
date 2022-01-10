@@ -14,11 +14,15 @@ entity bist_controller is
 		test_finished		: in std_logic;
 		test_started		: in std_logic;
 		
+		-- OUTPUTS
 		test_mux_sel		: out std_logic;	-- primary input mux selector
 		out_eval_en		: out std_logic;	-- output evaluator enable
 		tpg_en			: out std_logic;	-- Test Pattern Generator enable
 		count_enable		: out std_logic;	-- enables the Test Counter
-	
+		rst_test_counter_n	: out std_logic;
+		rst_tpg_n		: out std_logic;
+		rst_out_eval_n		: out std_logic; 
+		
 		go_nogo			: out std_logic;
 	); 
 end entity;
@@ -71,7 +75,7 @@ begin
 					NEXT_STATE <= TEST;
 
 			when EVALUATION =>
-				NEXT_STATE <= IDLE;
+				NEXT_STATE <= RESET;
 			
 			when others => 
 				NEXT_STATE <= RESET;
@@ -87,6 +91,9 @@ begin
 				out_eval_en	<= '0';
 				tpg_en		<= '0';
 				count_enable	<= '0';
+				rst_test_counter_n	<= '0';
+				rst_tpg_n		<= '0';
+				rst_out_eval_n		<= '0'; 
 
 			when IDLE => 
 				test_mux_sel	<= '0'; 
@@ -94,29 +101,44 @@ begin
 				tpg_en		<= '0';
 				count_enable	<= '0';
 
+				rst_test_counter_n	<= '1';
+				rst_tpg_n		<= '1';
+				rst_out_eval_n		<= '1'; 
 			when START_TEST => 
 				test_mux_sel	<= '1'; 
 				out_eval_en	<= '0';
 				tpg_en		<= '1';
 				count_enable	<= '1';
+				rst_test_counter_n	<= '1';
+				rst_tpg_n		<= '1';
+				rst_out_eval_n		<= '1'; 
 
 			when TEST =>
 				test_mux_sel	<= '1'; 
 				out_eval_en	<= '1';
 				tpg_en		<= '1';
 				count_enable	<= '1';
+				rst_test_counter_n	<= '1';
+				rst_tpg_n		<= '1';
+				rst_out_eval_n		<= '1'; 
 
 			when EVALUATION =>
 				test_mux_sel	<= '0'; 
 				out_eval_en	<= '0';
 				tpg_en		<= '0';
 				count_enable	<= '0';
+				rst_test_counter_n	<= '1';
+				rst_tpg_n		<= '1';
+				rst_out_eval_n		<= '1'; 
 
 			when others => 
 				test_mux_sel	<= '0'; 
 				out_eval_en	<= '0';
 				tpg_en		<= '0';
 				count_enable	<= '0';
+				rst_test_counter_n	<= '0';
+				rst_tpg_n		<= '0';
+				rst_out_eval_n		<= '0'; 
 		end case; 	
 	end process P_OUTPUTS;
 end architecture;
