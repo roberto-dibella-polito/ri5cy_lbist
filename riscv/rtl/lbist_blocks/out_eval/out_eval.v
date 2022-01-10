@@ -8,7 +8,8 @@
 
 module out_eval
 #(
-    parameter N = 239
+    parameter N = 239,
+	parameter EXPECTED_SIGNATURE = 0
 )
 
 (
@@ -34,6 +35,7 @@ module out_eval
 				.din(tmp_in[24*i+23:24*i]),
 				.dout(dout[24*i+23:24*i]));
 	endgenerate
+
 endmodule
 	
                         

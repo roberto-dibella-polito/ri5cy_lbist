@@ -5,35 +5,35 @@ use ieee.std_logic_arith.all;
  
 entity bist_controller is
 	port(
-		--suppongo abbia bisogno di clk and rst
 		clk                	: in  std_logic;	-- Clock
 		rst                	: in  std_logic;	-- Reset:Active-Low
 		
 		-- INPUTS
-		normal_test		: in std_logic;	-- 0 for normal mode, 1 for test mode
-		signature_check	: in std_logic;	-- receives result of comparison made by output data evaluator
-		start_capture	: in std_logic;
-		go_nogo       	: out std_logic;
-		test_finished	: out std_logic;
-		input_selection	: out std_logic; -- chooses between pi and lfsr
-		count_enable	: out std_logic;
-		--to_test_pattern		: out std_logic; -- dunno if needed
-		--RECONFIGURE?? -- related to scan chains
-		); 
+		normal_test			: in std_logic;	-- 0 for normal mode, 1 for test mode
+		signature_check		: in std_logic;	-- receives result of comparison made by output data evaluator
+		test_finished		: in std_logic;
+		test_started		: in std_logic;
+		
+		test_mux_sel		: out std_logic;	-- primary input mux selector
+		out_eval_en			: out std_logic;	-- output evaluator enable
+		tpg_en				: out std_logic;	-- Test Pattern Generator enable
+		count_enable		: out std_logic;	-- enables the Test Counter
+	
+		go_nogo				: out std_logic;
+	); 
 end entity;
 
-architecture beh of bist_controller is 
+architecture bhv of bist_controller is 
    
-		
 	type TYPE_STATE is (
-		reset, normal, test, capture, go
+		RESET, IDLE, START_TEST, TEST, EVALUATION
 	);
-	signal CURRENT_STATE : TYPE_STATE := reset;
-	signal NEXT_STATE : TYPE_STATE := normal;
+	signal CURRENT_STATE : TYPE_STATE := RESET;
+	signal NEXT_STATE : TYPE_STATE := IDLE;
 
 begin
 
-	P_OPC : process(Clk, Rst)		
+	P_OPC : process(clk, rst)		
 	begin
 		if Rst='0' then
 	        	CURRENT_STATE <= reset;
@@ -42,30 +42,37 @@ begin
 		end if;
 	end process P_OPC;
 	
-	P_NEXT_STATE : process(CURRENT_STATE, normal_test, start_capture)
+	P_NEXT_STATE : process(CURRENT_STATE, normal_test, test_started, test_finished)
 	begin
 		case CURRENT_STATE is
-			when reset =>
-				NEXT_STATE <= normal;
-			when normal => 
+			when RESET =>
+				NEXT_STATE <= IDLE;
+			
+			when IDLE => 
 				if normal_test = '0' then
-					NEXT_STATE <= normal;
+					NEXT_STATE <= IDLE;
 				else
-					NEXT_STATE <= test;
+					NEXT_STATE <= START_TEST;
 				end if;
-			when test => 
-				if start_capture = '1' then
-					NEXT_STATE <= capture;
+			
+			when START_TEST => 
+				if test_started = '1' then
+					NEXT_STATE <= TEST;
 				else
-					NEXT_STATE <= normal;
+					NEXT_STATE <= START_TEST;
 				end if;
-			when capture =>
-				--IT DEPENDS ON HOW MANY CC NEEDED FOR CAPTURE
-				NEXT_STATE <= go;
-			when go =>
-				NEXT_STATE <= normal;
+			
+			when TEST =>
+				if test_finished = '1' then
+					NEXT_STATE <= EVALUATION;
+				else
+					NEXT_STATE <= TEST;
+
+			when EVALUATION =>
+				NEXT_STATE <= IDLE;
+			
 			when others => 
-				NEXT_STATE <= reset;
+				NEXT_STATE <= RESET;
 
 		end case;	
 	end process P_NEXT_STATE;
@@ -73,28 +80,28 @@ begin
 	P_OUTPUTS: process(CURRENT_STATE)
 	begin
 		case CURRENT_STATE is	
-			when reset => 
+			when RESET => 
 				go_nogo <= '0';
 				test_finished <= '0';
 				input_selection <= '0';
 				count_enable <= '0';
-			when normal => 
+			when IDLE => 
 				go_nogo <= '0';
 				test_finished <= '0';
 				input_selection <= '0';
 				count_enable <= '0';
-			when test => 
+			when START_TEST => 
 				go_nogo <= '0';
 				test_finished <= '0';
 				input_selection <= '1';
 				count_enable <= '1';
-			when capture =>
+			when TEST =>
 				-- dunno, do stuff but don't know what
 				go_nogo <= '0';
 				test_finished <= '0';
 				input_selection <= '0';
 				count_enable <= '0';
-			when go =>
+			when EVALUATION =>
 				-- dunno, do stuff but don't know what
 				-- idealmente: trasmetto il signature check e segnale per dire che ho finito
 				go_nogo <= signature_check
