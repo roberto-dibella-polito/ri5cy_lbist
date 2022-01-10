@@ -6,8 +6,8 @@ use ieee.std_logic_arith.all;
 entity bist_controller is
 	port(
 		--suppongo abbia bisogno di clk and rst
-		clk                	: in  std_logic;	-- Clock
-		rst                	: in  std_logic;	-- Reset:Active-Low
+		Clk                	: in  std_logic;	-- Clock
+		Rst                	: in  std_logic;	-- Reset:Active-Low
 		
 		-- INPUTS
 		normal_test		: in std_logic;	-- 0 for normal mode, 1 for test mode

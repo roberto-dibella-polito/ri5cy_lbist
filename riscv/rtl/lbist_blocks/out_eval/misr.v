@@ -5,10 +5,10 @@
  *
  ****************************************************************************/
 
-module lfsr
+module misr
 #(
-    parameter N = 20,
-    parameter SEED = 1
+    parameter N = 24,
+    parameter SEED = 100
 )
 
 (
@@ -18,38 +18,49 @@ module lfsr
 
 );
 
-
-// Register is indexed backwards for compliancy with taps
-// indication given during the course.
-reg [1:N] r_reg;
-wire [1:N] r_next;
-wire feedback_value;
+	reg [1:N] r_reg;
+	wire [1:N] r_next;
                         
-always @(posedge clk,negedge rst_n)
-begin 
-    if (rst_n == 1'b0)
-        r_reg <= SEED;  // use this or uncomment below two line
-    else if (clk == 1'b1 & en == 1'b1)
-        r_reg <= r_next;
-end
+	always @(posedge clk,negedge rst_n)
+	begin 
+    	if (rst_n == 1'b0)
+        	r_reg <= SEED;  // use this or uncomment below two line
+    	else if (clk == 1'b1 & en == 1'b1)
+        	r_reg <= r_next;
+	end
 
-generate
-case (N)
+	genvar i;
 
-23: 	assign feedback_value = r_reg[19] ~^ r_reg[5] ~^ r_reg[2] ~^ r_reg[1];
+	assign r_next[1] = din[0] ~^ r_reg[N]; 
+	generate
+		case (N)
+			// Cases
+			23: 	// x[23]+x[5]+1
+					for( i=2; i<=N; i=i+1 ) begin
+						if( i==5)
+							assign r_next[i] = r_reg[i-1] ~^ din[i-1] ~^ r_reg[N];
+						else
+							assign r_next[i] = r_next[i-1] ~^ din[i-1];
+					end
 
-24: 	assign feedback_value = r_reg[24] ~^ r_reg[7] ~^ r_reg[2] ~^ r_reg[1];
+ 			24: 	// x[24]+x[7]+x[2]+x[1]
+					for( i=2; i<=N; i=i+1 ) begin
+						if( i==7 | i==2 | i == 1)
+							assign r_next[i] = r_reg[i-1] ~^ din[i-1] ~^ r_reg[N];
+						else
+							assign r_next[i] = r_reg[i-1] ~^ din[i-1]; 
+					end
+ 
+			default: 
+				begin
+		 			initial
+						$display("Missing N=%d in the LFSR code, please implement it!", N);
+						//illegal missing_case("please implement");
+				end		
+		endcase
+	endgenerate
 
-default: 
-	begin
-		 initial
-			$display("Missing N=%d in the LFSR code, please implement it!", N);
-		//illegal missing_case("please implement");
-	end		
-endcase
-endgenerate
+	//assign r_next = {feedback_value, r_reg[]};
+	assign dout = r_reg;
 
-
-assign r_next = {feedback_value, r_reg[1:N-1]};
-assign dout = r_reg;
 endmodule
