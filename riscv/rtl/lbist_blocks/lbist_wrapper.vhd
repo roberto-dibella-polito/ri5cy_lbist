@@ -28,12 +28,16 @@ architecture structure of riscv_lbist is
 			signature_check		: in std_logic;	-- receives result of comparison made by output data evaluator
 			test_finished		: in std_logic;
 			test_started		: in std_logic;
-		
+			
+			--OUTPUTS
 			test_mux_sel		: out std_logic;	-- primary input mux selector
 			out_eval_en		: out std_logic;	-- output evaluator enable
 			tpg_en			: out std_logic;	-- Test Pattern Generator enable
 			count_enable		: out std_logic;	-- enables the Test Counter
-	
+			rst_test_counter_n	: out std_logic;
+			rst_tpg_n		: out std_logic;
+			rst_out_eval_n		: out std_logic;
+			
 			go_nogo			: out std_logic;
 		); 
 	end component;
@@ -149,6 +153,25 @@ begin
 	);
 
 	-- BIST CONTROLLER
+	controller: bist_controller port map(
+		clk	=> clk_i,
+		rst	=> rst_n,
+		normal_test 	=> normal_test,
+		go_nogo		=> go_nogo,
+		
+		signature_check		=> signature_check_i,
+		test_finished		=> test_finished_i,
+		test_started		=> test_started_i,
+		
+		-- OUTPUTS
+		test_mux_sel		=> pi_test_sel_i,
+		out_eval_en		=> out_eval_en_i,
+		tpg_en			=> tpg_en_i,
+		count_enable		=> count_en_i,
+		rst_test_counter_n	=> rst_count_i,
+		rst_tpg_n		=> tpg_rst_n_i,
+		rst_out_eval_n		=> signature_rst_i	);
+		
 	
 	-- TEST COUNTER
 	test_cnt: test_counter generic map( TEST_DURATION => 10000, TEST_START => 4 ) port map (
