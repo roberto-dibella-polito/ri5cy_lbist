@@ -37,9 +37,9 @@ begin
 
 	P_OPC : process(clk, rst)		
 	begin
-		if Rst='0' then
+		if rst='0' then
 	        	CURRENT_STATE <= reset;
-		elsif (Clk ='1' and Clk'EVENT) then 
+		elsif (clk ='1' and Clk'EVENT) then 
 			CURRENT_STATE <= NEXT_STATE;
 		end if;
 	end process P_OPC;
