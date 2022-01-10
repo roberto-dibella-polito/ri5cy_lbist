@@ -7,19 +7,19 @@ entity bist_controller is
 	port(
 		clk                	: in  std_logic;	-- Clock
 		rst                	: in  std_logic;	-- Reset:Active-Low
-		
+			
 		-- INPUTS
-		normal_test			: in std_logic;	-- 0 for normal mode, 1 for test mode
+		normal_test		: in std_logic;	-- 0 for normal mode, 1 for test mode
 		signature_check		: in std_logic;	-- receives result of comparison made by output data evaluator
 		test_finished		: in std_logic;
 		test_started		: in std_logic;
 		
 		test_mux_sel		: out std_logic;	-- primary input mux selector
-		out_eval_en			: out std_logic;	-- output evaluator enable
-		tpg_en				: out std_logic;	-- Test Pattern Generator enable
+		out_eval_en		: out std_logic;	-- output evaluator enable
+		tpg_en			: out std_logic;	-- Test Pattern Generator enable
 		count_enable		: out std_logic;	-- enables the Test Counter
 	
-		go_nogo				: out std_logic;
+		go_nogo			: out std_logic;
 	); 
 end entity;
 
@@ -32,6 +32,8 @@ architecture bhv of bist_controller is
 	signal NEXT_STATE : TYPE_STATE := IDLE;
 
 begin
+
+	go_nogo <= signature_check;	
 
 	P_OPC : process(clk, rst)		
 	begin
@@ -81,40 +83,40 @@ begin
 	begin
 		case CURRENT_STATE is	
 			when RESET => 
-				go_nogo <= '0';
-				test_finished <= '0';
-				input_selection <= '0';
-				count_enable <= '0';
+				test_mux_sel	<= '0'; 
+				out_eval_en	<= '0';
+				tpg_en		<= '0';
+				count_enable	<= '0';
+
 			when IDLE => 
-				go_nogo <= '0';
-				test_finished <= '0';
-				input_selection <= '0';
-				count_enable <= '0';
+				test_mux_sel	<= '0'; 
+				out_eval_en	<= '0';
+				tpg_en		<= '0';
+				count_enable	<= '0';
+
 			when START_TEST => 
-				go_nogo <= '0';
-				test_finished <= '0';
-				input_selection <= '1';
-				count_enable <= '1';
+				test_mux_sel	<= '1'; 
+				out_eval_en	<= '0';
+				tpg_en		<= '1';
+				count_enable	<= '1';
+
 			when TEST =>
-				-- dunno, do stuff but don't know what
-				go_nogo <= '0';
-				test_finished <= '0';
-				input_selection <= '0';
-				count_enable <= '0';
+				test_mux_sel	<= '1'; 
+				out_eval_en	<= '1';
+				tpg_en		<= '1';
+				count_enable	<= '1';
+
 			when EVALUATION =>
-				-- dunno, do stuff but don't know what
-				-- idealmente: trasmetto il signature check e segnale per dire che ho finito
-				go_nogo <= signature_check
-				test_finished <= '1';
-				input_selection <= '0';
-				count_enable <= '0';
+				test_mux_sel	<= '0'; 
+				out_eval_en	<= '0';
+				tpg_en		<= '0';
+				count_enable	<= '0';
+
 			when others => 
-				go_nogo <= '0';
-				test_finished <= '0';
-				input_selection <= '0';
-				count_enable <= '0';		
+				test_mux_sel	<= '0'; 
+				out_eval_en	<= '0';
+				tpg_en		<= '0';
+				count_enable	<= '0';
 		end case; 	
 	end process P_OUTPUTS;
-
-
 end architecture;
