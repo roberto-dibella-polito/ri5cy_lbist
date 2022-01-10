@@ -11,10 +11,11 @@ entity riscv_lbist is
 		clk, rst_n, normal_test	: in std_logic;
 		pis			: in std_logic_vector(266 downto 0);
 		pos			: in std_logic_vector(239 downto 0);
+		pi_selected		: out std_logic_vector(266 downto 0);
 		go_nogo			: out std_logic );
 end riscv_lbist;
 
-architecture structure of 
+architecture structure of riscv_lbist is 
 
 	-- BIST CONTROLLER
 	component bist_controller
@@ -94,9 +95,76 @@ architecture structure of
 			clk, rst_n, en	: in std_logic;
 			din		: in std_logic_vector(N-1 downto 0);
 			dout		: out std_logic_vector(N downto 0);
-			sign_ok			: out std_logic
+			sign_ok		: out std_logic
 		);
 	end component;
+
+	-- CONNECTION SIGNALS
+	signal clk_i 	: std_logic;
 	
+	-- Data
+	signal lfsr_patterns_i		: std_logic_vector(23 downto 0);
+	signal test_patterns_i		: std_logic_vector(266 downto 0);
+	signal signature_i		: std_logic_vector(239 downto 0);
+	
+	-- LBIST controls
+	-- Test Counter
+	signal test_started_i		: std_logic; 
+	signal test_finished_i		: std_logic;
+	signal signature_check_i	: std_logic;
+	signal rst_count_i		: std_logic;
+	signal count_en_i		: std_logic;
+	
+	-- Test Pattern selection & generation
+	signal pi_test_sel_i		: std_logic;
+	signal tpg_en_i			: std_logic;
+	signal tpg_rst_n_i		: std_logic;
+	
+	-- Output evaluation
+	signal out_eval_en_i		: std_logic;
+	signal signature_rst_i		: std_logic;
+	signal sign_ok_i		: std_logic;
 begin
-		
+
+	-- Multiplexer instantiation
+	mux: mux2to1_n generic map( N => 267 ) port map(
+		sel	=> pi_test_sel_i,
+		d0	=> din,
+		d1	=> test_patterns_i,
+		dout	=> pi_selected 
+	);		
+	
+	-- LFSR
+	lfsr_i: lfsr generic map( N => 24, SEED => 1) port map(
+		clk	=> clk_i,
+		rst_n	=> tpg_rst_n_i,
+		en	=> tpg_en_i,
+		dout	=> lfsr_patterns_i
+	);
+	
+	-- Phase Shifter
+	phsh: phase_shifter generic map( N_IN => 24, N_OUT => 267 ) port map (
+		din	=> lfsr_patterns_i,
+		dout	=> test_patterns_i
+	);
+
+	-- BIST CONTROLLER
+	
+	-- TEST COUNTER
+	test_cnt: test_counter generic map( TEST_DURATION => 10000, TEST_START => 4 ) port map (
+		clk		=> clk_i,
+		rst_n		=> rst_count_i,
+		en		=> count_en_i,
+		test_started	=> test_started_i,
+		test_finished	=> test_finished_i	);
+
+	-- OUTPUT EVALUATOR
+	out_eval: output_evaluator generic map( N => 240, EXPECTED_SIGNATURE => (others=>'0') ) port map(
+		clk	=> clk_i,
+		rst_n	=> signature_rst_i,
+		en	=> out_eval_en_i,
+		din	=> pos,
+		dout	=> signature_i,
+		sign_ok => sign_ok_i
+	);
+end structure;
