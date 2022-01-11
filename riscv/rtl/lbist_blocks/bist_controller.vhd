@@ -23,7 +23,7 @@ entity bist_controller is
 		rst_tpg_n		: out std_logic;
 		rst_out_eval_n		: out std_logic; 
 		
-		go_nogo			: out std_logic;
+		go_nogo			: out std_logic
 	); 
 end entity;
 
@@ -73,7 +73,8 @@ begin
 					NEXT_STATE <= EVALUATION;
 				else
 					NEXT_STATE <= TEST;
-
+				end if;
+			
 			when EVALUATION =>
 				NEXT_STATE <= RESET;
 			

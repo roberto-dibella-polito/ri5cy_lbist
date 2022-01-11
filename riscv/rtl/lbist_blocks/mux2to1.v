@@ -11,12 +11,14 @@ module mux2to1_n
 	input wire sel,
 	input wire [N-1:0] d0,d1,
 	output wire [N-1:0] dout
-)
+);
 
 	always @ (d1 or d2 or sel)
+	begin
 		case(sel)
 			0:	assign dout = d0;
 			1:	assign dout = d1;
+		endcase
 	end
 endmodule
 	

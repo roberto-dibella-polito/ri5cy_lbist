@@ -10,7 +10,7 @@ entity riscv_lbist is
 	port(
 		clk, rst_n, normal_test	: in std_logic;
 		pis			: in std_logic_vector(266 downto 0);
-		pos			: in std_logic_vector(239 downto 0);
+		pos			: in std_logic_vector(238 downto 0);
 		pi_selected		: out std_logic_vector(266 downto 0);
 		go_nogo			: out std_logic );
 end riscv_lbist;
@@ -38,7 +38,7 @@ architecture structure of riscv_lbist is
 			rst_tpg_n		: out std_logic;
 			rst_out_eval_n		: out std_logic;
 			
-			go_nogo			: out std_logic;
+			go_nogo			: out std_logic
 		); 
 	end component;
 
@@ -70,7 +70,7 @@ architecture structure of riscv_lbist is
 	component lfsr
 		generic( 
 			N : integer := 20;
-			SEED : integer := 1;
+			SEED : integer := 1
 		);
 		port(
 			clk, rst_n, en	: in std_logic;
@@ -80,20 +80,20 @@ architecture structure of riscv_lbist is
 
 	component phase_shifter
 		generic(
-			N_IN : integer := 24,
+			N_IN : integer := 24;
 			N_OUT : integer := 267
 		);
 		port(
 			din	: in std_logic_vector(N_IN-1 downto 0);
-			dout	: out std_logic_vector(N_OUT-1 downto 0);
+			dout	: out std_logic_vector(N_OUT-1 downto 0)
 		);
 	end component;
 
 	-- OUTPUT EVALUATOR
 	component output_evaluator 
 		generic(
-			N 			: integer := 239;
-			EXPECTED_SIGNATURE 	: std_logic_vector(N-1 downto 0) := (others=>'0') 
+			N 			: integer := 239
+			--EXPECTED_SIGNATURE 	: std_logic_vector(N-1 downto 0) := (others=>'0') 
 		);
 		port(
 			clk, rst_n, en	: in std_logic;
@@ -133,7 +133,7 @@ begin
 	-- Multiplexer instantiation
 	mux: mux2to1_n generic map( N => 267 ) port map(
 		sel	=> pi_test_sel_i,
-		d0	=> din,
+		d0	=> pis,
 		d1	=> test_patterns_i,
 		dout	=> pi_selected 
 	);		
@@ -182,7 +182,7 @@ begin
 		test_finished	=> test_finished_i	);
 
 	-- OUTPUT EVALUATOR
-	out_eval: output_evaluator generic map( N => 240, EXPECTED_SIGNATURE => (others=>'0') ) port map(
+	out_eval: output_evaluator generic map( N => 239 ) port map(
 		clk	=> clk_i,
 		rst_n	=> signature_rst_i,
 		en	=> out_eval_en_i,
