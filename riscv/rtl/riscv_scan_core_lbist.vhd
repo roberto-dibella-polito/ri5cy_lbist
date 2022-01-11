@@ -108,9 +108,25 @@ begin
 		go_nogo		=> go_nogo_o	);
 	
 	-- Connect together all primary inputs into pis_i
-			
-	-- Connect together all primary outputs into pos_i
+	
+	pis_i(31 downto 0) 	<= boot_addr_i;
+  	pis_i(35 downto 32)	<= core_id_i;
+  	pis_i(42 downto 36)	<= cluster_id_i;	
+  	pis_i(170 downto 43)	<= instr_rdata_i;
+  	pis_i(202 downto 171)	<= data_rdata_i;
+  	pis_i(234 downto 203)	<= apu_master_result_i;
+  	pis_i(239 downto 235)	<= apu_master_flags_i;
+  	pis_i(244 downto 240) 	<= irq_id_i;
+  	pis_i(245 to 247)	<= ext_perf_counters_i;
+	pis_i(256 downto 247)	<= fregfile_disable_i & instr_gnt_i & instr_rvalid_i & data_gnt_i & data_rvalid_i & apu_master_gnt_i & apu_master_valid_i & irq_i & irq_sec_i & debug_req_i;
+	
+	-- This signals will enter the mux of the LBIST and eventually coming out in the same position from pis_selected
+	--> Reconnect everything to the DUT
 
+
+	-- Connect together all primary outputs into pos_i
+	
+	
 	-- connect the selected_pis in the same way of the input + add the scan signals
 
 
