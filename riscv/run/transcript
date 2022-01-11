@@ -1,0 +1,7 @@
+# vsim -c tb_top_vopt "+firmware=/home/s267517/assignment/riscv/sbst/sbst.hex" "+dumpports+nocollapse" -suppress 3015 -do "/home/s267517/assignment/riscv/vsim.tcl" 
+# Start time: 10:12:59 on Jan 11,2022
+# ** Error (suppressible): (vsim-19) Failed to access library 'work_gate' at "work_gate".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 10:13:00 on Jan 11,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
