@@ -1,4 +1,6 @@
-
+--------------------------------------------------
+-- RISC-V GATE CORE with LBIST BLOCK
+--------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -144,7 +146,7 @@ begin
   			apu_master_result_i	=> pis_selected_i(234 downto 203),
   			apu_master_flags_i	=> pis_selected_i(239 downto 235),
   			irq_id_i		=> pis_selected_i(244 downto 240),
-  			irq_id_o		=> pos_i(223 downto 219);
+  			irq_id_o		=> pos_i(223 downto 219),
   			ext_perf_counters_i	=> pis_selected_i(245 to 246),
 
 			
@@ -197,9 +199,26 @@ begin
 			test_so6 		=> pos_i(237),
 			test_so7		=> pos_i(238)
 		);
+	
 	-- Connect together all primary outputs into pos_i AND to the output ports
+	instr_addr_o		<= pos_i(31 downto 0);
+  	data_be_o		<= pos_i(35 downto 32);
+  	data_addr_o		<= pos_i(67 downto 36);
+  	data_wdata_o		<= pos_i(99 downto 68);
+  	apu_master_operands_o	<= pos_i(195 downto 100);
+ 	apu_master_op_o		<= pos_i(201 downto 196);
+  	apu_master_type_o	<= pos_i(202 to 203);
+  	apu_master_flags_o	<= pos_i(218 downto 204);
+  	irq_id_o		<= pos_i(223 downto 219);	
 	
-	
+	 instr_req_o		<= pos_i(224);
+	data_req_o		<= pos_i(225);
+	data_we_o		<= pos_i(226);
+	apu_master_req_o	<= pos_i(227);
+        apu_master_ready_o	<= pos_i(228);
+	irq_ack_o		<= pos_i(229);
+	sec_lvl_o		<= pos_i(230);
+	core_busy_o		<= pos_i(231);
 	-- connect the selected_pis in the same way of the input + add the scan signals
 
 
