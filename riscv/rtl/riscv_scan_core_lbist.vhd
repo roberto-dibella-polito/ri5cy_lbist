@@ -11,7 +11,7 @@ entity riscv_core is
 		
 		boot_addr_i 		: in std_logic_vector(31 downto 0);
   		core_id_i		: in std_logic_vector(3 downto 0);
-  		cluster_id_i 		: in std_logic_vector(6 downto 0);	
+  		cluster_id_i 		: in std_logic_vector(5 downto 0);	
   		instr_addr_o		: out std_logic_vector(31 downto 0);
   		instr_rdata_i		: in std_logic_vector(127 downto 0);
   		data_be_o		: out std_logic_vector(3 downto 0);
@@ -48,7 +48,7 @@ architecture structure of riscv_core is
 		port( 
 			boot_addr_i 		: in std_logic_vector(31 downto 0);
   			core_id_i		: in std_logic_vector(3 downto 0);
-  			cluster_id_i 		: in std_logic_vector(6 downto 0);	
+  			cluster_id_i 		: in std_logic_vector(5 downto 0);	
   			instr_addr_o		: out std_logic_vector(31 downto 0);
   			instr_rdata_i		: in std_logic_vector(127 downto 0);
   			data_be_o		: out std_logic_vector(3 downto 0);
@@ -106,7 +106,7 @@ begin
 		normal_test	=> test_select,
 		pis		=> pis_i,
 		pos		=> pos_i,
-		pi_selected	=> pis_selected_i
+		pi_selected	=> pis_selected_i,
 		go_nogo		=> go_nogo_o	);
 	
 	-- POSITIONAL CONNECTION
@@ -114,15 +114,15 @@ begin
 	
 	pis_i(31 downto 0) 	<= boot_addr_i;
   	pis_i(35 downto 32)	<= core_id_i;
-  	pis_i(42 downto 36)	<= cluster_id_i;	
-  	pis_i(170 downto 43)	<= instr_rdata_i;
-  	pis_i(202 downto 171)	<= data_rdata_i;
-  	pis_i(234 downto 203)	<= apu_master_result_i;
-  	pis_i(239 downto 235)	<= apu_master_flags_i;
-  	pis_i(244 downto 240) 	<= irq_id_i;
-  	pis_i(245 to 246)	<= ext_perf_counters_i;
-	pis_i(256 downto 247)	<= fregfile_disable_i & instr_gnt_i & instr_rvalid_i & data_gnt_i & data_rvalid_i & apu_master_gnt_i & apu_master_valid_i & irq_i & irq_sec_i & debug_req_i;
-	pis_i(263 downto 257)	<= (others=>'0'); -- Dummy ports for SCAN CHAINS port 
+  	pis_i(41 downto 36)	<= cluster_id_i;	
+  	pis_i(169 downto 42)	<= instr_rdata_i;
+  	pis_i(201 downto 170)	<= data_rdata_i;
+  	pis_i(233 downto 202)	<= apu_master_result_i;
+  	pis_i(238 downto 234)	<= apu_master_flags_i;
+  	pis_i(243 downto 239) 	<= irq_id_i;
+  	pis_i(245 downto 244)	<= ext_perf_counters_i(2) & ext_perf_counters_i(1);
+	pis_i(255 downto 246)	<= fregfile_disable_i & instr_gnt_i & instr_rvalid_i & data_gnt_i & data_rvalid_i & apu_master_gnt_i & apu_master_valid_i & irq_i & irq_sec_i & debug_req_i;
+	pis_i(262 downto 256)	<= (others=>'0'); -- Dummy ports for SCAN CHAINS port 
 
 	-- These signals will enter the mux of the LBIST and eventually coming out in the same position from pis_selected
 	--> Reconnect everything to the DUT
@@ -132,53 +132,53 @@ begin
 	core: riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800 port map(
 			boot_addr_i 		=> pis_selected_i(31 downto 0),
   			core_id_i		=> pis_selected_i(35 downto 32),
-  			cluster_id_i 		=> pis_selected_i(42 downto 36),	
+  			cluster_id_i 		=> pis_selected_i(41 downto 36),	
   			instr_addr_o		=> pos_i(31 downto 0),
-  			instr_rdata_i		=> pis_selected_i(170 downto 43),
+  			instr_rdata_i		=> pis_selected_i(169 downto 42),
   			data_be_o		=> pos_i(35 downto 32),
   			data_addr_o		=> pos_i(67 downto 36),
   			data_wdata_o		=> pos_i(99 downto 68),
-  			data_rdata_i		=> pis_selected_i(202 downto 171),
+  			data_rdata_i		=> pis_selected_i(201 downto 170),
   			apu_master_operands_o	=> pos_i(195 downto 100),
  			apu_master_op_o		=> pos_i(201 downto 196),
-  			apu_master_type_o	=> pos_i(202 to 203),
+  			apu_master_type_o	=> pos_i(203 downto 202),
   			apu_master_flags_o	=> pos_i(218 downto 204),
-  			apu_master_result_i	=> pis_selected_i(234 downto 203),
-  			apu_master_flags_i	=> pis_selected_i(239 downto 235),
-  			irq_id_i		=> pis_selected_i(244 downto 240),
+  			apu_master_result_i	=> pis_selected_i(233 downto 202),
+  			apu_master_flags_i	=> pis_selected_i(238 downto 234),
+  			irq_id_i		=> pis_selected_i(243 downto 239),
   			irq_id_o		=> pos_i(223 downto 219),
-  			ext_perf_counters_i	=> pis_selected_i(245 to 246),
+  			ext_perf_counters_i	=> pis_selected_i(245 downto 244),
 
 			
 			-- Signals for the top-level entity
  	 		clk_i			=> clk_i, 
 			rst_ni			=> rst_ni, 
-			clock_en_i		=> clk_en_i, 
+			clock_en_i		=> clock_en_i, 
 
 			test_en_i		=> test_select, 
 			test_mode		=> '1', 
 			fetch_enable_i		=> fetch_enable_i,
 			
 			-- 1-bit primary inputs
-			fregfile_disable_i	=> pis_selected_i(256), 
-			instr_gnt_i		=> pis_selected_i(255), 			
-			instr_rvalid_i		=> pis_selected_i(254),
-			data_gnt_i		=> pis_selected_i(253),
-			data_rvalid_i		=> pis_selected_i(252),
-			apu_master_gnt_i	=> pis_selected_i(251),	
-			apu_master_valid_i	=> pis_selected_i(250),
-			irq_i			=> pis_selected_i(249),
-			irq_sec_i		=> pis_selected_i(248),
-			debug_req_i		=> pis_selected_i(247),
+			fregfile_disable_i	=> pis_selected_i(255), 
+			instr_gnt_i		=> pis_selected_i(254), 			
+			instr_rvalid_i		=> pis_selected_i(253),
+			data_gnt_i		=> pis_selected_i(252),
+			data_rvalid_i		=> pis_selected_i(251),
+			apu_master_gnt_i	=> pis_selected_i(250),	
+			apu_master_valid_i	=> pis_selected_i(249),
+			irq_i			=> pis_selected_i(248),
+			irq_sec_i		=> pis_selected_i(247),
+			debug_req_i		=> pis_selected_i(246),
          		
 			-- Scan input port -> MSBs of the selected pis
-			test_si1		=> pis_selected_i(257), 
-			test_si2		=> pis_selected_i(258), 
-			test_si3		=> pis_selected_i(259), 
-			test_si4		=> pis_selected_i(260), 
-			test_si5		=> pis_selected_i(261), 
-			test_si6		=> pis_selected_i(262), 
-			test_si7		=> pis_selected_i(263),
+			test_si1		=> pis_selected_i(256), 
+			test_si2		=> pis_selected_i(257), 
+			test_si3		=> pis_selected_i(258), 
+			test_si4		=> pis_selected_i(259), 
+			test_si5		=> pis_selected_i(260), 
+			test_si6		=> pis_selected_i(261), 
+			test_si7		=> pis_selected_i(262),
          		
 			-- 1-bit primary outputs
 	 		instr_req_o		=> pos_i(224), 
@@ -207,7 +207,7 @@ begin
   	data_wdata_o		<= pos_i(99 downto 68);
   	apu_master_operands_o	<= pos_i(195 downto 100);
  	apu_master_op_o		<= pos_i(201 downto 196);
-  	apu_master_type_o	<= pos_i(202 to 203);
+  	apu_master_type_o	<= pos_i(202) & pos_i(203);
   	apu_master_flags_o	<= pos_i(218 downto 204);
   	irq_id_o		<= pos_i(223 downto 219);	
 	

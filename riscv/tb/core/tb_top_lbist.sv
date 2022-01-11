@@ -35,7 +35,6 @@ module tb_top
     logic                   rst_n = 'b0;
 	
 	logic	test_mode = 'b1;
-	logic	
 
 
     // cycle counter
@@ -52,6 +51,7 @@ module tb_top
 
     // make the core start fetching instruction immediately
     assign fetch_enable = '1;
+	assign clock_en_i = '1;
 
     // allow vcd dump
     initial begin
@@ -143,14 +143,14 @@ module tb_top
     end
 
     //PoliTo: Memory map check
-    always_ff @(posedge clk, negedge rst_n) begin
+    //always_ff @(posedge clk, negedge rst_n) begin
 	//if (tb_top.riscv_wrapper_i.riscv_core_i.load_store_unit_i.data_we_ex_i == 1'h1) begin
-	if (tb_top.riscv_wrapper_i.data_req == 1'h1 && tb_top.riscv_wrapper_i.data_we == 1'h1) begin
-	  if (tb_top.riscv_wrapper_i.riscv_core_i.load_store_unit_i.data_addr_o < 32'h200000 || tb_top.riscv_wrapper_i.riscv_core_i.load_store_unit_i.data_addr_o > 32'h240000) begin
-		  $display("MEMORY MAP WARNING: Writing OUTSIDE DRAM at address %h, time %t", tb_top.riscv_wrapper_i.riscv_core_i.load_store_unit_i.data_addr_o, $realtime); 
-	  end 
-	end
-    end
+	//if (tb_top.riscv_wrapper_i.data_req == 1'h1 && tb_top.riscv_wrapper_i.data_we == 1'h1) begin
+	  //if (tb_top.riscv_wrapper_i.riscv_core_i.load_store_unit_i.data_addr_o < 32'h200000 || tb_top.riscv_wrapper_i.riscv_core_i.load_store_unit_i.data_addr_o > 32'h240000) begin
+	//	  $display("MEMORY MAP WARNING: Writing OUTSIDE DRAM at address %h, time %t", tb_top.riscv_wrapper_i.riscv_core_i.load_store_unit_i.data_addr_o, $realtime); 
+	  //end 
+	//end
+    //end
 
     // wrapper for riscv, the memory system and stdout peripheral
     riscv_wrapper
@@ -163,6 +163,8 @@ module tb_top
         (.clk_i          ( clk          ),
          .rst_ni         ( rst_n        ),
          .fetch_enable_i ( fetch_enable ),
+		.test_mode ( test_mode 	),
+		.clock_en_i( clk_en_i	),
          .tests_passed_o ( tests_passed ),
          .tests_failed_o ( tests_failed ),
          .exit_valid_o   ( exit_valid   ),

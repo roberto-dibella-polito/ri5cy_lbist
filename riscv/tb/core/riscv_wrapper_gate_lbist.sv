@@ -23,7 +23,7 @@ module riscv_wrapper
      
 	// ADDED FOR TESTING
     	input logic	 test_mode,
-     	input logic	 clock_en_i,
+     	//input logic	 clock_en_i,
 	
      output logic        tests_passed_o,
      output logic        tests_failed_o,
@@ -147,7 +147,7 @@ module riscv_wrapper
          .irq_id_o       ( irq_id_in                      ),
          .irq_o          ( irq                            ),
 
-         .pc_core_id_i   ( riscv_core_i.pc_id             ),
+         .pc_core_id_i   ( riscv_core_i.core_id_i         ),
 
          .tests_passed_o ( tests_passed_o                 ),
          .tests_failed_o ( tests_failed_o                 ),
