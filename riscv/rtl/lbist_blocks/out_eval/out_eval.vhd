@@ -39,7 +39,8 @@ begin
 	
 	--------------------------------------------------------
 	-- EXPECTED SIGNATURE TO BE UPDATED HERE
-	EXPECTED_SIGNATURE <= (others=>'0');
+	--EXPECTED_SIGNATURE <= x"3B155ADC4DFCDC4DFCDC4DFCDC4DFC0C11F2B0EC4F492990C7C7F0AF891A";
+	EXPECTED_SIGNATURE <= x"BFC63BC36406C36406C36406C3640643DC1A002391A1D8D4F5AB3624EDCA";
 	--------------------------------------------------------
 	
 	tmp_in <= din(N-1) & din;	

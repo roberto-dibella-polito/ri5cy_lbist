@@ -80,8 +80,9 @@ begin
 				end if;
 			
 			when EVALUATION =>
-				NEXT_STATE <= TEST_RESULT;
-			
+				NEXT_STATE <= RESET;
+		
+	
 			when others => 
 				NEXT_STATE <= RESET;
 

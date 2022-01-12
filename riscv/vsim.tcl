@@ -30,8 +30,11 @@ if { $env(RUN_GATE) == 1 } {
 	vcd dumpports -file dumpports_gate.evcd sim:/tb_top/riscv_wrapper_i/riscv_core_i/*
 }
 
-run 100 ns
+# For exhaustive testing -> simulation is too long
 #run 167772200 ns
+
+# 10k random patterns
+run 111140 ns
 
 if { $env(RUN_GUI) != 1 } {
 	quit
