@@ -12,7 +12,9 @@ entity riscv_lbist is
 		pis			: in std_logic_vector(266 downto 0);
 		pos			: in std_logic_vector(238 downto 0);
 		pi_selected		: out std_logic_vector(266 downto 0);
-		go_nogo			: out std_logic );
+		go_nogo			: out std_logic;
+		test_over		: out std_logic;
+		testing			: out std_logic);
 end riscv_lbist;
 
 architecture structure of riscv_lbist is 
@@ -38,7 +40,9 @@ architecture structure of riscv_lbist is
 			rst_tpg_n		: out std_logic;
 			rst_out_eval_n		: out std_logic;
 			
-			go_nogo			: out std_logic
+			test_over		: out std_logic;
+			go_nogo			: out std_logic;
+			testing			: out std_logic
 		); 
 	end component;
 
@@ -130,6 +134,8 @@ architecture structure of riscv_lbist is
 	signal sign_ok_i		: std_logic;
 begin
 
+	clk_i <= clk;
+
 	-- Multiplexer instantiation
 	mux: mux2to1_n generic map( N => 267 ) port map(
 		sel	=> pi_test_sel_i,
@@ -157,6 +163,7 @@ begin
 		clk	=> clk_i,
 		rst	=> rst_n,
 		normal_test 	=> normal_test,
+		test_over	=> test_over,
 		go_nogo		=> go_nogo,
 		
 		signature_check		=> signature_check_i,
@@ -170,11 +177,12 @@ begin
 		count_enable		=> count_en_i,
 		rst_test_counter_n	=> rst_count_i,
 		rst_tpg_n		=> tpg_rst_n_i,
-		rst_out_eval_n		=> signature_rst_i	);
+		rst_out_eval_n		=> signature_rst_i,
+		testing			=> testing	);
 		
 	
 	-- TEST COUNTER
-	test_cnt: test_counter generic map( TEST_DURATION => 10000, TEST_START => 4 ) port map (
+	test_cnt: test_counter generic map( TEST_DURATION => to_integer(unsigned(x"FFFFFF")), TEST_START => 98 ) port map (
 		clk		=> clk_i,
 		rst_n		=> rst_count_i,
 		en		=> count_en_i,
@@ -188,6 +196,6 @@ begin
 		en	=> out_eval_en_i,
 		din	=> pos,
 		dout	=> signature_i,
-		sign_ok => sign_ok_i
+		sign_ok => signature_check_i
 	);
 end structure;

@@ -28,7 +28,7 @@ entity riscv_core is
   		irq_id_o		: out std_logic_vector(4 downto 0);
   		ext_perf_counters_i	: in std_logic_vector(1 to 2);
  	 	
-		clk_i, rst_ni, clock_en_i, test_mode, fetch_enable_i			: in std_logic;
+		clk_i, rst_ni, clock_en_i, test_mode_i, fetch_enable_i, normal_test_i		: in std_logic;
 		
 		-- 1-bit primary inputs
 		fregfile_disable_i, instr_gnt_i, instr_rvalid_i, data_gnt_i, data_rvalid_i	: in std_logic;
@@ -38,7 +38,8 @@ entity riscv_core is
 		instr_req_o, data_req_o, data_we_o, apu_master_req_o	: out std_logic;
          	apu_master_ready_o, irq_ack_o, sec_lvl_o, core_busy_o	: out std_logic;
 		
-		go_nogo_o : out std_logic
+		test_over_o	: out std_logic;
+		go_nogo_o 	: out std_logic
 	);
 end riscv_core;
 
@@ -90,25 +91,33 @@ architecture structure of riscv_core is
 			pis			: in std_logic_vector(266 downto 0);
 			pos			: in std_logic_vector(238 downto 0);
 			pi_selected		: out std_logic_vector(266 downto 0);
-			go_nogo			: out std_logic );
+			go_nogo			: out std_logic;
+			test_over		: out std_logic;
+			testing			: out std_logic);
 	end component;
 
 	-- Internal signals
 	signal pis_i, pis_selected_i	: std_logic_vector(266 downto 0);
 	signal pos_i			: std_logic_vector(238 downto 0);
-	signal test_select		: std_logic;
+	--signal test_select		: std_logic;
+	signal testing, fetch_en	: std_logic;
 
 begin
 
 	lbist: riscv_lbist port map(
 		clk 		=> clk_i,
 		rst_n		=> rst_ni,
-		normal_test	=> test_select,
+		normal_test	=> normal_test_i,
 		pis		=> pis_i,
 		pos		=> pos_i,
 		pi_selected	=> pis_selected_i,
-		go_nogo		=> go_nogo_o	);
+		go_nogo		=> go_nogo_o,
+		test_over	=> test_over_o,	
+		testing		=> testing	);
 	
+	-- WHILE TESTING, fetch is disabled
+	fetch_en <= fetch_enable_i and (not testing); 
+
 	-- POSITIONAL CONNECTION
 	-- Connect together all primary inputs into pis_i
 	
@@ -155,9 +164,9 @@ begin
 			rst_ni			=> rst_ni, 
 			clock_en_i		=> clock_en_i, 
 
-			test_en_i		=> test_select, 
-			test_mode		=> '1', 
-			fetch_enable_i		=> fetch_enable_i,
+			test_en_i		=> testing, 
+			test_mode		=> test_mode_i,
+			fetch_enable_i		=> fetch_en,
 			
 			-- 1-bit primary inputs
 			fregfile_disable_i	=> pis_selected_i(255), 
@@ -211,8 +220,8 @@ begin
   	apu_master_flags_o	<= pos_i(218 downto 204);
   	irq_id_o		<= pos_i(223 downto 219);	
 	
-	 instr_req_o		<= pos_i(224);
-	data_req_o		<= pos_i(225);
+	instr_req_o		<= pos_i(224) and (not testing);
+	data_req_o		<= pos_i(225) and (not testing);
 	data_we_o		<= pos_i(226);
 	apu_master_req_o	<= pos_i(227);
         apu_master_ready_o	<= pos_i(228);

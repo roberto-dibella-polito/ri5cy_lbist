@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/s267517/assignment/riscv/run
 valu_ff
-Z1 !s110 1641925532
+Z1 !s110 1642005827
 !i10b 1
 !s100 ^Ez2>Zk:1NFAR]@h=Qmf>1
 I^OAk7zn=Vcg5JDMO7=FYh3
@@ -23,7 +23,7 @@ Z6 OL;L;10.5c_4;63
 r1
 !s85 0
 31
-Z7 !s108 1641925531.000000
+Z7 !s108 1642005826.000000
 Z8 !s107 /home/s267517/assignment/riscv/gate/scan/syn/output/riscv_core_scan.v|/home/s267517/assignment/riscv/rtl/lbist_blocks/out_eval/misr.v|/home/s267517/assignment/riscv/rtl/lbist_blocks/tpg/phase_shifter/phase_shifter.v|/home/s267517/assignment/riscv/rtl/lbist_blocks/tpg/lfsr/lfsr.v|
 Z9 !s90 -work|work_gate|/home/s267517/assignment/riscv/rtl/lbist_blocks/tpg/lfsr/lfsr.v|/home/s267517/assignment/riscv/rtl/lbist_blocks/tpg/phase_shifter/phase_shifter.v|/home/s267517/assignment/riscv/rtl/lbist_blocks/out_eval/misr.v|/home/s267517/assignment/riscv/gate/scan/syn/output/riscv_core_scan.v|
 !i113 0
@@ -51,7 +51,7 @@ R9
 R10
 R11
 vAND2_X1
-Z12 !s110 1641925530
+Z12 !s110 1642005825
 !i10b 1
 !s100 ]ece4@HBNnSUVNl5Gnkgj2
 I2F1PM6Z_Nj]=J9Lod;MhU2
@@ -65,7 +65,7 @@ R6
 r1
 !s85 0
 31
-Z16 !s108 1641925530.000000
+Z16 !s108 1642005825.000000
 Z17 !s107 /home/s267517/assignment/riscv/gate/NangateOpenCellLibrary.v|
 Z18 !s90 -work|work_gate|+define+functional|/home/s267517/assignment/riscv/gate/NangateOpenCellLibrary.v|
 !i113 0
@@ -627,7 +627,7 @@ R11
 n@a@o@i22_@x4
 Xapu_core_package
 Z20 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z21 !s110 1641925535
+Z21 !s110 1642005828
 !i10b 1
 !s100 EDlz^GNNMdP1hl8W;P8Pz0
 I@]GS;oMdXDNcAYZLPVR<]2
@@ -642,7 +642,7 @@ R6
 r1
 !s85 0
 31
-Z23 !s108 1641925534.000000
+Z23 !s108 1642005828.000000
 Z24 !s107 /home/s267517/assignment/riscv/tb/tb_riscv/../../rtl/include/riscv_config.sv|/home/s267517/assignment/riscv/tb/verilator-model/ram.sv|/home/s267517/assignment/riscv/tb/core/mm_ram.sv|/home/s267517/assignment/riscv/tb/core/tb_top_lbist.sv|/home/s267517/assignment/riscv/tb/core/cluster_clock_gating.sv|/home/s267517/assignment/riscv/tb/core/dp_ram.sv|/home/s267517/assignment/riscv/tb/core/riscv_wrapper_gate_lbist.sv|/home/s267517/assignment/riscv/tb/tb_riscv/riscv_random_interrupt_generator.sv|/home/s267517/assignment/riscv/tb/tb_riscv/riscv_random_stall.sv|/home/s267517/assignment/riscv/tb/tb_riscv/riscv_perturbation.sv|/home/s267517/assignment/riscv/tb/tb_riscv/include/perturbation_defines.sv|/home/s267517/assignment/riscv/rtl/include/riscv_tracer_defines.sv|/home/s267517/assignment/riscv/rtl/include/riscv_defines.sv|/home/s267517/assignment/riscv/rtl/include/apu_core_package.sv|/home/s267517/assignment/riscv/tb/core/fpnew/src/fpnew_pkg.sv|/home/s267517/assignment/riscv/rtl/include/riscv_config.sv|
 Z25 !s90 -sv|-work|work_gate|-cover|t|-novopt|-timescale|1 ns/ 1 ps|-suppress|2577|-suppress|2583|/home/s267517/assignment/riscv/rtl/include/riscv_config.sv|/home/s267517/assignment/riscv/tb/core/fpnew/src/fpnew_pkg.sv|/home/s267517/assignment/riscv/rtl/include/apu_core_package.sv|/home/s267517/assignment/riscv/rtl/include/riscv_defines.sv|/home/s267517/assignment/riscv/rtl/include/riscv_tracer_defines.sv|/home/s267517/assignment/riscv/tb/tb_riscv/include/perturbation_defines.sv|/home/s267517/assignment/riscv/tb/tb_riscv/riscv_perturbation.sv|/home/s267517/assignment/riscv/tb/tb_riscv/riscv_random_stall.sv|/home/s267517/assignment/riscv/tb/tb_riscv/riscv_random_interrupt_generator.sv|/home/s267517/assignment/riscv/tb/core/riscv_wrapper_gate_lbist.sv|/home/s267517/assignment/riscv/tb/core/dp_ram.sv|/home/s267517/assignment/riscv/tb/core/cluster_clock_gating.sv|/home/s267517/assignment/riscv/tb/core/tb_top_lbist.sv|/home/s267517/assignment/riscv/tb/core/mm_ram.sv|/home/s267517/assignment/riscv/tb/verilator-model/ram.sv|
 !i113 1
@@ -650,7 +650,7 @@ Z26 !s102 -cover t
 Z27 o-suppress 2577 -suppress 2583 -sv -work work_gate -cover t -timescale {1 ns/ 1 ps} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R11
 Ebist_controller
-Z28 w1641888794
+Z28 w1642002786
 Z29 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z30 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z31 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
@@ -660,38 +660,38 @@ Z33 8/home/s267517/assignment/riscv/rtl/lbist_blocks/bist_controller.vhd
 Z34 F/home/s267517/assignment/riscv/rtl/lbist_blocks/bist_controller.vhd
 l0
 L6
-VgXRP>go6SjcZ<T;=fW;8b2
-!s100 RBV;eNfRP=lb;GICPQgg_1
+V6`AECje9_>jIi=?DY>M360
+!s100 F@0Ik1S609`4:@j?flgie0
 Z35 OL;C;10.5c_4;63
 31
-R12
+Z36 !s110 1642005826
 !i10b 1
-R16
-Z36 !s90 -93|-work|work_gate|/home/s267517/assignment/riscv/rtl/lbist_blocks/mux2to1.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/out_eval/out_eval.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/counter.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/test_counter.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/bist_controller.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/lbist_wrapper.vhd|/home/s267517/assignment/riscv/rtl/riscv_scan_core_lbist.vhd|
-Z37 !s107 /home/s267517/assignment/riscv/rtl/riscv_scan_core_lbist.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/lbist_wrapper.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/bist_controller.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/test_counter.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/counter.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/out_eval/out_eval.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/mux2to1.vhd|
+R7
+Z37 !s90 -93|-work|work_gate|/home/s267517/assignment/riscv/rtl/lbist_blocks/mux2to1.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/out_eval/out_eval.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/counter.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/test_counter.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/bist_controller.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/lbist_wrapper.vhd|/home/s267517/assignment/riscv/rtl/riscv_scan_core_lbist.vhd|
+Z38 !s107 /home/s267517/assignment/riscv/rtl/riscv_scan_core_lbist.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/lbist_wrapper.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/bist_controller.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/test_counter.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/counter.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/out_eval/out_eval.vhd|/home/s267517/assignment/riscv/rtl/lbist_blocks/mux2to1.vhd|
 !i113 0
-Z38 o-93 -work work_gate
-Z39 tExplicit 1 CvgOpt 0
+Z39 o-93 -work work_gate
+Z40 tExplicit 1 CvgOpt 0
 Abhv
 R29
 R30
 R31
 R32
-DEx4 work 15 bist_controller 0 22 gXRP>go6SjcZ<T;=fW;8b2
-l38
-L30
-Vi]_n:<IjP321479[CRSRL2
-!s100 H`_dh]M<0A8h`=Dl=n@_<0
+DEx4 work 15 bist_controller 0 22 6`AECje9_>jIi=?DY>M360
+l40
+L32
+VJG[D4]d2Z<K@I5^Dk]Oge3
+!s100 S9XibD27MPWlLK_fQ3LIU0
 R35
 31
-R12
-!i10b 1
-R16
 R36
+!i10b 1
+R7
 R37
-!i113 0
 R38
+!i113 0
 R39
+R40
 vBUF_X1
 R12
 !i10b 1
@@ -1093,7 +1093,7 @@ R2
 !s105 cluster_clock_gating_sv_unit
 S1
 R0
-Z40 w1641069229
+Z41 w1641069229
 8/home/s267517/assignment/riscv/tb/core/cluster_clock_gating.sv
 F/home/s267517/assignment/riscv/tb/core/cluster_clock_gating.sv
 L0 11
@@ -1109,31 +1109,31 @@ R26
 R27
 R11
 Ecounter
-Z41 w1641811430
-Z42 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z42 w1641811430
+Z43 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R30
 R29
 R31
 R32
 R0
-Z43 8/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/counter.vhd
-Z44 F/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/counter.vhd
+Z44 8/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/counter.vhd
+Z45 F/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/counter.vhd
 l0
 L10
 VbmGKngW;J]bmZkZ=9PGUh3
 !s100 TR_KZ_CJNUIOPC]a]zz>>1
 R35
 31
-R12
-!i10b 1
-R16
 R36
+!i10b 1
+R7
 R37
-!i113 0
 R38
+!i113 0
 R39
+R40
 Abeh
-R42
+R43
 R30
 R29
 R31
@@ -1145,14 +1145,14 @@ VPOY__U1o@KUS@YX5gnB1W1
 !s100 m7b:NQUQ9lMYN>2LN[4Cd2
 R35
 31
-R12
-!i10b 1
-R16
 R36
+!i10b 1
+R7
 R37
-!i113 0
 R38
+!i113 0
 R39
+R40
 vDFF_X1
 R12
 !i10b 1
@@ -1439,10 +1439,10 @@ R2
 !s105 dp_ram_sv_unit
 S1
 R0
-R40
+R41
 8/home/s267517/assignment/riscv/tb/core/dp_ram.sv
 F/home/s267517/assignment/riscv/tb/core/dp_ram.sv
-Z45 L0 12
+Z46 L0 12
 R6
 r1
 !s85 0
@@ -1624,10 +1624,10 @@ IU0[gA1DVo9Z@KcU^g0=S50
 VU0[gA1DVo9Z@KcU^g0=S50
 S1
 R0
-R40
+R41
 8/home/s267517/assignment/riscv/tb/core/fpnew/src/fpnew_pkg.sv
 F/home/s267517/assignment/riscv/tb/core/fpnew/src/fpnew_pkg.sv
-Z46 L0 14
+Z47 L0 14
 R6
 r1
 !s85 0
@@ -1801,7 +1801,7 @@ R19
 R11
 n@i@n@v_@x8
 vlfsr
-Z47 !s110 1641925531
+R36
 !i10b 1
 !s100 _zIfDej?CXR0>1D=i7;C20
 I?c?ifFkNc;EiCQH@I;MJZ2
@@ -1810,7 +1810,7 @@ R0
 w1641753385
 8/home/s267517/assignment/riscv/rtl/lbist_blocks/tpg/lfsr/lfsr.v
 F/home/s267517/assignment/riscv/rtl/lbist_blocks/tpg/lfsr/lfsr.v
-R45
+R46
 R6
 r1
 !s85 0
@@ -1868,7 +1868,7 @@ R19
 R11
 n@l@o@g@i@c1_@x1
 vmisr
-R47
+R36
 !i10b 1
 !s100 dZbK?JziJbTn7Il6<W03c0
 I3V7AoZ=e6bJdQ_I`V@CNo0
@@ -1898,7 +1898,7 @@ R2
 !s105 mm_ram_sv_unit
 S1
 R0
-R40
+R41
 8/home/s267517/assignment/riscv/tb/core/mm_ram.sv
 F/home/s267517/assignment/riscv/tb/core/mm_ram.sv
 L0 18
@@ -1961,7 +1961,7 @@ R11
 n@m@u@x2_@x2
 Emux2to1_n
 Z48 w1641888157
-R42
+R43
 R31
 R32
 R0
@@ -1973,16 +1973,16 @@ VQl`NJCiBIjY3S3H1@=5hU2
 !s100 @Xni`=7aPm`MM=0VfBmL<3
 R35
 31
-R12
-!i10b 1
-R16
 R36
+!i10b 1
+R7
 R37
-!i113 0
 R38
+!i113 0
 R39
+R40
 Abhv
-R42
+R43
 R31
 R32
 DEx4 work 9 mux2to1_n 0 22 Ql`NJCiBIjY3S3H1@=5hU2
@@ -1992,14 +1992,14 @@ VhKTE<h8lkZQ`K?]jTQY1W2
 !s100 ;@_NeQLV^l@i9V:eUmNT63
 R35
 31
-R12
-!i10b 1
-R16
 R36
+!i10b 1
+R7
 R37
-!i113 0
 R38
+!i113 0
 R39
+R40
 vNAND2_X1
 R12
 !i10b 1
@@ -3012,8 +3012,8 @@ R19
 R11
 n@o@r4_@x4
 Eoutput_evaluator
-Z52 w1641888634
-R42
+Z52 w1642003071
+R43
 R31
 R32
 R0
@@ -3025,33 +3025,33 @@ V]kMD`_j6?Vf=z[5z[BJ>o2
 !s100 CUn3BlVVITO:A7E51KDjz1
 R35
 31
-R12
-!i10b 1
-R16
 R36
+!i10b 1
+R7
 R37
-!i113 0
 R38
+!i113 0
 R39
+R40
 Astructure
-R42
+R43
 R31
 R32
 DEx4 work 16 output_evaluator 0 22 ]kMD`_j6?Vf=z[5z[BJ>o2
 l38
 L22
-V6:YYfkWVfj?CbZEZ3V6G?2
-!s100 Go:Y]E@U@WUP_@UiIH2S40
+VB5a2bI=]nD?_BV;:>NBT71
+!s100 H;Wl8J>Xd5:]_i:WnL]:c3
 R35
 31
-R12
-!i10b 1
-R16
 R36
+!i10b 1
+R7
 R37
-!i113 0
 R38
+!i113 0
 R39
+R40
 Xperturbation_defines
 R20
 R21
@@ -3061,7 +3061,7 @@ ImBYTkU1Z53B:V5<dO>e270
 VmBYTkU1Z53B:V5<dO>e270
 S1
 R0
-R40
+R41
 8/home/s267517/assignment/riscv/tb/tb_riscv/include/perturbation_defines.sv
 F/home/s267517/assignment/riscv/tb/tb_riscv/include/perturbation_defines.sv
 L0 23
@@ -3077,7 +3077,7 @@ R26
 R27
 R11
 vphase_shifter
-R47
+R36
 !i10b 1
 !s100 <o4?Fc1AHaRijcBD=jeW`3
 I>`UZ_zU:Tdna2BEPa?abT2
@@ -3188,7 +3188,7 @@ R10
 R11
 nriscv_alu_@s@h@a@r@e@d_@i@n@t_@d@i@v0_@f@p@u0_test_1
 vriscv_compressed_decoder_FPU0
-R47
+R36
 !i10b 1
 !s100 78U1JM=<TViKB_Ome[?o>2
 II[G=9aCH@HjPZh5JF=mc81
@@ -3231,47 +3231,8 @@ R9
 R10
 R11
 nriscv_controller_@f@p@u0_test_1
-Eriscv_core
-Z56 w1641924469
-R31
-R32
-R0
-Z57 8/home/s267517/assignment/riscv/rtl/riscv_scan_core_lbist.vhd
-Z58 F/home/s267517/assignment/riscv/rtl/riscv_scan_core_lbist.vhd
-l0
-L8
-V?DY_K=c;_TGH[aCchIbfz1
-!s100 nR<jg>MBfMmjc0eTNnBbZ0
-R35
-31
-R12
-!i10b 1
-R16
-R36
-R37
-!i113 0
-R38
-R39
-Astructure
-R31
-R32
-DEx4 work 10 riscv_core 0 22 ?DY_K=c;_TGH[aCchIbfz1
-l101
-L45
-VW[nY:2ck=c?=DXU@hlZ<n0
-!s100 RMV:UZG?`@BT`cO@e;LCj0
-R35
-31
-R12
-!i10b 1
-R16
-R36
-R37
-!i113 0
-R38
-R39
 vriscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
-Z59 !s110 1641925534
+R21
 !i10b 1
 !s100 neUVn:[CZcSkl7`HX^YCI1
 Id>85oICZh@H7TWHJWkcJd2
@@ -3292,7 +3253,7 @@ R9
 R10
 R11
 vriscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DW01_decode_width1
-R59
+R21
 !i10b 1
 !s100 JhBo<3zRY[8]bcl`MJ;Sc3
 I2U8g>mX]Ez6Be=L[CJ[m[0
@@ -3314,7 +3275,7 @@ R10
 R11
 nriscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_@d@w01_decode_width1
 vriscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_COMPRESSOR
-R59
+R21
 !i10b 1
 !s100 n7YkjcRFgJJi[=L;ikEfI0
 I]eROkC2Y@JEzoRf<miY;l2
@@ -3336,7 +3297,7 @@ R10
 R11
 nriscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_@s@c@c@o@m@p_@c@o@m@p@r@e@s@s@o@r
 vriscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_DECOMPRESSOR
-R59
+R21
 !i10b 1
 !s100 48;djIe3?YMJ0`ZPLeXIJ2
 IUJ^<X<M_`C[Tbbl8RBAS90
@@ -3358,7 +3319,7 @@ R10
 R11
 nriscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_@s@c@c@o@m@p_@d@e@c@o@m@p@r@e@s@s@o@r
 vriscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_test_1
-Z60 !s110 1641925533
+R1
 !i10b 1
 !s100 ;ObLg<a`:EDMDXBoMDg4g3
 IO>R30<D8lm98CJncZlDZT3
@@ -3403,7 +3364,7 @@ R11
 nriscv_decoder_@f@p@u0_@f@p_@d@i@v@s@q@r@t0_@p@u@l@p_@s@e@c@u@r@e1_@s@h@a@r@e@d_@f@p0_@s@h@a@r@e@d_@d@s@p_@m@u@l@t0_@s@h@a@r@e@d_@i@n@t_@m@u@l@t0_@s@h@a@r@e@d_@i@n@t_@d@i@v0_@s@h@a@r@e@d_@f@p_@d@i@v@s@q@r@t0_@w@a@p@u@t@y@p@e0_@a@p@u_@w@o@p_@c@p@u6
 Xriscv_defines
 R20
-Z61 DXx4 work 9 fpnew_pkg 0 22 U0[gA1DVo9Z@KcU^g0=S50
+Z56 DXx4 work 9 fpnew_pkg 0 22 U0[gA1DVo9Z@KcU^g0=S50
 R21
 !i10b 1
 !s100 5f>OX9M4=Oj81SZCkGMo?3
@@ -3414,7 +3375,7 @@ R0
 R22
 8/home/s267517/assignment/riscv/rtl/include/riscv_defines.sv
 F/home/s267517/assignment/riscv/rtl/include/riscv_defines.sv
-Z62 L0 26
+Z57 L0 26
 R6
 r1
 !s85 0
@@ -3427,7 +3388,7 @@ R26
 R27
 R11
 vriscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1
-R60
+R1
 !i10b 1
 !s100 ?mQnlhU6TES20QZeTQXhV3
 IG2?BkSFz96_a5XeeonWk<3
@@ -3449,7 +3410,7 @@ R10
 R11
 nriscv_ex_stage_@f@p@u0_@f@p_@d@i@v@s@q@r@t0_@s@h@a@r@e@d_@f@p0_@s@h@a@r@e@d_@d@s@p_@m@u@l@t0_@s@h@a@r@e@d_@i@n@t_@d@i@v0_@a@p@u_@n@a@r@g@s_@c@p@u3_@a@p@u_@w@o@p_@c@p@u6_@a@p@u_@n@d@s@f@l@a@g@s_@c@p@u15_@a@p@u_@n@u@s@f@l@a@g@s_@c@p@u5_test_1
 vriscv_hwloop_controller_N_REGS2
-R47
+R36
 !i10b 1
 !s100 dGb_aO9HOJB9afB9mgEf]2
 Io?16Eo<FmZGCnZYS`TVTj3
@@ -3515,7 +3476,7 @@ R10
 R11
 n2bb8cd1
 vriscv_if_stage_2_128_0_1a110800_test_1
-R47
+R36
 !i10b 1
 !s100 4eaRC^M^khz;cL3X_T5^E2
 I9S?Po^XQgIBYeDU`PcoXk2
@@ -3558,7 +3519,7 @@ R10
 R11
 nriscv_int_controller_@p@u@l@p_@s@e@c@u@r@e1_test_1
 vriscv_L0_buffer_RDATA_IN_WIDTH128_test_1
-R47
+R36
 !i10b 1
 !s100 [bi2iIM>Y1_z5co_2T7463
 IWcNK]W80?W7;>WD`HUg_X3
@@ -3580,48 +3541,29 @@ R10
 R11
 nriscv_@l0_buffer_@r@d@a@t@a_@i@n_@w@i@d@t@h128_test_1
 Eriscv_lbist
-Z63 w1641889294
-R42
+w1642005466
+R43
 R31
 R32
 R0
-Z64 8/home/s267517/assignment/riscv/rtl/lbist_blocks/lbist_wrapper.vhd
-Z65 F/home/s267517/assignment/riscv/rtl/lbist_blocks/lbist_wrapper.vhd
+8/home/s267517/assignment/riscv/rtl/lbist_blocks/lbist_wrapper.vhd
+F/home/s267517/assignment/riscv/rtl/lbist_blocks/lbist_wrapper.vhd
 l0
 L9
-VV]C4ARiAJb;db>=6Q1`In1
-!s100 f2FjO3_6`O9mzb8P;98J[3
+V6eh8lb>e6TUUcfLkOBn]I0
+!s100 [kUPFPQ7UIMAAZT00]WM=2
 R35
 31
-R12
-!i10b 1
-R16
 R36
-R37
-!i113 0
-R38
-R39
-Astructure
-R42
-R31
-R32
-DEx4 work 11 riscv_lbist 0 22 V]C4ARiAJb;db>=6Q1`In1
-l131
-L18
-VF;zaSZDCh7nD?Gn@0n[ZK0
-!s100 :@5E`>QQdKG<<d5b=9oEW1
-R35
-31
-R12
 !i10b 1
-R16
-R36
+R7
 R37
-!i113 0
 R38
+!i113 0
 R39
+R40
 vriscv_load_store_unit_test_1
-R60
+R1
 !i10b 1
 !s100 K;2>>GU1LJk2;TVbG>[IE3
 I@Q1^`]UPnikHN9S4bL@RD0
@@ -3642,7 +3584,7 @@ R9
 R10
 R11
 vriscv_mult_SHARED_DSP_MULT0_test_1
-R60
+R1
 !i10b 1
 !s100 1LQ4R4I2Vm8eWNWee]69[3
 IJV7Yg<ALKI5[nc33_i28O0
@@ -3665,8 +3607,8 @@ R11
 nriscv_mult_@s@h@a@r@e@d_@d@s@p_@m@u@l@t0_test_1
 vriscv_perturbation
 R20
-R61
-Z66 DXx4 work 13 riscv_defines 0 22 nb3>kQbNLX7EZeU[0_bd[1
+R56
+Z58 DXx4 work 13 riscv_defines 0 22 nb3>kQbNLX7EZeU[0_bd[1
 DXx4 work 26 riscv_perturbation_sv_unit 0 22 _ZMI`8P23aDcRRklBOj]k0
 R2
 r1
@@ -3678,9 +3620,9 @@ ISi^Qhh[gX:FH24Lc_c_b22
 !s105 riscv_perturbation_sv_unit
 S1
 R0
-R40
-Z67 8/home/s267517/assignment/riscv/tb/tb_riscv/riscv_perturbation.sv
-Z68 F/home/s267517/assignment/riscv/tb/tb_riscv/riscv_perturbation.sv
+R41
+Z59 8/home/s267517/assignment/riscv/tb/tb_riscv/riscv_perturbation.sv
+Z60 F/home/s267517/assignment/riscv/tb/tb_riscv/riscv_perturbation.sv
 L0 28
 R6
 R23
@@ -3692,8 +3634,8 @@ R27
 R11
 Xriscv_perturbation_sv_unit
 R20
-R61
-R66
+R56
+R58
 V_ZMI`8P23aDcRRklBOj]k0
 r1
 !s85 0
@@ -3704,11 +3646,11 @@ I_ZMI`8P23aDcRRklBOj]k0
 !i103 1
 S1
 R0
-R40
-R67
-R68
-Z69 F/home/s267517/assignment/riscv/tb/tb_riscv/../../rtl/include/riscv_config.sv
-Z70 L0 25
+R41
+R59
+R60
+Z61 F/home/s267517/assignment/riscv/tb/tb_riscv/../../rtl/include/riscv_config.sv
+Z62 L0 25
 R6
 R23
 R24
@@ -3718,7 +3660,7 @@ R26
 R27
 R11
 vriscv_pmp_N_PMP_ENTRIES16_test_1
-R59
+R21
 !i10b 1
 !s100 Q>VKQW57?e@c[b0i7B<n>2
 I33GXH`J>9PXzh6`a_2U?41
@@ -3740,7 +3682,7 @@ R10
 R11
 nriscv_pmp_@n_@p@m@p_@e@n@t@r@i@e@s16_test_1
 vriscv_prefetch_L0_buffer_test_1
-R47
+R36
 !i10b 1
 !s100 _99gk?_>5AA_1zofh_SoE3
 Iae;WjM@o2@[:37WHW?AK]0
@@ -3763,9 +3705,9 @@ R11
 nriscv_prefetch_@l0_buffer_test_1
 vriscv_random_interrupt_generator
 R20
-R61
-R66
-Z71 DXx4 work 20 perturbation_defines 0 22 mBYTkU1Z53B:V5<dO>e270
+R56
+R58
+Z63 DXx4 work 20 perturbation_defines 0 22 mBYTkU1Z53B:V5<dO>e270
 DXx4 work 40 riscv_random_interrupt_generator_sv_unit 0 22 VifcLYbcj8MW:eEUHakS90
 R2
 r1
@@ -3777,9 +3719,9 @@ I0><TjQSHN1lYOh9GQU_Y?1
 !s105 riscv_random_interrupt_generator_sv_unit
 S1
 R0
-R40
-Z72 8/home/s267517/assignment/riscv/tb/tb_riscv/riscv_random_interrupt_generator.sv
-Z73 F/home/s267517/assignment/riscv/tb/tb_riscv/riscv_random_interrupt_generator.sv
+R41
+Z64 8/home/s267517/assignment/riscv/tb/tb_riscv/riscv_random_interrupt_generator.sv
+Z65 F/home/s267517/assignment/riscv/tb/tb_riscv/riscv_random_interrupt_generator.sv
 L0 30
 R6
 R23
@@ -3791,9 +3733,9 @@ R27
 R11
 Xriscv_random_interrupt_generator_sv_unit
 R20
-R61
-R66
-R71
+R56
+R58
+R63
 VVifcLYbcj8MW:eEUHakS90
 r1
 !s85 0
@@ -3804,11 +3746,11 @@ IVifcLYbcj8MW:eEUHakS90
 !i103 1
 S1
 R0
-R40
-R72
-R73
-R69
-R62
+R41
+R64
+R65
+R61
+R57
 R6
 R23
 R24
@@ -3819,9 +3761,9 @@ R27
 R11
 vriscv_random_stall
 R20
-R61
-R66
-R71
+R56
+R58
+R63
 DXx4 work 26 riscv_random_stall_sv_unit 0 22 @m[Fd91jT=oe5ka5Z[]gP3
 R2
 r1
@@ -3833,9 +3775,9 @@ I29NZ?XkN=hbja_>=GOL6U1
 !s105 riscv_random_stall_sv_unit
 S1
 R0
-R40
-Z74 8/home/s267517/assignment/riscv/tb/tb_riscv/riscv_random_stall.sv
-Z75 F/home/s267517/assignment/riscv/tb/tb_riscv/riscv_random_stall.sv
+R41
+Z66 8/home/s267517/assignment/riscv/tb/tb_riscv/riscv_random_stall.sv
+Z67 F/home/s267517/assignment/riscv/tb/tb_riscv/riscv_random_stall.sv
 L0 29
 R6
 R23
@@ -3847,9 +3789,9 @@ R27
 R11
 Xriscv_random_stall_sv_unit
 R20
-R61
-R66
-R71
+R56
+R58
+R63
 V@m[Fd91jT=oe5ka5Z[]gP3
 r1
 !s85 0
@@ -3860,11 +3802,11 @@ I@m[Fd91jT=oe5ka5Z[]gP3
 !i103 1
 S1
 R0
-R40
-R74
-R75
-R69
-R70
+R41
+R66
+R67
+R61
+R62
 R6
 R23
 R24
@@ -3897,8 +3839,8 @@ R11
 nriscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_test_1
 Xriscv_tracer_defines
 R20
-R61
-R66
+R56
+R58
 R21
 !i10b 1
 !s100 G?hdK1bQf>M5?1=Q[2@g90
@@ -3909,7 +3851,7 @@ R0
 R22
 8/home/s267517/assignment/riscv/rtl/include/riscv_tracer_defines.sv
 F/home/s267517/assignment/riscv/rtl/include/riscv_tracer_defines.sv
-R45
+R46
 R6
 r1
 !s85 0
@@ -3925,16 +3867,16 @@ vriscv_wrapper
 R20
 R21
 !i10b 1
-!s100 BFE^LjoLo@G]<HfadY=Ib1
-IXnB4PmO1LMafOa0H9RS9D1
+!s100 bjflOUERV]ldUNJOSSf_b3
+I[hzf@:Hnk65NFZOkSWBIT2
 R2
 !s105 riscv_wrapper_gate_lbist_sv_unit
 S1
 R0
-w1641925485
+w1641995657
 8/home/s267517/assignment/riscv/tb/core/riscv_wrapper_gate_lbist.sv
 F/home/s267517/assignment/riscv/tb/core/riscv_wrapper_gate_lbist.sv
-R46
+R47
 R6
 r1
 !s85 0
@@ -4864,7 +4806,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_alu_div_2
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_0
-R60
+R1
 !i10b 1
 !s100 aFa[f@eU;::_COacbh<;A1
 I;X2CZ_SQSdBRT10KXIGk82
@@ -4886,7 +4828,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_0
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_1
-R60
+R1
 !i10b 1
 !s100 nSD@9lie=l5EbniI_ZTXX3
 ISQCH01Z0W1b9jPzQo^98a0
@@ -4908,7 +4850,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_1
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_10
-R60
+R1
 !i10b 1
 !s100 2Sfm]VPXCc_6JFjmdE=LH0
 I5dOgeQF;De0CeVkJcIb992
@@ -4930,7 +4872,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_10
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_11
-R60
+R1
 !i10b 1
 !s100 I<[k_HcDX@1`ZTeWPL@[Z2
 I_FVo:kQ3:VOP2iYh5?@:]3
@@ -4952,7 +4894,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_11
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_12
-R60
+R1
 !i10b 1
 !s100 01;3_@G1I4c15beJObjPU1
 IR6]Fm>IYQWNI0d2h>9b;F1
@@ -4974,7 +4916,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_12
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_13
-R60
+R1
 !i10b 1
 !s100 5UC7I890jHo268dh]:n_M1
 Ii9NGic8=aF8[cdBZdV]8:0
@@ -4996,7 +4938,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_13
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_14
-R60
+R1
 !i10b 1
 !s100 D07IHnoObC2Uh_KED;HiV0
 I5TY;@3>@B4Dgde8Hb4zXJ0
@@ -5018,7 +4960,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_14
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_15
-R60
+R1
 !i10b 1
 !s100 Hc@CzSCe^02cUOA1a0V`52
 IS6m5NGofAe^o4dL06dLN`2
@@ -5040,7 +4982,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_15
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_16
-R60
+R1
 !i10b 1
 !s100 8aR9HzARS:RJc4C=o_8KU3
 INZ6bW_O5iL]55SJmI21n42
@@ -5062,7 +5004,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_16
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_17
-R60
+R1
 !i10b 1
 !s100 >koNPF3b18?C3iTaf1H`a1
 I9<4i;24m0WVHOdEUfD?o03
@@ -5084,7 +5026,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_17
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_18
-R60
+R1
 !i10b 1
 !s100 Om]J[oMLQKYm:]i_DzZA53
 IhK=c:D9?6;1aSPO9b3nf]1
@@ -5106,7 +5048,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_18
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_19
-R60
+R1
 !i10b 1
 !s100 3BS[z?[I645;HO3PGf7Qj3
 ISF1?ngXINJCTbFlKE8mhM1
@@ -5128,7 +5070,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_19
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_2
-R60
+R1
 !i10b 1
 !s100 B`^L;4Mlo65o85:EKbS?80
 IH6nBB_Qm1gMk]kU]6ZM9E3
@@ -5150,7 +5092,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_2
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_20
-R60
+R1
 !i10b 1
 !s100 E9;Ni0iC0JC^d=?aG[G5O0
 I1O<=0;2n1k7zI5]OTBm`62
@@ -5172,7 +5114,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_20
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_21
-R60
+R1
 !i10b 1
 !s100 k`h0j>LnIMGbe[j=`V8k93
 IdV@FLozh7_QdRbmnLJeie3
@@ -5194,7 +5136,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_21
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_22
-R60
+R1
 !i10b 1
 !s100 l4<3LGcGEPal?6Fej95Wf0
 I:C]g?0:zKdC7POzTz@4QR0
@@ -5216,7 +5158,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_22
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_23
-R60
+R1
 !i10b 1
 !s100 2QBoD;QQQ>ea35FFBgL6V0
 ILED3H3SdQGN]@8YU6I@JQ0
@@ -5238,7 +5180,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_23
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_24
-R60
+R1
 !i10b 1
 !s100 QoeBWm@@DJzai6W_zL]?30
 I?1C8Fi6Y83YPh_z3GPZ`n0
@@ -5260,7 +5202,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_24
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_25
-R60
+R1
 !i10b 1
 !s100 HPoQk[OP@3lSN`^6<A:3i3
 IcZFzVi:>bgAfb;VPl?3HI1
@@ -5282,7 +5224,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_25
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_26
-R60
+R1
 !i10b 1
 !s100 ?YVM[`z=DLlDONdTKb2Cd2
 ImRmJXEGAgMBQA2:S2K<Wl2
@@ -5304,7 +5246,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_26
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_27
-R60
+R1
 !i10b 1
 !s100 cbWm9<IZHcgi9WPPN`zE42
 I@`N6CVzXiYJa<BQX5W9NO0
@@ -5326,7 +5268,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_27
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_28
-R60
+R1
 !i10b 1
 !s100 Y9TB91MZLEk:Mh3S@<1=j0
 I6K@>6?Z=C@A^CNZCM5B602
@@ -5348,7 +5290,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_28
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_29
-R60
+R1
 !i10b 1
 !s100 NIbBIF:?28[XlURhJK5@Y2
 IFUD<i3hWCWTW4QzLOmdFg0
@@ -5370,7 +5312,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_29
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_3
-R60
+R1
 !i10b 1
 !s100 L^6P;3TVCkSfGROF]cB5a2
 IPo=7e3nm?bZ;J7DMB0YzY3
@@ -5392,7 +5334,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_3
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_30
-R60
+R1
 !i10b 1
 !s100 HjgfIiomKnaJVnQWflOHi0
 I=VJW81Ph>8F55UCPg7@>l1
@@ -5414,7 +5356,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_30
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_31
-R60
+R1
 !i10b 1
 !s100 o6[IT4STgGAg`N=NnWBz:0
 IMWajh7:E0;OBDC80LoNiG3
@@ -5436,7 +5378,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_31
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_32
-R60
+R1
 !i10b 1
 !s100 Tg6z[YGEDKb_TcJ=c[fNO0
 IZ?0b7m]`XU46Z?^^L@C`d0
@@ -5458,7 +5400,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_32
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_33
-R60
+R1
 !i10b 1
 !s100 6U]AN@hYTj:WjGnh2c^W43
 IJ;oHfHLm4cj80o=OS<R4a3
@@ -5480,7 +5422,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_33
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_4
-R60
+R1
 !i10b 1
 !s100 LFh5DX5SC62@Kb9LWCzRn1
 IjQaJi?lcg1E3;<DzB`L0V0
@@ -5502,7 +5444,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_4
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_5
-R60
+R1
 !i10b 1
 !s100 [RG2:zg[RYP0HQRKd7hed2
 I7HZlCG5bgIWRjnY@2=7JU1
@@ -5524,7 +5466,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_5
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_6
-R60
+R1
 !i10b 1
 !s100 RB_M`flT?_Z;=UgRGdDli0
 IhV9^KPJ;SPlS2[U=aO1;L0
@@ -5546,7 +5488,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_6
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_7
-R60
+R1
 !i10b 1
 !s100 3GeT6cZD2zgVhI^5cabYA0
 IZ1i1`[Q7BEMadPPkolKTV3
@@ -5568,7 +5510,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_7
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_8
-R60
+R1
 !i10b 1
 !s100 A1K3hJnF^T4MAW]UndVdC0
 IPn_0eASR5GQ6ZoIK>gNJ41
@@ -5590,7 +5532,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_8
 vSNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_9
-R60
+R1
 !i10b 1
 !s100 bP^oGfLJ^80D<l:;fI:Y:3
 I@Hek0PKTfh7QjE_gC0mgI0
@@ -5612,7 +5554,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_cs_registers_@n_@e@x@t_@c@n@t0_@a@p@u0_@f@p@u0_@p@u@l@p_@s@e@c@u@r@e1_@u@s@e_@p@m@p1_@n_@p@m@p_@e@n@t@r@i@e@s16_9
 vSNPS_CLOCK_GATE_HIGH_riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_0
-R60
+R1
 !i10b 1
 !s100 __acW:<;[7FO9aZ6;U?3F3
 I0gD@XHXn2TSWWVa2g8Q:81
@@ -6030,7 +5972,7 @@ R10
 R11
 nb284499
 vSNPS_CLOCK_GATE_HIGH_riscv_if_stage_2_128_0_1a110800_0
-R47
+R36
 !i10b 1
 !s100 26TUj?OQ3V[NVL74kd>GB2
 IeCeZToUkcQ21DKW<99;k22
@@ -6074,7 +6016,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_int_controller_@p@u@l@p_@s@e@c@u@r@e1_0
 vSNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_0
-R47
+R36
 !i10b 1
 !s100 5GkV1TXLNJlEQf:A:LcGC1
 IbP[b4U2LICWgmz0nJG=hf0
@@ -6096,7 +6038,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_@l0_buffer_@r@d@a@t@a_@i@n_@w@i@d@t@h128_0
 vSNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_1
-R47
+R36
 !i10b 1
 !s100 Ba[3Ik]?5zHlkm:5o225W2
 IO0^QklYS:Wf49fD8EBS3D1
@@ -6118,7 +6060,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_@l0_buffer_@r@d@a@t@a_@i@n_@w@i@d@t@h128_1
 vSNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_2
-R47
+R36
 !i10b 1
 !s100 hQ_`BVkH`dRcEi_G6jN>g1
 IE8:ziQd;Z^V;oU5B<T?cO2
@@ -6140,7 +6082,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_@l0_buffer_@r@d@a@t@a_@i@n_@w@i@d@t@h128_2
 vSNPS_CLOCK_GATE_HIGH_riscv_load_store_unit_0
-R60
+R1
 !i10b 1
 !s100 D:7L<COkb3ng4QCn]iX;03
 IJ22Go?]DNl;QWlmO@Ufi@3
@@ -6162,7 +6104,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_load_store_unit_0
 vSNPS_CLOCK_GATE_HIGH_riscv_load_store_unit_1
-R60
+R1
 !i10b 1
 !s100 KekZzej0n7;h>YgHgc<_c1
 IL`i<l6c7<h>`E6l:cYnWS1
@@ -6184,7 +6126,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_load_store_unit_1
 vSNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_0
-R47
+R36
 !i10b 1
 !s100 C[lM83mdSf^RFbJV2En?81
 I=am]Xd8Wh@^@b`09DbiOC0
@@ -6206,7 +6148,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_prefetch_@l0_buffer_0
 vSNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_1
-R47
+R36
 !i10b 1
 !s100 EY^W@KKLTIXLb1MVTN@PQ1
 Ij7bmW[YF<0C8:oC8c=58G0
@@ -6228,7 +6170,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_prefetch_@l0_buffer_1
 vSNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_2
-R47
+R36
 !i10b 1
 !s100 ZCD9>RlZNjdaQNRHk7XLS0
 ICAV>2TD5Gf4D:RWdB2FVN2
@@ -6250,7 +6192,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_prefetch_@l0_buffer_2
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_0
-R47
+R36
 !i10b 1
 !s100 4K46:`U]P<:ScoBJKB;`N3
 I2VWE`m@?XTnZ4eHCDR8?A1
@@ -6272,7 +6214,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_0
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_1
-R47
+R36
 !i10b 1
 !s100 4YijIL82G^faN?TNgZ@]S1
 I?O=D8gBg=3oN6m8H<mZOG1
@@ -6294,7 +6236,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_1
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_10
-R47
+R36
 !i10b 1
 !s100 ]ERa7h>^SL?:NdSc[D3Dd2
 IdI<5@Gc609CgAiK3blYK`1
@@ -6316,7 +6258,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_10
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_11
-R47
+R36
 !i10b 1
 !s100 `e>FKaMWVg2XgLDa0KVhg2
 IoG7b<jOOF9bYcRV7mEL`a1
@@ -6338,7 +6280,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_11
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_12
-R47
+R36
 !i10b 1
 !s100 d3S1jb136zjIE4YJT6QPm3
 I:dKQgnmk4Oa9_H@b;S>Pb3
@@ -6360,7 +6302,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_12
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_13
-R47
+R36
 !i10b 1
 !s100 ^mVVS?j^X1fUBmci@Kio10
 IQ>O_Sf6VV8QIU;MC6PK3z2
@@ -6382,7 +6324,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_13
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_14
-R47
+R36
 !i10b 1
 !s100 44I6S5]_Y3NgJh=iO_f@k3
 Il5CSBXVNcN[FKR;?AXVmn2
@@ -6404,7 +6346,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_14
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_15
-R47
+R36
 !i10b 1
 !s100 jShP<Qz8W:ZoS46lQ8>`52
 IbW2N1of[n>MWM_8<[hL1G3
@@ -6426,7 +6368,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_15
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_16
-R47
+R36
 !i10b 1
 !s100 J9zY:GR<75DJkTI:1PDb`2
 I]c9L5UNMlAB9Bg7;7z8;D3
@@ -6448,7 +6390,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_16
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_17
-R47
+R36
 !i10b 1
 !s100 3DO@5<T3f95?6on7KB_Nk3
 I64JD_ma6Za0ch<o9?zd@W0
@@ -6470,7 +6412,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_17
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_18
-R47
+R36
 !i10b 1
 !s100 DL1:RCJab[=?=G<f8@>YF2
 Ig@MO3UJ]0Y<aXcW0OFiGV2
@@ -6492,7 +6434,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_18
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_19
-R47
+R36
 !i10b 1
 !s100 5HSH2flX;Rb1fQLEWQ8_U3
 IY7Bca<6aR]zhTd3Gn^[ef0
@@ -6514,7 +6456,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_19
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_2
-R47
+R36
 !i10b 1
 !s100 k98ZH5M_zFE?LkiW`>2X]3
 I5]MX@X9Bn8ajA4neSMDN91
@@ -6536,7 +6478,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_2
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_20
-R47
+R36
 !i10b 1
 !s100 ClFo6<B51BORDmVFTSo110
 I?L@gkC08iPXV]5hg6Oi?>3
@@ -6558,7 +6500,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_20
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_21
-R47
+R36
 !i10b 1
 !s100 W81BL>L?RYzHScGf?YSfN0
 IYoEcoPDQ0HMhKzB_O^fib2
@@ -6580,7 +6522,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_21
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_22
-R47
+R36
 !i10b 1
 !s100 F7QKik1EIT]i@n`]VDmP21
 IfTA?KVBE[:h>l]^dY3i@d3
@@ -6602,7 +6544,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_22
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_23
-R47
+R36
 !i10b 1
 !s100 e1<]JYzN:cOcW`k;H:oTB3
 I9`c835U_l23m@FV<AKFR_0
@@ -6624,7 +6566,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_23
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_24
-R47
+R36
 !i10b 1
 !s100 IWflRo:L^NnQm9eM2C@VY2
 Iln6BBiBkNOWUCb=kd=f922
@@ -6646,7 +6588,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_24
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_25
-R47
+R36
 !i10b 1
 !s100 <iNJ4d0>G2d3PG0imz8GE2
 IeY4;Z[?dal<=Je:ERa>D_2
@@ -6668,7 +6610,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_25
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_26
-R47
+R36
 !i10b 1
 !s100 5Lk1=TPbBa::H2Z?j=K@X1
 IlP:13cYXMCWU?LYYV1m:j2
@@ -6690,7 +6632,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_26
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_27
-R47
+R36
 !i10b 1
 !s100 QMGND8K>zlVf5NI57<GYI2
 Ie9`7VAUj`k3KNN>de067;1
@@ -6712,7 +6654,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_27
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_28
-R47
+R36
 !i10b 1
 !s100 <5GjhkVU@caMgnlJO;fPo1
 I_7P5RKe?XzdZh[Sa?NLIX0
@@ -6734,7 +6676,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_28
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_29
-R47
+R36
 !i10b 1
 !s100 o3eB3cX2mbnb@;W]>[Ig<0
 I@@W0IkK`2k6<Ce@dSV5NK0
@@ -6756,7 +6698,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_29
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_3
-R47
+R36
 !i10b 1
 !s100 Mg5UAz7L8DCTG25QEGdE@2
 IDRjk65Rb2bDO?`GczSG`d2
@@ -6778,7 +6720,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_3
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_30
-R47
+R36
 !i10b 1
 !s100 LVJlPldiA=g=:cC6`TgO41
 I:g4zamMQFdn0568=N0Lc:0
@@ -6800,7 +6742,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_30
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_4
-R47
+R36
 !i10b 1
 !s100 _^fiUGDJV^4fmAKKV0E4`1
 I2Q<Ki1d1NffYj_C`?D90m3
@@ -6822,7 +6764,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_4
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_5
-R47
+R36
 !i10b 1
 !s100 8Ej22iX<BY]`o^cN4O_n10
 IRBCEEnV<<j^gTVWejCGnb1
@@ -6844,7 +6786,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_5
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_6
-R47
+R36
 !i10b 1
 !s100 n@33C9e?dW:m40Q>[;eUB1
 IjLYDQ[b9mV7XZ;Sd`>IID0
@@ -6866,7 +6808,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_6
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_7
-R47
+R36
 !i10b 1
 !s100 MmleA;l]1h2J8=VY<GR[X3
 IV0634:C_FhM`FJ5d1UH;N3
@@ -6888,7 +6830,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_7
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_8
-R47
+R36
 !i10b 1
 !s100 D0DT9gZH=DE^gDo29:Y9A3
 Ik[OB;iVk]T9JS;1WIaC;[0
@@ -6910,7 +6852,7 @@ R10
 R11
 n@s@n@p@s_@c@l@o@c@k_@g@a@t@e_@h@i@g@h_riscv_register_file_@a@d@d@r_@w@i@d@t@h6_@d@a@t@a_@w@i@d@t@h32_@f@p@u0_@zfinx0_8
 vSNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_9
-R47
+R36
 !i10b 1
 !s100 a;J9a_N3fMi>Zo@9;kzY<0
 IeFGgW:CLTmQL[C4ClNjM63
@@ -6935,13 +6877,13 @@ vtb_top
 R20
 R21
 !i10b 1
-!s100 1S4_lm7I@Rm>EN=BdlDPh0
-IBo`@]bjD8A7>C8c@hYaiE3
+!s100 8Q5V5L008h9HhQF:jkWKG3
+IJIoMN<_YHD<j9FE53ch6l3
 R2
 !s105 tb_top_lbist_sv_unit
 S1
 R0
-w1641924671
+w1641999254
 8/home/s267517/assignment/riscv/tb/core/tb_top_lbist.sv
 F/home/s267517/assignment/riscv/tb/core/tb_top_lbist.sv
 L0 16
@@ -7072,29 +7014,29 @@ R19
 R11
 n@t@b@u@f_@x8
 Etest_counter
-Z76 w1641811620
-R42
+Z68 w1641811620
+R43
 R31
 R32
 R0
-Z77 8/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/test_counter.vhd
-Z78 F/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/test_counter.vhd
+Z69 8/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/test_counter.vhd
+Z70 F/home/s267517/assignment/riscv/rtl/lbist_blocks/test_counter/test_counter.vhd
 l0
 L6
 VEN:;QiEgcblhVeQWTePSa3
 !s100 ^`5Y^E7Yj7A>_9=R_bfDe0
 R35
 31
-R12
-!i10b 1
-R16
 R36
+!i10b 1
+R7
 R37
-!i113 0
 R38
+!i113 0
 R39
+R40
 Astructure
-R42
+R43
 R31
 R32
 DEx4 work 12 test_counter 0 22 EN:;QiEgcblhVeQWTePSa3
@@ -7104,14 +7046,14 @@ V5eFVmLO9Bc_C7ZgHdHhhk3
 !s100 FZg=Xaz]U`5Y<G?m<9bS91
 R35
 31
-R12
-!i10b 1
-R16
 R36
+!i10b 1
+R7
 R37
-!i113 0
 R38
+!i113 0
 R39
+R40
 vTINV_X1
 R12
 !i10b 1

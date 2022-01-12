@@ -28,15 +28,12 @@ module tb_top
     const time RESP_ACQUISITION_DEL = CLK_PERIOD * 0.9;
     const time RESET_DEL = STIM_APPLICATION_DEL;
     const int  RESET_WAIT_CYCLES  = 4;
-
+	const int START_TEST_CYCLES	= 9*CLK_PERIOD + 0.9ns;
 
     // clock and reset for tb
     logic                   clk   = 'b1;
     logic                   rst_n = 'b0;
 	
-	logic	test_mode = 'b1;
-
-
     // cycle counter
     int unsigned            cycle_cnt_q;
 
@@ -45,13 +42,20 @@ module tb_top
     logic                   tests_failed;
     logic                   exit_valid;
     logic [31:0]            exit_value;
+	
+	logic 			go_nogo;
+	logic			test_over = 'b0;
 
     // signals for ri5cy
     logic                   fetch_enable;
+	logic			test_mode;
+	logic			normal_test;
 
     // make the core start fetching instruction immediately
     assign fetch_enable = '1;
-	assign clock_en_i = '1;
+	assign clock_en 	= '1;
+	assign test_mode	= '1;	// Test mode in ScanCompression mode
+	//assign normal_test	= '0;
 
     // allow vcd dump
     initial begin
@@ -102,6 +106,14 @@ module tb_top
             $display("reset deasserted", $time);
 
     end: reset_gen
+	
+	/***********************************************/
+	// TEST CONTROLLER
+	initial begin: test_control
+		normal_test = 1'b0;
+		#START_TEST_CYCLES normal_test = 1'b1;
+	end: test_control
+	/***********************************************/
 
     // set timing format
     initial begin: timing_format
@@ -140,7 +152,7 @@ module tb_top
                 $display("EXIT FAILURE: %d", exit_value);
             $finish;
         end
-    end
+    end	
 
     //PoliTo: Memory map check
     //always_ff @(posedge clk, negedge rst_n) begin
@@ -163,8 +175,11 @@ module tb_top
         (.clk_i          ( clk          ),
          .rst_ni         ( rst_n        ),
          .fetch_enable_i ( fetch_enable ),
-		.test_mode ( test_mode 	),
-		.clock_en_i( clk_en_i	),
+	.test_mode_i 	( test_mode 	),
+	.clock_en_i( clock_en	),
+	.normal_test_i	( normal_test	),
+	.go_nogo_o	( go_nogo	),
+	.test_over_o	( test_over	),
          .tests_passed_o ( tests_passed ),
          .tests_failed_o ( tests_failed ),
          .exit_valid_o   ( exit_valid   ),

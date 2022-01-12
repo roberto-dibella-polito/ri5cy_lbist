@@ -50,14 +50,15 @@ begin
 			en 	=> en,
 			rst_n	=> rst_n,
 			din	=> tmp_in(24*i+23 downto 24*i),
-			dout	=> dout(24*i+23 downto 24*i) );
+			dout	=> tmp_out(24*i+23 downto 24*i) );
 	end generate;
-
+	
 	compare: process(tmp_out)
 	begin
 		if( tmp_out = EXPECTED_SIGNATURE ) then sign_ok <= '1';
 		else sign_ok <= '0';
 		end if;
 	end process;
-
+	
+	dout <= tmp_out;	
 end structure;		

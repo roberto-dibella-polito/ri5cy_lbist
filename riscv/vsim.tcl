@@ -17,7 +17,8 @@ if { $env(RUN_GUI) == 1 } {
 	#source $env(TB_DIR)/software.tcl
 
 	if { $env(RUN_GATE) == 1 } {
-		source $env(TB_DIR)/waves_gate.tcl
+		#source $env(TB_DIR)/waves_gate.tcl
+		source $env(TB_DIR)/waves_gate_lbist.tcl
 	} {
 		log -r *
 		source $env(TB_DIR)/software.tcl

@@ -23,28 +23,32 @@ entity bist_controller is
 		rst_tpg_n		: out std_logic;
 		rst_out_eval_n		: out std_logic; 
 		
-		go_nogo			: out std_logic
+		go_nogo			: out std_logic;
+		test_over		: out std_logic;
+		testing			: out std_logic
 	); 
 end entity;
 
 architecture bhv of bist_controller is 
    
 	type TYPE_STATE is (
-		RESET, IDLE, START_TEST, TEST, EVALUATION
+		RESET, IDLE, START_TEST, TEST, EVALUATION, TEST_RESULT
 	);
 	signal CURRENT_STATE : TYPE_STATE := RESET;
 	signal NEXT_STATE : TYPE_STATE := IDLE;
 
 begin
 
-	go_nogo <= signature_check;	
+	--go_nogo <= signature_check;	
 
 	P_OPC : process(clk, rst)		
 	begin
 		if rst='0' then
 	        	CURRENT_STATE <= reset;
+			go_nogo	<= '0';
 		elsif (clk ='1' and Clk'EVENT) then 
 			CURRENT_STATE <= NEXT_STATE;
+			go_nogo	<= signature_check;
 		end if;
 	end process P_OPC;
 	
@@ -76,7 +80,7 @@ begin
 				end if;
 			
 			when EVALUATION =>
-				NEXT_STATE <= RESET;
+				NEXT_STATE <= TEST_RESULT;
 			
 			when others => 
 				NEXT_STATE <= RESET;
@@ -88,58 +92,70 @@ begin
 	begin
 		case CURRENT_STATE is	
 			when RESET => 
-				test_mux_sel	<= '0'; 
-				out_eval_en	<= '0';
-				tpg_en		<= '0';
-				count_enable	<= '0';
+				test_mux_sel		<= '0'; 
+				out_eval_en		<= '0';
+				tpg_en			<= '0';
+				count_enable		<= '0';
 				rst_test_counter_n	<= '0';
 				rst_tpg_n		<= '0';
-				rst_out_eval_n		<= '0'; 
+				rst_out_eval_n		<= '0';
+				testing			<= '0';
+				test_over		<= '0'; 
 
 			when IDLE => 
-				test_mux_sel	<= '0'; 
-				out_eval_en	<= '0';
-				tpg_en		<= '0';
-				count_enable	<= '0';
+				test_mux_sel		<= '0'; 
+				out_eval_en		<= '0';
+				tpg_en			<= '0';
+				count_enable		<= '0';
+				rst_test_counter_n	<= '1';
+				rst_tpg_n		<= '1';
+				rst_out_eval_n		<= '1'; 
+				testing			<= '0';
+				test_over		<= '0'; 
 
-				rst_test_counter_n	<= '1';
-				rst_tpg_n		<= '1';
-				rst_out_eval_n		<= '1'; 
 			when START_TEST => 
-				test_mux_sel	<= '1'; 
-				out_eval_en	<= '0';
-				tpg_en		<= '1';
-				count_enable	<= '1';
+				test_mux_sel		<= '1'; 
+				out_eval_en		<= '0';
+				tpg_en			<= '1';
+				count_enable		<= '1';
 				rst_test_counter_n	<= '1';
 				rst_tpg_n		<= '1';
 				rst_out_eval_n		<= '1'; 
+				testing			<= '1';
+				test_over		<= '0'; 
 
 			when TEST =>
-				test_mux_sel	<= '1'; 
-				out_eval_en	<= '1';
-				tpg_en		<= '1';
-				count_enable	<= '1';
+				test_mux_sel		<= '1'; 
+				out_eval_en		<= '1';
+				tpg_en			<= '1';
+				count_enable		<= '1';
 				rst_test_counter_n	<= '1';
 				rst_tpg_n		<= '1';
-				rst_out_eval_n		<= '1'; 
+				rst_out_eval_n		<= '1';
+				testing			<= '1'; 
+				test_over		<= '0'; 
 
 			when EVALUATION =>
-				test_mux_sel	<= '0'; 
-				out_eval_en	<= '0';
-				tpg_en		<= '0';
-				count_enable	<= '0';
+				test_mux_sel		<= '0'; 
+				out_eval_en		<= '0';
+				tpg_en			<= '0';
+				count_enable		<= '0';
 				rst_test_counter_n	<= '1';
 				rst_tpg_n		<= '1';
-				rst_out_eval_n		<= '1'; 
-
+				rst_out_eval_n		<= '1';
+				testing			<= '1'; 
+				test_over		<= '1'; 
+			
 			when others => 
-				test_mux_sel	<= '0'; 
-				out_eval_en	<= '0';
-				tpg_en		<= '0';
-				count_enable	<= '0';
+				test_mux_sel		<= '0'; 
+				out_eval_en		<= '0';
+				tpg_en			<= '0';
+				count_enable		<= '0';
 				rst_test_counter_n	<= '0';
 				rst_tpg_n		<= '0';
 				rst_out_eval_n		<= '0'; 
+				testing			<= '0';
+				test_over		<= '0'; 
 		end case; 	
 	end process P_OUTPUTS;
 end architecture;

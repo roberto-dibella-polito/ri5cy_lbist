@@ -22,8 +22,12 @@ module riscv_wrapper
      input logic         fetch_enable_i,
      
 	// ADDED FOR TESTING
-    	input logic	 test_mode,
-     	//input logic	 clock_en_i,
+    	input logic	test_mode_i,
+     	input logic	clock_en_i,
+	input logic	normal_test_i,
+		
+	output logic	go_nogo_o,
+	output logic	test_over_o,	
 	
      output logic        tests_passed_o,
      output logic        tests_failed_o,
@@ -70,8 +74,11 @@ module riscv_wrapper
          .clk_i                  ( clk_i                 ),
          .rst_ni                 ( rst_ni                ),
 
-         .clock_en_i             ( '1                    ),
-	 .test_mode		 ( test_mode_i		 ),	
+         .clock_en_i             ( clock_en_i            ),
+	 .test_mode_i		 ( test_mode_i		 ),	
+	.normal_test_i		( normal_test_i		),
+	.go_nogo_o		( go_nogo_o		),
+	.test_over_o		( test_over_o		),
 
          .boot_addr_i            ( BOOT_ADDR             ),
          .core_id_i              ( 4'h0                  ),
