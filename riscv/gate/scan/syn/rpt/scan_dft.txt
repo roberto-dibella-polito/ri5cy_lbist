@@ -15,7 +15,7 @@ Preview_dft report
 For    : 'Insert_dft' command
 Design : riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
 Version: R-2020.09-SP2
-Date   : Sat Jan  8 22:20:35 2022
+Date   : Wed Jan 12 22:32:11 2022
 ****************************************
 
 

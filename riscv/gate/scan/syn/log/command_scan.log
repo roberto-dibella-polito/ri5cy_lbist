@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version R-2020.09-SP2 for linux64 -- Dec 03, 2020
-#@ # Date:   Sat Jan  8 22:16:45 2022
+#@ # Date:   Wed Jan 12 22:42:25 2022
 #@ # Run by: s267517@po.polito.it
 #@ 
 
@@ -6686,16 +6686,10 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 
 #@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.setup
 
-source -echo -verbose /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/scan_nangate.tcl
-#@ # -- Starting source /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/scan_nangate.tcl
+source -echo -verbose /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/bist_nangate.tcl
+#@ # -- Starting source /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/bist_nangate.tcl
 
-#@ ##################### RI5CY SCAN INSERTION - Version 2 ##########################################
-#@ # Script that inserts scan chains to the RI5CY gate-level netlist.				#	
-#@ # This version is based on the template and the directory structure provided.			#
-#@ #												#
-#@ # Output files:	riscv_core_scan.v		Top-level entity with scan insertion		#
-#@ # 		riscv_core_scan.spf		STIL procedure for scan design			#
-#@ # 		riscv_core_scancompress.spf	STIL procedure for scan-compressed design	#
+#@ ##################### RI5CY SCAN INSERTION with LBIST  ##########################################
 #@ #################################################################################################
 #@ 
 #@ set GATE_PATH			../output
@@ -6720,62 +6714,38 @@ source -echo -verbose /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/sc
 #@ # -- End source ../bin/NangateOpenCell.dc_setup_scan.tcl
 
 #@ 
-#@ ##########################################
-#@ # VARIABLES for SCAN INSERTION
-#@ # Change it here
 #@ 
-#@ set scanChains 7
-#@ set scanCompress 25
+#@ read_ddc {$TOPLEVEL}_scan.ddc
 #@ 
-#@ ##########################################
+#@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/mux2to1.vhd
+#@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/bist_controller.vhd
+#@ analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v
+#@ analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/phase_shifter/phase_shifter.v
+#@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/test_counter/counter.vhd
+#@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/test_counter/test_counter.vhd
+#@ analyze -format verilog -work work ../../../../rtl/lbist_blocks/out_eval/misr.v
+#@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/out_eval/out_eval.vhd
+#@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/lbist_wrapper.vhd
+#@ analyze -format sverilog -work work ../../../../tb/riscv_wrapper_gate_lbist.sv
 #@ 
-#@ read_ddc $TOPLEVEL.ddc
+#@ #current_design 
+#@ 
+#@ 
 #@ #link
 #@ #check_design
-#@ compile_ultra -incremental -gate_clock -scan -no_autoungroup
+#@ #compile
 #@ 
-#@ 
-#@ set_dft_clock_gating_pin [get_cells * -hierarchical -filter "@ref_name =~ SNPS_CLOCK_GATE*"] -pin_name TE
-#@ 
-#@ 
-#@ report_area > ${REPORT_PATH}/area_pre_dft.txt
-#@ set_dft_configuration -scan_compression enable
-#@ 
-#@ set test_default_scan_style multiplexed_flip_flop
-#@ 
-#@ ### Set pins functionality ###
-#@ set_dft_signal  -view existing_dft -type ScanEnable -port test_en_i
-#@ set_dft_signal  -view spec -type ScanEnable -port test_en_i 
-#@ 
-#@ 
-#@ set_scan_element false NangateOpenCellLibrary/DLH_X1
-#@ 
-#@ 
-#@ set_scan_configuration -chain_count $scanChains
-#@ #set_scan_compression_configuration -chain_count $scanCompress
-#@ set_scan_compression_configuration -max_length 100
-#@ 
-#@ create_test_protocol -infer_asynch -infer_clock
-#@ dft_drc
-#@ preview_dft > ${REPORT_PATH}/scan_dft.txt
-#@ insert_dft
-#@ 
-#@ streaming_dft_planner
-#@ 
-#@ change_names -rules verilog -hierarchy
-#@ 
-#@ report_scan_path -test_mode all > ${REPORT_PATH}/chains.txt
-#@ 
-#@ report_area > ${REPORT_PATH}/area_post_dft.txt
-#@ 
-#@ write -hierarchy -format verilog -output "${GATE_PATH}/${TOPLEVEL}_scan.v"
-#@ write_sdf -version 3.0 "${GATE_PATH}/${TOPLEVEL}_scan.sdf"
-#@ write_sdc "${GATE_PATH}/${TOPLEVEL}_scan.sdc"
-#@ write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}_scan.spf" -test_mode Internal_scan
-#@ write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}_scancompress.spf" -test_mode ScanCompression_mode
-#@ 
+#@ #write -hierarchy -format verilog -output "${GATE_PATH}/${TOPLEVEL}_lbist.v"
+#@ #write_sdf -version 3.0 "${GATE_PATH}/${TOPLEVEL}_lbist.sdf"
+#@ #write_sdc "${GATE_PATH}/${TOPLEVEL}_lbist.sdc"
 #@ #quit
-#@ # -- End source /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/scan_nangate.tcl
+#@ # -- End source /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/bist_nangate.tcl
 
-report_timing > ../rpt/timing.txt
+analyze -format vhdl ../../../../rtl/riscv_scan_core_lbist.vhd
+current_design
+elaborate
+current_design riscv_core
+elaborate riscv_core -work work
+current_design
+link
 exit

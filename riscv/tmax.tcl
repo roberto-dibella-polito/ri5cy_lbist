@@ -3,9 +3,19 @@ set_environment_viewer -instance_names
 set_messages -log tmax.log -replace
 
 ## Build and DRC
+read_netlist ../rtl/lbist_blocks/mux2to1.vhd
+read_netlist ../rtl/lbist_blocks/tpg/lfsr/lfsr.v
+read_netlist ../rtl/lbist_blocks/tpg/phase_shifter/phase_shifter.v
+read_netlist ../rtl/lbist_blocks/out_eval/misr.v
+read_netlist ../rtl/lbist_blocks/out_eval/out_eval.vhd
+read_netlist ../rtl/lbist_blocks/test_counter/counter.vhd
+read_netlist ../rtl/lbist_blocks/test_counter/test_counter.vhd
+read_netlist ../rtl/lbist_blocks/bist_controller.vhd
+read_netlist ../rtl/lbist_blocks/lbist_wrapper.vhd
+
 read_netlist ../gate/NangateOpenCellLibrary.tlib -library
-read_netlist ../gate/riscv_core.v
-run_build_model riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
+read_netlist ../gate/scan/syn/output/riscv_core_scan.v
+run_build_model riscv_core
 run_drc
 
 ## Load and check patterns

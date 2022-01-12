@@ -68,6 +68,7 @@ report_scan_path -test_mode all > ${REPORT_PATH}/chains.txt
 report_area > ${REPORT_PATH}/area_post_dft.txt
 
 write -hierarchy -format verilog -output "${GATE_PATH}/${TOPLEVEL}_scan.v"
+write_file -format ddc -hierarchy -output "${GATE_PATH}/${TOPLEVEL}_scan.ddc" 
 write_sdf -version 3.0 "${GATE_PATH}/${TOPLEVEL}_scan.sdf"
 write_sdc "${GATE_PATH}/${TOPLEVEL}_scan.sdc"
 write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}_scan.spf" -test_mode Internal_scan
