@@ -182,7 +182,7 @@ begin
 		
 	
 	-- TEST COUNTER
-	test_cnt: test_counter generic map( TEST_DURATION => to_integer(unsigned(x"FFFFFF")), TEST_START => 98 ) port map (
+	test_cnt: test_counter generic map( TEST_DURATION => 16#FFFFFF#, TEST_START => 98 ) port map (
 		clk		=> clk_i,
 		rst_n		=> rst_count_i,
 		en		=> count_en_i,

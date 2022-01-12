@@ -31,6 +31,7 @@ if { $env(RUN_GATE) == 1 } {
 }
 
 run 100 ns
+#run 167772200 ns
 
 if { $env(RUN_GUI) != 1 } {
 	quit

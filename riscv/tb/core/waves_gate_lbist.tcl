@@ -39,4 +39,9 @@ sim:/tb_top/riscv_wrapper_i/riscv_core_i/core/test_so5 \
 sim:/tb_top/riscv_wrapper_i/riscv_core_i/core/test_so6 \
 sim:/tb_top/riscv_wrapper_i/riscv_core_i/core/test_so7 }}\
 -divider "TestClock" \
-sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/test_cnt/cnt_i
+sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/test_cnt/cnt_i \
+sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/test_cnt/test_started \
+sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/test_cnt/test_finished \
+-divider "Output Evaluator" \
+sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/out_eval/dout \
+sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/out_eval/en
