@@ -1,0 +1,15 @@
+SpyGlass DashBoard,,,,,,,,,,,,,, 
+Created: Thu Jan 13 16:38:54 CET 2022 by s267517,,,,,,,,,,,,,, 
+riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800,,,,,,,,,,,
+,Category,Run status,Design objective,,,,,Success criteria,Pass/Fail status,Graph
+,Summary,Completed,,,,,,Passed objectives = 3,Pass
+,DFT,Completed,Stuck-at fault coverage = 97.6%,,,,,,Stuck-at fault coverage > 95%,Pass
+,DFT,Completed,Stuck-at test coverage = 100.0%,,,,,,Stuck-at test coverage > 95%,Pass
+,DFT,Completed,Percentage of scannable flops = 100.0%,,,,,,Percentage of scannable flops = 100%,Pass
+
+,Quality goals,Run status,Unresolved Messages,,,Waived Messages,,Success criteria,Pass/Fail status,Graph
+,,,FATAL,ERROR,WARNING,ERROR,WARNING,,,,
+,Summary,Completed,0,0,0,0,0,Passed goals = 1,Pass
+,sg_dft_testpoint_analysis::,Completed,0,0,0,0,0, Fatal =0; Error =0,Pass
+
+ Note: The SpyGlass configuration file used to collect data for this report is: <NA>,,,,,,,,,,,,,,

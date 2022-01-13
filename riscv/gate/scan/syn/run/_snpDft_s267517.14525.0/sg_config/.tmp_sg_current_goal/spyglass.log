@@ -1,0 +1,17 @@
+SpyGlass run started at 04:18:43 PM on Jan 13 2022 
+
+SpyGlass Predictive Analyzer(R) - Version SpyGlass_vR-2020.12
+Synopsys TestMAX(TM)
+Last compiled on Nov 30 2020
+
+All Rights Reserved. Use, disclosure or duplication
+without prior written permission of Synopsys Inc. is prohibited.
+Technical support: email spyglass_support@synopsys.com.
+
+Loading Policy: spyglass (Version: SpyGlass_vR-2020.12) from path: /eda/synopsys/2020-21/RHELx86/SPYGLASS_2020.12/SPYGLASS_HOME/policies/spyglass
+Loading Shared library libspyglassrules-Linux4.spyso from /eda/synopsys/2020-21/RHELx86/SPYGLASS_2020.12/SPYGLASS_HOME/lib/libspyglassrules-Linux4.spyso 
+Loading Shared library libsdcInitRules-Linux4.spyso from /eda/synopsys/2020-21/RHELx86/SPYGLASS_2020.12/SPYGLASS_HOME/lib/libsdcInitRules-Linux4.spyso 
+Loading Shared library librmerules-Linux4.spyso from /eda/synopsys/2020-21/RHELx86/SPYGLASS_2020.12/SPYGLASS_HOME/lib/librmerules-Linux4.spyso 
+Version of Policy 'dft': SpyGlass_vR-2020.12
+Loading Shared library libDftRules-Linux4.spyso from /eda/synopsys/2020-21/RHELx86/SPYGLASS_2020.12/SPYGLASS_HOME/policies/dft/libDftRules-Linux4.spyso 
+Version of Policy 'dft_dsm': SpyGlass_vR-2020.12

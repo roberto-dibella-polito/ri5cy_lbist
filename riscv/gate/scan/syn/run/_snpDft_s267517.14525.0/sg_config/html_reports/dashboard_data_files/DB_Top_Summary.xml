@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="file://Dashboard/DB_Top_Summary.xsd">
+<!-- This file schema is internal to SpyGlass DashBoard and subject to change in future without notice --> 
+	<category name="Quality" fail="0" in-process="0" pass="100">
+
+		 <item name="sg_dft_testpoint_analysis" fail="0" in-process="0" pass="100" link="dashboard_data_files/sg_dft_testpoint_analysis.xml"/>
+	</category>
+	<category name="DFT" fail="40" in-process="0" pass="60">
+
+		 <item name="Stuck-at fault coverage" fail="0" in-process="0" pass="100" link="dashboard_data_files/DFT_stuck_at_fault.xml"/>
+
+		 <item name="Stuck-at test coverage" fail="0" in-process="0" pass="100" link="dashboard_data_files/DFT_stuck_at_test.xml"/>
+
+		 <item name="Percentage of scannable flops" fail="0" in-process="0" pass="100" link="dashboard_data_files/DFT_scannable_flops.xml"/>
+
+		 <item name="Random pattern fault coverage" fail="100" in-process="0" pass="0" link="dashboard_data_files/DFT_random_pattern_fault.xml"/>
+
+		 <item name="Random pattern test coverage" fail="100" in-process="0" pass="0" link="dashboard_data_files/DFT_random_pattern_test.xml"/>
+
+	</category>
+
+<collapse_all>false </collapse_all>
+<title><![CDATA[]]></title>
+<label><![CDATA[]]></label>
+</items>

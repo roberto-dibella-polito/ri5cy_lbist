@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<modules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  	 xsi:noNamespaceSchemaLocation="file://Dashboard/DB_Block_Summary.xsd">
+<!-- This file schema is internal to SpyGlass DashBoard and subject to change in future without notice --> 
+<module name="riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800" header_link="dashboard_data_files/DashBoard_Main.xml#riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800"> 
+			  <design_objectives> 
+<category name="DFT">
+ <item name="Stuck-at fault coverage" header_link="dashboard_data_files/DFT_stuck_at_fault.xml" pass_status="Pass" cell_link="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DFT_stuck_at_fault_sg_dft_testpoint_analysis-trend.xml" date_time="01/13/2022 (16:38)"/> 
+ <item name="Stuck-at test coverage" header_link="dashboard_data_files/DFT_stuck_at_test.xml" pass_status="Pass" cell_link="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DFT_stuck_at_test_sg_dft_testpoint_analysis-trend.xml" date_time="01/13/2022 (16:38)"/> 
+ <item name="Percentage of scannable flops" header_link="dashboard_data_files/DFT_scannable_flops.xml" pass_status="Pass" cell_link="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DFT_scannable_flops_sg_dft_testpoint_analysis-trend.xml" date_time="01/13/2022 (16:38)"/> 
+ <item name="Random pattern fault coverage" header_link="dashboard_data_files/DFT_random_pattern_fault.xml" pass_status="Fail" cell_link="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DFT_random_pattern_fault_sg_dft_testpoint_analysis-trend.xml" date_time="01/13/2022 (16:38)"/> 
+ <item name="Random pattern test coverage" header_link="dashboard_data_files/DFT_random_pattern_test.xml" pass_status="Fail" cell_link="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DFT_random_pattern_test_sg_dft_testpoint_analysis-trend.xml" date_time="01/13/2022 (16:38)"/> 
+</category> 
+</design_objectives> 
+<quality_goals>
+<goal name="sg_dft_testpoint_analysis" header_link="dashboard_data_files/sg_dft_testpoint_analysis.xml" pass_status="Pass" cell_link="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_sg_dft_testpoint_analysis-trend.xml" date_time="01/13/2022 (16:38)"/>
+ </quality_goals>
+<oldest_update>01/13/2022 (16:38) </oldest_update>
+  		</module> 
+</modules>

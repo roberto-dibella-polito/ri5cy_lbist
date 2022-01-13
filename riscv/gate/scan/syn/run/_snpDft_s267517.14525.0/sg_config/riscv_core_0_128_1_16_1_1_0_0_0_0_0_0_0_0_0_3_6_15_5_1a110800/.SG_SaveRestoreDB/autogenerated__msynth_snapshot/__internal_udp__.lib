@@ -1,0 +1,116 @@
+library (_udp_to_dotlib_) {
+ 	cell(SDFFR_X1_5_X1_udp) {
+ 		pin(Q) {
+			direction : output;
+			function : "IQ";
+		}
+ 		pin(RN) {
+			direction : input;
+		}
+ 		pin(CK) {
+			direction : input;
+		}
+ 		pin(SE) {
+			direction : input;
+		}
+ 		pin(D) {
+			direction : input;
+		}
+ 		pin(SI) {
+			direction : input;
+		}
+ 		ff(IQ,IQN) {
+ 			clear : "!RN";
+ 			next_state : "  (SE & SI) | ((!SE) & D) ";
+ 			clocked_on : "CK";
+ 		}
+	}
+ 	cell(SDFFR_X1_6_X1_udp) {
+ 		pin(QN) {
+			direction : output;
+			function : " ((!Q))";
+			timing() {
+				related_pin : "Q";
+			}
+		}
+ 		pin(Q) {
+			direction : input;
+		}
+ 	}
+ 	cell(SDFFS_X1_5_X1_udp) {
+ 		pin(Q) {
+			direction : output;
+			function : "IQ";
+		}
+ 		pin(SN) {
+			direction : input;
+		}
+ 		pin(CK) {
+			direction : input;
+		}
+ 		pin(SE) {
+			direction : input;
+		}
+ 		pin(D) {
+			direction : input;
+		}
+ 		pin(SI) {
+			direction : input;
+		}
+ 		ff(IQ,IQN) {
+ 			preset : "!SN";
+ 			next_state : "  (SE & SI) | ((!SE) & D) ";
+ 			clocked_on : "CK";
+ 		}
+	}
+ 	cell(SDFFS_X1_6_X1_udp) {
+ 		pin(QN) {
+			direction : output;
+			function : " ((!Q))";
+			timing() {
+				related_pin : "Q";
+			}
+		}
+ 		pin(Q) {
+			direction : input;
+		}
+ 	}
+ 	cell(SDFFR_X2_5_X1_udp) {
+ 		pin(Q) {
+			direction : output;
+			function : "IQ";
+		}
+ 		pin(RN) {
+			direction : input;
+		}
+ 		pin(CK) {
+			direction : input;
+		}
+ 		pin(SE) {
+			direction : input;
+		}
+ 		pin(D) {
+			direction : input;
+		}
+ 		pin(SI) {
+			direction : input;
+		}
+ 		ff(IQ,IQN) {
+ 			clear : "!RN";
+ 			next_state : "  (SE & SI) | ((!SE) & D) ";
+ 			clocked_on : "CK";
+ 		}
+	}
+ 	cell(SDFFR_X2_6_X1_udp) {
+ 		pin(QN) {
+			direction : output;
+			function : " ((!Q))";
+			timing() {
+				related_pin : "Q";
+			}
+		}
+ 		pin(Q) {
+			direction : input;
+		}
+ 	}
+}

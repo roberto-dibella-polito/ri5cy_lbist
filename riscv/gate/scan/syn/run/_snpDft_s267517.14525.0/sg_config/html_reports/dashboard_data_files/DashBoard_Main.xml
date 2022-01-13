@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<modules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  	 xsi:noNamespaceSchemaLocation="file://Dashboard/DashBoard_Main.xsd">
+<!-- This file schema is internal to SpyGlass DashBoard and subject to change in future without notice --> 
+<module name="riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800">
+		      <design_data>
+		<category name="DFT">
+			<item name="Stuck-at fault coverage = 97.6%" tooltip="" date_time="" run_status="Completed" link="" success_criteria="Stuck-at fault coverage > 95%" pass_status="Pass" graph="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DFT_stuck_at_fault_sg_dft_testpoint_analysis-trend.xml" run_link="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_sg_config_sg_dft_testpoint_analysis.sh">
+			</item>
+			<item name="Stuck-at test coverage = 100.0%" tooltip="" date_time="" run_status="Completed" link="" success_criteria="Stuck-at test coverage > 95%" pass_status="Pass" graph="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DFT_stuck_at_test_sg_dft_testpoint_analysis-trend.xml" run_link="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_sg_config_sg_dft_testpoint_analysis.sh">
+			</item>
+			<item name="Percentage of scannable flops = 100.0%" tooltip="" date_time="" run_status="Completed" link="" success_criteria="Percentage of scannable flops = 100%" pass_status="Pass" graph="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DFT_scannable_flops_sg_dft_testpoint_analysis-trend.xml" run_link="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_sg_config_sg_dft_testpoint_analysis.sh">
+			</item>
+			<item name="Random pattern fault coverage = 58.9%" tooltip="" date_time="" run_status="Completed" link="" success_criteria="Random pattern fault coverage > 80%" pass_status="Fail" graph="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DFT_random_pattern_fault_sg_dft_testpoint_analysis-trend.xml" run_link="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_sg_config_sg_dft_testpoint_analysis.sh">
+			</item>
+			<item name="Random pattern test coverage = 60.3%" tooltip="" date_time="" run_status="Completed" link="" success_criteria="Random pattern test coverage > 80%" pass_status="Fail" graph="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DFT_random_pattern_test_sg_dft_testpoint_analysis-trend.xml" run_link="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_sg_config_sg_dft_testpoint_analysis.sh">
+			</item>
+		</category>
+<summary_Main name="Summary" run_status="Not completed" success_criteria="Failed objectives = 2" pass_status="Fail"/>
+<summary_Pass name="Summary" run_status="Completed" success_criteria="Passed objectives = 3" pass_status="Pass"/>
+<summary_Fail name="Summary" run_status="Not completed" success_criteria="Failed objectives = 2" pass_status="Fail"/>
+ </design_data>
+ <quality_data>
+<goal name="sg_dft_testpoint_analysis" link="data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_sg_dft_testpoint_analysis_summary.xml" run_status="Completed" end_time="01-13-2022 16:38:52" run_time="00:19:54 (1194 secs)" fatal="0" error="0" warning="0" waived-error="0" waived-warning="0" success_criteria=" Fatal =0, Error =0" pass_status="Pass" graph="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_sg_dft_testpoint_analysis-trend.xml" run_link="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_sg_config_sg_dft_testpoint_analysis.sh" />
+<summary_Main name="Summary" run_status="Completed" fatal="0" error="0" warning="0" waived-error="0" waived-warning="0" success_criteria="Failed goals = 0" pass_status="Pass" graph="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800-quality-summary.xml" />
+<summary_Pass name="Summary" run_status="Completed" fatal="0" error="0" warning="0" waived-error="0" waived-warning="0" success_criteria="Passed goals = 1" pass_status="Pass" graph="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800-quality-summary.xml" />
+<summary_Fail name="Summary" run_status="" success_criteria="Failed goals = 0" pass_status="" graph="dashboard_data_files/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800-quality-summary.xml" />
+ </quality_data>
+ </module>
+<collapse_all>false</collapse_all>
+<run_link>false</run_link>
+<title><![CDATA[]]></title>
+<label><![CDATA[]]></label>
+ </modules>
