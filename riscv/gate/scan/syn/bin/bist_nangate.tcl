@@ -13,9 +13,6 @@ set search_path [ join "$GATE_PATH $search_path" ]
 
 source ../bin/$TECH.dc_setup_scan.tcl
 
-
-read_ddc {$TOPLEVEL}_scan.ddc
-
 analyze -format vhdl -work work ../../../../rtl/lbist_blocks/mux2to1.vhd
 analyze -format vhdl -work work ../../../../rtl/lbist_blocks/bist_controller.vhd
 analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v
@@ -25,7 +22,7 @@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/test_counter/test_c
 analyze -format verilog -work work ../../../../rtl/lbist_blocks/out_eval/misr.v
 analyze -format vhdl -work work ../../../../rtl/lbist_blocks/out_eval/out_eval.vhd
 analyze -format vhdl -work work ../../../../rtl/lbist_blocks/lbist_wrapper.vhd
-analyze -format sverilog -work work ../../../../tb/riscv_wrapper_gate_lbist.sv
+analyze -format vhdl -work work ../../../../rtl/riscv_scan_core_lbist.vhd
 
 #current_design 
 
