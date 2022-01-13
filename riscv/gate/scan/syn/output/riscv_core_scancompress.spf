@@ -5,7 +5,7 @@ Header {
     Title 
     "Minimal STIL for design `riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800'"
     ;
-    Date "Wed Jan 12 22:31:54 2022";
+    Date "Thu Jan 13 15:21:31 2022";
     Source "DFT Compiler R-2020.09-SP2";
 }
 Signals {
@@ -270,6 +270,7 @@ Signals {
     "irq_sec_i" In;
     "rst_ni" In;
     "test_en_i" In;
+    "test_mode_tp" In;
     "apu_master_flags_o[0]" Out;
     "apu_master_flags_o[10]" Out;
     "apu_master_flags_o[11]" Out;
@@ -516,7 +517,6 @@ Signals {
     "test_so6" Out;
     "test_si7" In;
     "test_so7" Out;
-    "test_mode" In;
 }
 SignalGroups {
     "_si" = '"test_si1" + "test_si2" + "test_si3" + "test_si4" + "test_si5" + 
@@ -615,8 +615,8 @@ SignalGroups {
     "instr_rdata_i[97]" + "instr_rdata_i[98]" + "instr_rdata_i[99]" + 
     "instr_rdata_i[9]" + "instr_rvalid_i" + "irq_i" + "irq_id_i[0]" + 
     "irq_id_i[1]" + "irq_id_i[2]" + "irq_id_i[3]" + "irq_id_i[4]" + "irq_sec_i" 
-    + "rst_ni" + "test_en_i" + "test_si1" + "test_si2" + "test_si3" + "test_si4" 
-    + "test_si5" + "test_si6" + "test_si7" + "test_mode"';
+    + "rst_ni" + "test_en_i" + "test_mode_tp" + "test_si1" + "test_si2" + 
+    "test_si3" + "test_si4" + "test_si5" + "test_si6" + "test_si7"';
     "all_outputs" = '"apu_master_flags_o[0]" + "apu_master_flags_o[10]" + 
     "apu_master_flags_o[11]" + "apu_master_flags_o[12]" + 
     "apu_master_flags_o[13]" + "apu_master_flags_o[14]" + 
@@ -798,8 +798,8 @@ SignalGroups {
     "instr_rdata_i[97]" + "instr_rdata_i[98]" + "instr_rdata_i[99]" + 
     "instr_rdata_i[9]" + "instr_rvalid_i" + "irq_i" + "irq_id_i[0]" + 
     "irq_id_i[1]" + "irq_id_i[2]" + "irq_id_i[3]" + "irq_id_i[4]" + "irq_sec_i" 
-    + "rst_ni" + "test_en_i" + "test_si1" + "test_si2" + "test_si3" + "test_si4" 
-    + "test_si5" + "test_si6" + "test_si7" + "test_mode"';
+    + "rst_ni" + "test_en_i" + "test_mode_tp" + "test_si1" + "test_si2" + 
+    "test_si3" + "test_si4" + "test_si5" + "test_si6" + "test_si7"';
     "_po" = '"apu_master_flags_o[0]" + "apu_master_flags_o[10]" + 
     "apu_master_flags_o[11]" + "apu_master_flags_o[12]" + 
     "apu_master_flags_o[13]" + "apu_master_flags_o[14]" + 
@@ -1543,11 +1543,11 @@ Procedures {
     "multiclock_capture" {
         W "_multiclock_capture_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r8 N 1;
+            "all_inputs" = \r71 N 0 \r187 N 1N1 \r7 N;
             "all_outputs" = \r239 X;
         }
         F {
-            "test_mode" = 1;
+            "test_mode_tp" = 1;
         }
         V {
             "_pi" = \r269 #;
@@ -1557,11 +1557,11 @@ Procedures {
     "allclock_capture" {
         W "_allclock_capture_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r8 N 1;
+            "all_inputs" = \r71 N 0 \r187 N 1N1 \r7 N;
             "all_outputs" = \r239 X;
         }
         F {
-            "test_mode" = 1;
+            "test_mode_tp" = 1;
         }
         V {
             "_pi" = \r269 #;
@@ -1571,11 +1571,11 @@ Procedures {
     "allclock_launch" {
         W "_allclock_launch_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r8 N 1;
+            "all_inputs" = \r71 N 0 \r187 N 1N1 \r7 N;
             "all_outputs" = \r239 X;
         }
         F {
-            "test_mode" = 1;
+            "test_mode_tp" = 1;
         }
         V {
             "_pi" = \r269 #;
@@ -1585,11 +1585,11 @@ Procedures {
     "allclock_launch_capture" {
         W "_allclock_launch_capture_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r8 N 1;
+            "all_inputs" = \r71 N 0 \r187 N 1N1 \r7 N;
             "all_outputs" = \r239 X;
         }
         F {
-            "test_mode" = 1;
+            "test_mode_tp" = 1;
         }
         V {
             "_pi" = \r269 #;
@@ -1600,7 +1600,7 @@ Procedures {
         W "_default_WFT_";
         ActiveScanChains core_group;
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r8 N 1;
+            "all_inputs" = \r71 N 0 \r187 N 1N1 \r7 N;
             "all_outputs" = \r239 X;
         }
         "ScanCompression_mode_pre_shift" : V {
@@ -1625,7 +1625,7 @@ MacroDefs {
         V {
             "clk_i" = 0;
             "rst_ni" = 1;
-            "test_mode" = 1;
+            "test_mode_tp" = 1;
         }
         V {
         }

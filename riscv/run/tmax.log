@@ -1,26 +1,92 @@
 ## Build and DRC
-read_netlist ../rtl/lbist_blocks/mux2to1.vhd
- Begin reading netlist ( ../rtl/lbist_blocks/mux2to1.vhd )...
- Error: Line 13 (../rtl/lbist_blocks/mux2to1.vhd), parsing error (expected "arith_expression_operand" got "N"). (N1-1)
- Error: Line 13 (../rtl/lbist_blocks/mux2to1.vhd), parsing error (expected "anychar )" got "N"). (N1-2)
- Error: Line 13 (../rtl/lbist_blocks/mux2to1.vhd), parsing error (expected ")" got "-1 downto 0);"). (N1-3)
- Error: Line 13 (../rtl/lbist_blocks/mux2to1.vhd), parsing error (expected "anychar )" got "1 downto 0);"). (N1-4)
- Error: Line 14 (../rtl/lbist_blocks/mux2to1.vhd), parsing error (expected "anychar )" got "dout"). (N1-5)
- Error: Line 14 (../rtl/lbist_blocks/mux2to1.vhd), parsing error (expected ")" got ": out std_logic_vector(N-1 downto 0)"). (N1-6)
- Error: Line 14 (../rtl/lbist_blocks/mux2to1.vhd), parsing error (expected "anychar )" got "out"). (N1-7)
- Error: Line 14 (../rtl/lbist_blocks/mux2to1.vhd), parsing error (expected "anychar )" got "std_logic_vector"). (N1-8)
- Error: Line 14 (../rtl/lbist_blocks/mux2to1.vhd), parsing error (expected ")" got "(N-1 downto 0)"). (N1-9)
- Error: Line 14 (../rtl/lbist_blocks/mux2to1.vhd), parsing error (expected "anychar )" got "N" -- Too many errors; parsing terminated). (N1-10)
- External packages: ieee.std_logic_1164 ieee.numeric_std. Bit types: std_logic std_logic_vector. 
- Warning: Rule N2 (unsupported construct) was violated 1 times.
- End parsing VHDL file ../rtl/lbist_blocks/mux2to1.vhd with 10 errors;
- End reading netlist: #modules=1, top=(null), #lines=0, CPU_time=0.00 sec, Memory=0MB
+read_netlist ../gate/NangateOpenCellLibrary.tlib -library
+ Begin reading netlist ( ../gate/NangateOpenCellLibrary.tlib )...
+ End parsing Verilog file ../gate/NangateOpenCellLibrary.tlib with 0 errors.
+ End reading netlist: #modules=181, top=AND2_X1, #lines=2744, CPU_time=0.01 sec, Memory=0MB
+read_netlist ../gate/scan/syn/output/riscv_core_scan.v
+ Begin reading netlist ( ../gate/scan/syn/output/riscv_core_scan.v )...
+ End parsing Verilog file ../gate/scan/syn/output/riscv_core_scan.v with 0 errors.
+ End reading netlist: #modules=123, top=riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800, #lines=56419, CPU_time=0.19 sec, Memory=19MB
+run_build_model riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
+ ------------------------------------------------------------------------------
+ Begin build model for topcut = riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800 ...
+ ------------------------------------------------------------------------------
+ There were 115578 primitives and 2688 faultable pins removed during model optimizations
+ Warning: Rule B7 (undriven module output pin) was violated 466 times.
+ Warning: Rule B8 (unconnected module input pin) was violated 432 times.
+ Warning: Rule B9 (undriven module internal net) was violated 78 times.
+ Warning: Rule B10 (unconnected module internal net) was violated 521 times.
+ Warning: Rule N20 (underspecified UDP) was violated 5 times.
+ End build model: #primitives=70057, CPU_time=0.60 sec, Memory=32MB
+ ------------------------------------------------------------------------------
+ Begin learning analyses...
+ End learning analyses, total learning CPU time=0.73 sec.
+ ------------------------------------------------------------------------------
+run_drc
+ ------------------------------------------------------------------------------
+ Begin scan design rules checking...
+ ------------------------------------------------------------------------------
+ Begin simulating test protocol procedures...
+ Test protocol simulation completed, CPU time=0.00 sec.
+ ------------------------------------------------------------------------------
+ Begin scan chain operation checking...
+ Scan chain operation checking completed, CPU time=0.00 sec.
+ ------------------------------------------------------------------------------
+ Begin clock rules checking...
+ Warning: Rule C2 (unstable nonscan DFF when clocks off) was violated 3027 times.
+ Warning: Rule C25 (unstable cell clock input connected from multiple sources) was violated 3123 times.
+ Clock rules checking completed, CPU time=0.71 sec.
+ ------------------------------------------------------------------------------
+ Begin nonscan rules checking...
+ Nonscan cell summary: #DFF=3027  #DLAT=98  #RAM_outs=0  tla_usage_type=no_clock_tla
+ Nonscan behavior:  #CU=3027  #TLA=98
+ Nonscan rules checking completed, CPU time=0.00 sec.
+ ------------------------------------------------------------------------------
+ Begin DRC dependent learning...
+ Fast-sequential depth results: control=0(0), observe=0(0), detect=0(0), CPU time=0.02 sec
+ DRC dependent learning completed, CPU time=0.15 sec.
+ ------------------------------------------------------------------------------
+ DRC Summary Report
+ ------------------------------------------------------------------------------
+ Warning: Rule C2 (unstable nonscan DFF when clocks off) was violated 3027 times.
+ Warning: Rule C25 (unstable cell clock input connected from multiple sources) was violated 3123 times.
+ There were 6150 violations that occurred during DRC process.
+ Design rules checking was successful, total CPU time=0.87 sec.
+ ------------------------------------------------------------------------------
+## Load and check patterns
+set_patterns -external dumpports_gate.evcd.fixed  -sensitive -strobe_period { 10 ns } -strobe_offset { 59 ns }
+ End reading 11110 patterns, CPU_time = 1.06 sec, Memory = 3MB
+run_simulation -sequential
+ Begin sequential simulation of 11110 external patterns.
+ Simulation completed: #patterns=11110/22229, #fail_pats=0(0), #failing_meas=0(0), #rejected_pats=0, CPU time=130.69
+## Fault list (select one of the following)
+add_faults -all
+ 289890 faults were added to fault list.
+#add_faults ex_stage_i/alu_i
+#add_faults ex_stage_i/alu_i/int_div_div_i
+#add_faults ex_stage_i/mult_i
+#add_faults id_stage_i/registers_i/riscv_register_file_i
+#read_faults previous_fsim_faults.txt -force_retain_code -add
+## Fault simulation
+run_fault_sim -sequential
+ ------------------------------------------------------------------------------
+ Begin sequential fault simulation of 289258 faults on 11110 external patterns.
+ -----------------------------------------------------------
+ #faults    pass #faults   cum. #faults     test    process
+ simulated  detect/total   detect/active  coverage  CPU time
+ ---------  -------------  -------------  --------  --------
+ 1656         1628   1656    1628 287630     0.56%    115.18
+ 3310          688   1654    2316 286942     0.82%    827.99
+ 4699          720   1389    3036 286222     1.07%   1255.80
+ 6300          504   1601    3540 285718     1.25%   1853.64
+ 9310          394   3010    3934 285324     1.39%   2173.91
+ Error: Fault simulation aborted: #faults_simulated=9310, test_coverage=1.39%, CPU time=2173.91 (M127)
  Information: script '/home/s267517/assignment/riscv/tmax.tcl'
-	stopped at line 6 due to error. (CMD-081)
+	stopped at line 24 due to error. (CMD-081)
 
 Extended error info:
 
     while executing
-"read_netlist ../rtl/lbist_blocks/mux2to1.vhd"
-    (file "/home/s267517/assignment/riscv/tmax.tcl" line 6)
+"run_fault_sim -sequential"
+    (file "/home/s267517/assignment/riscv/tmax.tcl" line 24)
  -- End Extended Error Info

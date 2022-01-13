@@ -1,0 +1,90 @@
+Warning: Design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+  Information: Using test design rule information from previous dft_drc run.
+Error: Test point file  not found. (TEST-2377)
+Error: Test point file  not found. (TEST-2377)
+Information: DFT core wrapping client disabled; banking anticipates no core wrapping. (TEST-1290)
+  Architecting Scan Chains
+
+****************************************
+Preview_dft report
+For    : 'Insert_dft' command
+Design : riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
+Version: R-2020.09-SP2
+Date   : Thu Jan 13 15:38:53 2022
+****************************************
+
+Number of chains: 20
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+Scan enable: test_en_i (no hookup pin)
+
+
+Scan chain '1' (test_si1 --> test_so1) contains 152 cells
+
+
+Scan chain '2' (test_si2 --> test_so2) contains 152 cells
+
+
+Scan chain '3' (test_si3 --> test_so3) contains 152 cells
+
+
+Scan chain '4' (test_si4 --> test_so4) contains 152 cells
+
+
+Scan chain '5' (test_si5 --> test_so5) contains 152 cells
+
+
+Scan chain '6' (test_si6 --> test_so6) contains 152 cells
+
+
+Scan chain '7' (test_si7 --> test_so7) contains 152 cells
+
+
+Scan chain '8' (test_si8 --> test_so8) contains 151 cells
+
+
+Scan chain '9' (test_si9 --> data_we_o) contains 151 cells
+
+
+Scan chain '10' (test_si10 --> irq_id_o[4]) contains 151 cells
+
+
+Scan chain '11' (test_si11 --> test_so11) contains 151 cells
+
+
+Scan chain '12' (test_si12 --> test_so12) contains 151 cells
+
+
+Scan chain '13' (test_si13 --> test_so13) contains 151 cells
+
+
+Scan chain '14' (test_si14 --> test_so14) contains 151 cells
+
+
+Scan chain '15' (test_si15 --> test_so15) contains 151 cells
+
+
+Scan chain '16' (test_si16 --> test_so16) contains 151 cells
+
+
+Scan chain '17' (test_si17 --> test_so17) contains 151 cells
+
+
+Scan chain '18' (test_si18 --> test_so18) contains 151 cells
+
+
+Scan chain '19' (test_si19 --> test_so19) contains 151 cells
+
+
+Scan chain '20' (test_si20 --> test_so20) contains 151 cells
+
+
+
+****************** Test Point Summary *******************
+ Number of reused registers:                        2224
+
+ Total number of test points:                       2224
+**********************************************************
+
+1

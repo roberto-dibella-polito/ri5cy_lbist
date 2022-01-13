@@ -5,7 +5,7 @@ Header {
     Title 
     "Minimal STIL for design `riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800'"
     ;
-    Date "Wed Jan 12 22:31:54 2022";
+    Date "Thu Jan 13 15:38:09 2022";
     Source "DFT Compiler R-2020.09-SP2";
 }
 Signals {
@@ -270,6 +270,7 @@ Signals {
     "irq_sec_i" In;
     "rst_ni" In;
     "test_en_i" In;
+    "test_mode_tp" In;
     "apu_master_flags_o[0]" Out;
     "apu_master_flags_o[10]" Out;
     "apu_master_flags_o[11]" Out;
@@ -516,15 +517,42 @@ Signals {
     "test_so6" Out;
     "test_si7" In;
     "test_so7" Out;
-    "test_mode" In;
+    "test_si8" In;
+    "test_so8" Out;
+    "test_si9" In;
+    "test_si10" In;
+    "test_si11" In;
+    "test_so11" Out;
+    "test_si12" In;
+    "test_so12" Out;
+    "test_si13" In;
+    "test_so13" Out;
+    "test_si14" In;
+    "test_so14" Out;
+    "test_si15" In;
+    "test_so15" Out;
+    "test_si16" In;
+    "test_so16" Out;
+    "test_si17" In;
+    "test_so17" Out;
+    "test_si18" In;
+    "test_so18" Out;
+    "test_si19" In;
+    "test_so19" Out;
+    "test_si20" In;
+    "test_so20" Out;
 }
 SignalGroups {
     "_si" = '"test_si1" + "test_si2" + "test_si3" + "test_si4" + "test_si5" + 
-    "test_si6" + "test_si7"' {
+    "test_si6" + "test_si7" + "test_si8" + "test_si9" + "test_si10" + 
+    "test_si11" + "test_si12" + "test_si13" + "test_si14" + "test_si15" + 
+    "test_si16" + "test_si17" + "test_si18" + "test_si19" + "test_si20"' {
         ScanIn;
     }
-    "_so" = '"test_so1" + "test_so2" + "test_so3" + "test_so4" + "test_so5" + 
-    "test_so6" + "test_so7"' {
+    "_so" = '"data_we_o" + "irq_id_o[4]" + "test_so1" + "test_so2" + "test_so3" 
+    + "test_so4" + "test_so5" + "test_so6" + "test_so7" + "test_so8" + 
+    "test_so11" + "test_so12" + "test_so13" + "test_so14" + "test_so15" + 
+    "test_so16" + "test_so17" + "test_so18" + "test_so19" + "test_so20"' {
         ScanOut;
     }
     "_clk" = '"clk_i" + "rst_ni"';
@@ -615,8 +643,11 @@ SignalGroups {
     "instr_rdata_i[97]" + "instr_rdata_i[98]" + "instr_rdata_i[99]" + 
     "instr_rdata_i[9]" + "instr_rvalid_i" + "irq_i" + "irq_id_i[0]" + 
     "irq_id_i[1]" + "irq_id_i[2]" + "irq_id_i[3]" + "irq_id_i[4]" + "irq_sec_i" 
-    + "rst_ni" + "test_en_i" + "test_si1" + "test_si2" + "test_si3" + "test_si4" 
-    + "test_si5" + "test_si6" + "test_si7" + "test_mode"';
+    + "rst_ni" + "test_en_i" + "test_mode_tp" + "test_si1" + "test_si2" + 
+    "test_si3" + "test_si4" + "test_si5" + "test_si6" + "test_si7" + "test_si8" 
+    + "test_si9" + "test_si10" + "test_si11" + "test_si12" + "test_si13" + 
+    "test_si14" + "test_si15" + "test_si16" + "test_si17" + "test_si18" + 
+    "test_si19" + "test_si20"';
     "all_outputs" = '"apu_master_flags_o[0]" + "apu_master_flags_o[10]" + 
     "apu_master_flags_o[11]" + "apu_master_flags_o[12]" + 
     "apu_master_flags_o[13]" + "apu_master_flags_o[14]" + 
@@ -709,7 +740,9 @@ SignalGroups {
     "instr_addr_o[9]" + "instr_req_o" + "irq_ack_o" + "irq_id_o[0]" + 
     "irq_id_o[1]" + "irq_id_o[2]" + "irq_id_o[3]" + "irq_id_o[4]" + "sec_lvl_o" 
     + "test_so1" + "test_so2" + "test_so3" + "test_so4" + "test_so5" + 
-    "test_so6" + "test_so7"';
+    "test_so6" + "test_so7" + "test_so8" + "test_so11" + "test_so12" + 
+    "test_so13" + "test_so14" + "test_so15" + "test_so16" + "test_so17" + 
+    "test_so18" + "test_so19" + "test_so20"';
     "all_ports" = '"all_inputs" + "all_outputs"';
     "_pi" = '"apu_master_flags_i[0]" + "apu_master_flags_i[1]" + 
     "apu_master_flags_i[2]" + "apu_master_flags_i[3]" + "apu_master_flags_i[4]" 
@@ -798,8 +831,11 @@ SignalGroups {
     "instr_rdata_i[97]" + "instr_rdata_i[98]" + "instr_rdata_i[99]" + 
     "instr_rdata_i[9]" + "instr_rvalid_i" + "irq_i" + "irq_id_i[0]" + 
     "irq_id_i[1]" + "irq_id_i[2]" + "irq_id_i[3]" + "irq_id_i[4]" + "irq_sec_i" 
-    + "rst_ni" + "test_en_i" + "test_si1" + "test_si2" + "test_si3" + "test_si4" 
-    + "test_si5" + "test_si6" + "test_si7" + "test_mode"';
+    + "rst_ni" + "test_en_i" + "test_mode_tp" + "test_si1" + "test_si2" + 
+    "test_si3" + "test_si4" + "test_si5" + "test_si6" + "test_si7" + "test_si8" 
+    + "test_si9" + "test_si10" + "test_si11" + "test_si12" + "test_si13" + 
+    "test_si14" + "test_si15" + "test_si16" + "test_si17" + "test_si18" + 
+    "test_si19" + "test_si20"';
     "_po" = '"apu_master_flags_o[0]" + "apu_master_flags_o[10]" + 
     "apu_master_flags_o[11]" + "apu_master_flags_o[12]" + 
     "apu_master_flags_o[13]" + "apu_master_flags_o[14]" + 
@@ -892,55 +928,148 @@ SignalGroups {
     "instr_addr_o[9]" + "instr_req_o" + "irq_ack_o" + "irq_id_o[0]" + 
     "irq_id_o[1]" + "irq_id_o[2]" + "irq_id_o[3]" + "irq_id_o[4]" + "sec_lvl_o" 
     + "test_so1" + "test_so2" + "test_so3" + "test_so4" + "test_so5" + 
-    "test_so6" + "test_so7"';
+    "test_so6" + "test_so7" + "test_so8" + "test_so11" + "test_so12" + 
+    "test_so13" + "test_so14" + "test_so15" + "test_so16" + "test_so17" + 
+    "test_so18" + "test_so19" + "test_so20"';
 }
 ScanStructures {
     ScanChain "1" {
-        ScanLength 433;
+        ScanLength 152;
         ScanIn "test_si1";
         ScanOut "test_so1";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "2" {
-        ScanLength 433;
+        ScanLength 152;
         ScanIn "test_si2";
         ScanOut "test_so2";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "3" {
-        ScanLength 433;
+        ScanLength 152;
         ScanIn "test_si3";
         ScanOut "test_so3";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "4" {
-        ScanLength 432;
+        ScanLength 152;
         ScanIn "test_si4";
         ScanOut "test_so4";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "5" {
-        ScanLength 432;
+        ScanLength 152;
         ScanIn "test_si5";
         ScanOut "test_so5";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "6" {
-        ScanLength 432;
+        ScanLength 152;
         ScanIn "test_si6";
         ScanOut "test_so6";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "7" {
-        ScanLength 432;
+        ScanLength 152;
         ScanIn "test_si7";
         ScanOut "test_so7";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "8" {
+        ScanLength 151;
+        ScanIn "test_si8";
+        ScanOut "test_so8";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "9" {
+        ScanLength 151;
+        ScanIn "test_si9";
+        ScanOut "data_we_o";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "10" {
+        ScanLength 151;
+        ScanIn "test_si10";
+        ScanOut "irq_id_o[4]";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "11" {
+        ScanLength 151;
+        ScanIn "test_si11";
+        ScanOut "test_so11";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "12" {
+        ScanLength 151;
+        ScanIn "test_si12";
+        ScanOut "test_so12";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "13" {
+        ScanLength 151;
+        ScanIn "test_si13";
+        ScanOut "test_so13";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "14" {
+        ScanLength 151;
+        ScanIn "test_si14";
+        ScanOut "test_so14";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "15" {
+        ScanLength 151;
+        ScanIn "test_si15";
+        ScanOut "test_so15";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "16" {
+        ScanLength 151;
+        ScanIn "test_si16";
+        ScanOut "test_so16";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "17" {
+        ScanLength 151;
+        ScanIn "test_si17";
+        ScanOut "test_so17";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "18" {
+        ScanLength 151;
+        ScanIn "test_si18";
+        ScanOut "test_so18";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "19" {
+        ScanLength 151;
+        ScanIn "test_si19";
+        ScanOut "test_so19";
+        ScanEnable "test_en_i";
+        ScanMasterClock "clk_i";
+    }
+    ScanChain "20" {
+        ScanLength 151;
+        ScanIn "test_si20";
+        ScanOut "test_so20";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
@@ -1266,64 +1395,64 @@ Procedures {
     "multiclock_capture" {
         W "_multiclock_capture_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r8 N 0;
-            "all_outputs" = \r239 X;
+            "all_inputs" = \r71 N 0 \r187 N 1N1 \r20 N;
+            "all_outputs" = \r250 X;
         }
         F {
-            "test_mode" = 0;
+            "test_mode_tp" = 1;
         }
         V {
-            "_pi" = \r269 #;
-            "_po" = \r239 #;
+            "_pi" = \r282 #;
+            "_po" = \r250 #;
         }
     }
     "allclock_capture" {
         W "_allclock_capture_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r8 N 0;
-            "all_outputs" = \r239 X;
+            "all_inputs" = \r71 N 0 \r187 N 1N1 \r20 N;
+            "all_outputs" = \r250 X;
         }
         F {
-            "test_mode" = 0;
+            "test_mode_tp" = 1;
         }
         V {
-            "_pi" = \r269 #;
-            "_po" = \r239 #;
+            "_pi" = \r282 #;
+            "_po" = \r250 #;
         }
     }
     "allclock_launch" {
         W "_allclock_launch_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r8 N 0;
-            "all_outputs" = \r239 X;
+            "all_inputs" = \r71 N 0 \r187 N 1N1 \r20 N;
+            "all_outputs" = \r250 X;
         }
         F {
-            "test_mode" = 0;
+            "test_mode_tp" = 1;
         }
         V {
-            "_pi" = \r269 #;
-            "_po" = \r239 #;
+            "_pi" = \r282 #;
+            "_po" = \r250 #;
         }
     }
     "allclock_launch_capture" {
         W "_allclock_launch_capture_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r8 N 0;
-            "all_outputs" = \r239 X;
+            "all_inputs" = \r71 N 0 \r187 N 1N1 \r20 N;
+            "all_outputs" = \r250 X;
         }
         F {
-            "test_mode" = 0;
+            "test_mode_tp" = 1;
         }
         V {
-            "_pi" = \r269 #;
-            "_po" = \r239 #;
+            "_pi" = \r282 #;
+            "_po" = \r250 #;
         }
     }
     "load_unload" {
         W "_default_WFT_";
         C {
-            "all_inputs" = \r71 N 0 \r187 N 1 \r8 N 0;
-            "all_outputs" = \r239 X;
+            "all_inputs" = \r71 N 0 \r187 N 1N1 \r20 N;
+            "all_outputs" = \r250 X;
         }
         "Internal_scan_pre_shift" : V {
             "test_en_i" = 1;
@@ -1331,8 +1460,8 @@ Procedures {
         Shift {
             V {
                 "_clk" = P1;
-                "_si" = \r7 #;
-                "_so" = \r7 #;
+                "_si" = \r20 #;
+                "_so" = \r20 #;
             }
         }
     }
@@ -1341,13 +1470,13 @@ MacroDefs {
     "test_setup" {
         W "_default_WFT_";
         C {
-            "all_inputs" = \r269 N;
-            "all_outputs" = \r239 X;
+            "all_inputs" = \r282 N;
+            "all_outputs" = \r250 X;
         }
         V {
             "clk_i" = 0;
             "rst_ni" = 1;
-            "test_mode" = 0;
+            "test_mode_tp" = 1;
         }
         V {
         }
