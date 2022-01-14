@@ -1,0 +1,18 @@
+current_design "riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800"
+
+clock -name clk_i -testclock -period 100
+
+
+
+
+test_mode -name rst_ni -value 1 -scanshift
+
+
+test_mode -name test_en_i -value 1 -invertInCapture
+
+
+test_mode -name test_mode_tp -value 1
+
+
+
+

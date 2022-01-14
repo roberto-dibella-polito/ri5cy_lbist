@@ -1,0 +1,37 @@
+##Data Import Section
+
+read_file -type hdl riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800.v
+#BackRefFile:/home/s267517/assignment/riscv/gate/scan/syn/run/_snpDft_s267517.4704.0/sg_config.prj #LineNumber:18
+read_file -type sgdc auto_excluded_cells.sgdc
+read_file -type sgdc sg_design_param.sgdc
+
+##Common Options Section
+
+set_option v { aaa.tlib }
+set_option nosavepolicy { all }
+set_option dw no
+set_option support_sdc_style_escaped_name yes
+set_option enable_unified_naming_search yes
+set_option allow_module_override yes
+set_option top riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
+set_option projectwdir /home/s267517/assignment/riscv/gate/scan/syn/run/_snpDft_s267517.4704.0
+
+
+##Goal Setup Section
+
+current_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
+
+##Custom Goals
+define_goal sg_dft_testpoint_analysis -policy { dft dft_dsm } {
+set_goal_option rules { Info_coverage Coverage_audit }
+set_goal_option addrules { Info_random_resistance }
+set_goal_option addrules { Info_x_sources }
+set_parameter dft_enable_test_point_flow on
+set_parameter dft_enable_netlist_for_analyzer on
+set_parameter dft_ignore_x_sources UIO_MCP_FP_CL_HN_MD
+set_parameter dft_rrf_tp_effort_level medium
+set_parameter dft_pattern_count 1024
+set_parameter dft_dc_tp_clock_info on
+
+}

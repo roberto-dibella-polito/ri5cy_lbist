@@ -2,27 +2,25 @@
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT     189383
-   detected_by_simulation         DS    (151582)
+ Detected                         DT      96713
+   detected_by_simulation         DS     (58912)
    detected_by_implication        DI     (37801)
  Possibly detected                PT          0
- Undetectable                     UD        764
+ Undetectable                     UD        437
    undetectable-unused            UU        (86)
    undetectable-tied              UT       (126)
-   undetectable-redundant         UR       (552)
- ATPG untestable                  AU       3733
-   atpg_untestable-not_detected   AN      (3733)
- Not detected                     ND     126652
-   not-controlled                 NC     (28369)
-   not-observed                   NO     (98283)
+   undetectable-redundant         UR       (225)
+ ATPG untestable                  AU     125702
+   atpg_untestable-not_detected   AN    (125702)
+ Not detected                     ND      97680
+   not-controlled                 NC      (5760)
+   not-observed                   NO     (91920)
  -----------------------------------------------
  total faults                            320532
- test coverage                            59.23%
- fault coverage                           59.08%
+ test coverage                            30.21%
+ fault coverage                           30.17%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                        2517
-     #basic_scan patterns                  2510
-     #full_sequential patterns                7
+ #internal patterns                           0
  -----------------------------------------------

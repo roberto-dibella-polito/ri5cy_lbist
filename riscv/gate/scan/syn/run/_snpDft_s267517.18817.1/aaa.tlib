@@ -1,0 +1,1056 @@
+`celldefine
+module CLKBUF_X1 ( A, Z); /* CLKBUF_X1 */
+ input A;
+output Z;
+
+
+	   buf(Z, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AND2_X1 ( A1, A2, ZN); /* AND2_X1 */
+ input A1;
+ input A2;
+output ZN;
+
+
+	   and(ZN, _3, _4);
+	   buf(_3, A1);
+	   buf(_4, A2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OR2_X1 ( A1, A2, ZN); /* OR2_X1 */
+ input A1;
+ input A2;
+output ZN;
+
+
+	    or(ZN, _3, _4);
+	   buf(_3, A1);
+	   buf(_4, A2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module INV_X1 ( A, ZN); /* INV_X1 */
+ input A;
+output ZN;
+
+
+	   not(ZN, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module NOR2_X1 ( A1, A2, ZN); /* NOR2_X1 */
+ input A1;
+ input A2;
+output ZN;
+
+
+	   and(ZN, _3, _4);
+	   not(_3, A1);
+	   not(_4, A2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AOI21_X1 ( B1, B2, A, ZN); /* AOI21_X1 */
+ input B1;
+ input B2;
+ input A;
+output ZN;
+
+
+	   and(ZN, _4, _5);
+	    or(_4, _6, _7);
+	   not(_6, B1);
+	   not(_7, B2);
+	   not(_5, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AND3_X1 ( A1, A2, A3, ZN); /* AND3_X1 */
+ input A1;
+ input A2;
+ input A3;
+output ZN;
+
+
+	   and(ZN, _4, _5, _6);
+	   buf(_4, A1);
+	   buf(_5, A2);
+	   buf(_6, A3);
+/* LOGDB */
+endmodule
+`endcelldefine
+primitive SDFFR_X1_5_X1_udp (Q, RN, CK, SE, D, SI);
+  output Q;
+  input  RN, CK, SE, D, SI;
+  reg Q;
+table 
+//RN(4)	CK(3)	SE(2)	D(0)	SI(1)	state(-3)	Q(5)	
+1	1	?	?	?	: 1 :	1	 ;
+1	1	?	?	?	: 0 :	0	 ;
+1	R	1	?	1	: ? :	1	 ;
+1	R	1	?	0	: ? :	0	 ;
+1	R	0	1	?	: ? :	1	 ;
+1	R	0	0	?	: ? :	0	 ;
+1	(?0)	?	?	?	: 1 :	1	 ;
+1	(?0)	?	?	?	: 0 :	0	 ;
+0	?	?	?	?	: ? :	0	 ;
+endtable
+endprimitive
+
+primitive SDFFR_X1_6_X1_udp (QN, Q);
+  output QN;
+  input  Q;
+table 
+//Q(5)	state(-3)	QN(6)	
+1	 :	0	 ;
+0	 :	1	 ;
+endtable
+endprimitive
+
+`celldefine
+module SDFFR_X1 ( D, SI, SE, CK, RN, Q, QN); /* SDFFR_X1 */
+ input D;
+ input SI;
+ input SE;
+ input CK;
+ input RN;
+output Q;
+output QN;
+
+
+/* BDD */
+SDFFR_X1_5_X1_udp _5_one (Q,  RN, CK, SE, D, SI);
+
+SDFFR_X1_6_X1_udp _6_one (QN,  Q);
+
+endmodule
+`endcelldefine
+
+`celldefine
+module BUF_X1 ( A, Z); /* BUF_X1 */
+ input A;
+output Z;
+
+
+	   buf(Z, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module MUX2_X1 ( A, B, S, Z); /* MUX2_X1 */
+ input A;
+ input B;
+ input S;
+output Z;
+
+
+	    or(Z, _4, _5);
+	   and(_4, _6, _7);
+	   not(_6, _8);
+	   buf(_8, S);
+	   buf(_7, A);
+	   and(_5, _8, _9);
+	   buf(_9, B);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module CLKGATETST_X1 ( E, SE, CK, GCK);
+  input E;
+  input SE;
+  input CK;
+  output GCK;
+  reg IQ;
+  always @( CK or E or SE )
+    if ( ~CK )
+      IQ <= E | SE;
+  and (GCK,CK,IQ);
+endmodule
+`endcelldefine
+`celldefine
+module NAND2_X1 ( A1, A2, ZN); /* NAND2_X1 */
+ input A1;
+ input A2;
+output ZN;
+
+
+	    or(ZN, _3, _4);
+	   not(_3, A1);
+	   not(_4, A2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module NOR3_X1 ( A1, A2, A3, ZN); /* NOR3_X1 */
+ input A1;
+ input A2;
+ input A3;
+output ZN;
+
+
+	   and(ZN, _4, _5, _6);
+	   not(_4, A1);
+	   not(_5, A2);
+	   not(_6, A3);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OAI21_X1 ( B1, B2, A, ZN); /* OAI21_X1 */
+ input B1;
+ input B2;
+ input A;
+output ZN;
+
+
+	    or(ZN, _4, _5);
+	   and(_4, _6, _7);
+	   not(_6, B1);
+	   not(_7, B2);
+	   not(_5, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module NAND3_X1 ( A1, A2, A3, ZN); /* NAND3_X1 */
+ input A1;
+ input A2;
+ input A3;
+output ZN;
+
+
+	    or(ZN, _4, _5, _6);
+	   not(_4, A1);
+	   not(_5, A2);
+	   not(_6, A3);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AOI22_X1 ( A1, A2, B1, B2, ZN); /* AOI22_X1 */
+ input A1;
+ input A2;
+ input B1;
+ input B2;
+output ZN;
+
+
+	   and(ZN, _5, _6);
+	    or(_5, _7, _8);
+	   not(_7, A1);
+	   not(_8, A2);
+	    or(_6, _9, _10);
+	   not(_9, B1);
+	   not(_10, B2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module NAND4_X1 ( A1, A2, A3, A4, ZN); /* NAND4_X1 */
+ input A1;
+ input A2;
+ input A3;
+ input A4;
+output ZN;
+
+
+	    or(ZN, _5, _6, _7, _8);
+	   not(_5, A1);
+	   not(_6, A2);
+	   not(_7, A3);
+	   not(_8, A4);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AOI221_X1 ( B1, B2, C1, C2, A, ZN); /* AOI221_X1 */
+ input B1;
+ input B2;
+ input C1;
+ input C2;
+ input A;
+output ZN;
+
+
+	   and(ZN, _6, _7, _8);
+	    or(_6, _9, _10);
+	   not(_9, B1);
+	   not(_10, B2);
+	    or(_7, _11, _12);
+	   not(_11, C1);
+	   not(_12, C2);
+	   not(_8, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AOI211_X1 ( C1, C2, A, B, ZN); /* AOI211_X1 */
+ input C1;
+ input C2;
+ input A;
+ input B;
+output ZN;
+
+
+	   and(ZN, _5, _6, _7);
+	    or(_5, _8, _9);
+	   not(_8, C1);
+	   not(_9, C2);
+	   not(_6, A);
+	   not(_7, B);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OAI211_X1 ( C1, C2, A, B, ZN); /* OAI211_X1 */
+ input C1;
+ input C2;
+ input A;
+ input B;
+output ZN;
+
+
+	    or(ZN, _5, _6, _7);
+	   and(_5, _8, _9);
+	   not(_8, C1);
+	   not(_9, C2);
+	   not(_6, A);
+	   not(_7, B);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module NOR4_X1 ( A1, A2, A3, A4, ZN); /* NOR4_X1 */
+ input A1;
+ input A2;
+ input A3;
+ input A4;
+output ZN;
+
+
+	   and(ZN, _5, _6, _7, _8);
+	   not(_5, A1);
+	   not(_6, A2);
+	   not(_7, A3);
+	   not(_8, A4);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OR3_X1 ( A1, A2, A3, ZN); /* OR3_X1 */
+ input A1;
+ input A2;
+ input A3;
+output ZN;
+
+
+	    or(ZN, _4, _5, _6);
+	   buf(_4, A1);
+	   buf(_5, A2);
+	   buf(_6, A3);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OAI221_X1 ( B1, B2, C1, C2, A, ZN); /* OAI221_X1 */
+ input B1;
+ input B2;
+ input C1;
+ input C2;
+ input A;
+output ZN;
+
+
+	    or(ZN, _6, _7, _8);
+	   and(_6, _9, _10);
+	   not(_9, B1);
+	   not(_10, B2);
+	   and(_7, _11, _12);
+	   not(_11, C1);
+	   not(_12, C2);
+	   not(_8, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module FA_X1 ( A, B, CI, CO, S); /* FA_X1 */
+ input A;
+ input B;
+ input CI;
+output CO;
+output S;
+
+
+	    or(CO, _5, _6);
+	   nor(_5, _7, _8);
+	   nor(_7, _9, _10);
+	   buf(_9, B);
+	   buf(_10, A);
+	   not(_8, CI);
+	   nor(_6, _11, _12);
+	   not(_11, B);
+	   not(_12, A);
+	   xor(S, _13, _14, _15);
+	   buf(_13, A);
+	   buf(_14, B);
+	   buf(_15, CI);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module HA_X1 ( A, B, CO, S); /* HA_X1 */
+ input A;
+ input B;
+output CO;
+output S;
+
+
+	   and(CO, _4, _5);
+	   buf(_4, A);
+	   buf(_5, B);
+	   xor(S, _6, _7);
+	   buf(_6, A);
+	   buf(_7, B);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AND4_X2 ( A1, A2, A3, A4, ZN); /* AND4_X2 */
+ input A1;
+ input A2;
+ input A3;
+ input A4;
+output ZN;
+
+
+	   and(ZN, _5, _6, _7, _8);
+	   buf(_5, A1);
+	   buf(_6, A2);
+	   buf(_7, A3);
+	   buf(_8, A4);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module NOR2_X2 ( A1, A2, ZN); /* NOR2_X2 */
+ input A1;
+ input A2;
+output ZN;
+
+
+	   and(ZN, _3, _4);
+	   not(_3, A1);
+	   not(_4, A2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module INV_X2 ( A, ZN); /* INV_X2 */
+ input A;
+output ZN;
+
+
+	   not(ZN, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module NAND2_X2 ( A1, A2, ZN); /* NAND2_X2 */
+ input A1;
+ input A2;
+output ZN;
+
+
+	    or(ZN, _3, _4);
+	   not(_3, A1);
+	   not(_4, A2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module INV_X4 ( A, ZN); /* INV_X4 */
+ input A;
+output ZN;
+
+
+	   not(ZN, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AND4_X1 ( A1, A2, A3, A4, ZN); /* AND4_X1 */
+ input A1;
+ input A2;
+ input A3;
+ input A4;
+output ZN;
+
+
+	   and(ZN, _5, _6, _7, _8);
+	   buf(_5, A1);
+	   buf(_6, A2);
+	   buf(_7, A3);
+	   buf(_8, A4);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module BUF_X2 ( A, Z); /* BUF_X2 */
+ input A;
+output Z;
+
+
+	   buf(Z, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module CLKBUF_X2 ( A, Z); /* CLKBUF_X2 */
+ input A;
+output Z;
+
+
+	   buf(Z, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OR2_X2 ( A1, A2, ZN); /* OR2_X2 */
+ input A1;
+ input A2;
+output ZN;
+
+
+	    or(ZN, _3, _4);
+	   buf(_3, A1);
+	   buf(_4, A2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module BUF_X4 ( A, Z); /* BUF_X4 */
+ input A;
+output Z;
+
+
+	   buf(Z, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OAI21_X2 ( B1, B2, A, ZN); /* OAI21_X2 */
+ input B1;
+ input B2;
+ input A;
+output ZN;
+
+
+	    or(ZN, _4, _5);
+	   and(_4, _6, _7);
+	   not(_6, B1);
+	   not(_7, B2);
+	   not(_5, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OR4_X1 ( A1, A2, A3, A4, ZN); /* OR4_X1 */
+ input A1;
+ input A2;
+ input A3;
+ input A4;
+output ZN;
+
+
+	    or(ZN, _5, _6, _7, _8);
+	   buf(_5, A1);
+	   buf(_6, A2);
+	   buf(_7, A3);
+	   buf(_8, A4);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AOI21_X2 ( B1, B2, A, ZN); /* AOI21_X2 */
+ input B1;
+ input B2;
+ input A;
+output ZN;
+
+
+	   and(ZN, _4, _5);
+	    or(_4, _6, _7);
+	   not(_6, B1);
+	   not(_7, B2);
+	   not(_5, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OAI22_X1 ( A1, A2, B1, B2, ZN); /* OAI22_X1 */
+ input A1;
+ input A2;
+ input B1;
+ input B2;
+output ZN;
+
+
+	    or(ZN, _5, _6);
+	   and(_5, _7, _8);
+	   not(_7, A1);
+	   not(_8, A2);
+	   and(_6, _9, _10);
+	   not(_9, B1);
+	   not(_10, B2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module XOR2_X1 ( A, B, Z); /* XOR2_X1 */
+ input A;
+ input B;
+output Z;
+
+
+	   xor(Z, _3, _4);
+	   buf(_3, A);
+	   buf(_4, B);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module XNOR2_X1 ( A, B, ZN); /* XNOR2_X1 */
+ input A;
+ input B;
+output ZN;
+
+
+	  xnor(ZN, _3, _4);
+	   buf(_3, A);
+	   buf(_4, B);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module CLKBUF_X3 ( A, Z); /* CLKBUF_X3 */
+ input A;
+output Z;
+
+
+	   buf(Z, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AND3_X2 ( A1, A2, A3, ZN); /* AND3_X2 */
+ input A1;
+ input A2;
+ input A3;
+output ZN;
+
+
+	   and(ZN, _4, _5, _6);
+	   buf(_4, A1);
+	   buf(_5, A2);
+	   buf(_6, A3);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AND2_X2 ( A1, A2, ZN); /* AND2_X2 */
+ input A1;
+ input A2;
+output ZN;
+
+
+	   and(ZN, _3, _4);
+	   buf(_3, A1);
+	   buf(_4, A2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module INV_X32 ( A, ZN); /* INV_X32 */
+ input A;
+output ZN;
+
+
+	   not(ZN, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AND2_X4 ( A1, A2, ZN); /* AND2_X4 */
+ input A1;
+ input A2;
+output ZN;
+
+
+	   and(ZN, _3, _4);
+	   buf(_3, A1);
+	   buf(_4, A2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OAI211_X2 ( C1, C2, A, B, ZN); /* OAI211_X2 */
+ input C1;
+ input C2;
+ input A;
+ input B;
+output ZN;
+
+
+	    or(ZN, _5, _6, _7);
+	   and(_5, _8, _9);
+	   not(_8, C1);
+	   not(_9, C2);
+	   not(_6, A);
+	   not(_7, B);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AOI222_X1 ( A1, A2, B1, B2, C1, C2, ZN); /* AOI222_X1 */
+ input A1;
+ input A2;
+ input B1;
+ input B2;
+ input C1;
+ input C2;
+output ZN;
+
+
+	   and(ZN, _7, _8, _9);
+	    or(_7, _10, _11);
+	   not(_10, A1);
+	   not(_11, A2);
+	    or(_8, _12, _13);
+	   not(_12, B1);
+	   not(_13, B2);
+	    or(_9, _14, _15);
+	   not(_14, C1);
+	   not(_15, C2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OAI222_X1 ( A1, A2, B1, B2, C1, C2, ZN); /* OAI222_X1 */
+ input A1;
+ input A2;
+ input B1;
+ input B2;
+ input C1;
+ input C2;
+output ZN;
+
+
+	    or(ZN, _7, _8, _9);
+	   and(_7, _10, _11);
+	   not(_10, A1);
+	   not(_11, A2);
+	   and(_8, _12, _13);
+	   not(_12, B1);
+	   not(_13, B2);
+	   and(_9, _14, _15);
+	   not(_14, C1);
+	   not(_15, C2);
+/* LOGDB */
+endmodule
+`endcelldefine
+primitive SDFFS_X1_5_X1_udp (Q, SN, CK, SE, D, SI);
+  output Q;
+  input  SN, CK, SE, D, SI;
+  reg Q;
+table 
+//SN(4)	CK(3)	SE(2)	D(0)	SI(1)	state(-3)	Q(5)	
+1	1	?	?	?	: 1 :	1	 ;
+1	1	?	?	?	: 0 :	0	 ;
+1	R	1	?	1	: ? :	1	 ;
+1	R	1	?	0	: ? :	0	 ;
+1	R	0	1	?	: ? :	1	 ;
+1	R	0	0	?	: ? :	0	 ;
+1	(?0)	?	?	?	: 1 :	1	 ;
+1	(?0)	?	?	?	: 0 :	0	 ;
+0	?	?	?	?	: ? :	1	 ;
+endtable
+endprimitive
+
+primitive SDFFS_X1_6_X1_udp (QN, Q);
+  output QN;
+  input  Q;
+table 
+//Q(5)	state(-3)	QN(6)	
+1	 :	0	 ;
+0	 :	1	 ;
+endtable
+endprimitive
+
+`celldefine
+module SDFFS_X1 ( D, SI, SE, CK, SN, Q, QN); /* SDFFS_X1 */
+ input D;
+ input SI;
+ input SE;
+ input CK;
+ input SN;
+output Q;
+output QN;
+
+
+/* BDD */
+SDFFS_X1_5_X1_udp _5_one (Q,  SN, CK, SE, D, SI);
+
+SDFFS_X1_6_X1_udp _6_one (QN,  Q);
+
+endmodule
+`endcelldefine
+
+primitive SDFFR_X2_5_X1_udp (Q, RN, CK, SE, D, SI);
+  output Q;
+  input  RN, CK, SE, D, SI;
+  reg Q;
+table 
+//RN(4)	CK(3)	SE(2)	D(0)	SI(1)	state(-3)	Q(5)	
+1	1	?	?	?	: 1 :	1	 ;
+1	1	?	?	?	: 0 :	0	 ;
+1	R	1	?	1	: ? :	1	 ;
+1	R	1	?	0	: ? :	0	 ;
+1	R	0	1	?	: ? :	1	 ;
+1	R	0	0	?	: ? :	0	 ;
+1	(?0)	?	?	?	: 1 :	1	 ;
+1	(?0)	?	?	?	: 0 :	0	 ;
+0	?	?	?	?	: ? :	0	 ;
+endtable
+endprimitive
+
+primitive SDFFR_X2_6_X1_udp (QN, Q);
+  output QN;
+  input  Q;
+table 
+//Q(5)	state(-3)	QN(6)	
+1	 :	0	 ;
+0	 :	1	 ;
+endtable
+endprimitive
+
+`celldefine
+module SDFFR_X2 ( D, SI, SE, CK, RN, Q, QN); /* SDFFR_X2 */
+ input D;
+ input SI;
+ input SE;
+ input CK;
+ input RN;
+output Q;
+output QN;
+
+
+/* BDD */
+SDFFR_X2_5_X1_udp _5_one (Q,  RN, CK, SE, D, SI);
+
+SDFFR_X2_6_X1_udp _6_one (QN,  Q);
+
+endmodule
+`endcelldefine
+
+`celldefine
+module MUX2_X2 ( A, B, S, Z); /* MUX2_X2 */
+ input A;
+ input B;
+ input S;
+output Z;
+
+
+	    or(Z, _4, _5);
+	   and(_4, _6, _7);
+	   not(_6, _8);
+	   buf(_8, S);
+	   buf(_7, A);
+	   and(_5, _8, _9);
+	   buf(_9, B);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module NAND3_X2 ( A1, A2, A3, ZN); /* NAND3_X2 */
+ input A1;
+ input A2;
+ input A3;
+output ZN;
+
+
+	    or(ZN, _4, _5, _6);
+	   not(_4, A1);
+	   not(_5, A2);
+	   not(_6, A3);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module AOI211_X2 ( C1, C2, A, B, ZN); /* AOI211_X2 */
+ input C1;
+ input C2;
+ input A;
+ input B;
+output ZN;
+
+
+	   and(ZN, _5, _6, _7);
+	    or(_5, _8, _9);
+	   not(_8, C1);
+	   not(_9, C2);
+	   not(_6, A);
+	   not(_7, B);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OAI22_X2 ( A1, A2, B1, B2, ZN); /* OAI22_X2 */
+ input A1;
+ input A2;
+ input B1;
+ input B2;
+output ZN;
+
+
+	    or(ZN, _5, _6);
+	   and(_5, _7, _8);
+	   not(_7, A1);
+	   not(_8, A2);
+	   and(_6, _9, _10);
+	   not(_9, B1);
+	   not(_10, B2);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OR3_X2 ( A1, A2, A3, ZN); /* OR3_X2 */
+ input A1;
+ input A2;
+ input A3;
+output ZN;
+
+
+	    or(ZN, _4, _5, _6);
+	   buf(_4, A1);
+	   buf(_5, A2);
+	   buf(_6, A3);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module BUF_X8 ( A, Z); /* BUF_X8 */
+ input A;
+output Z;
+
+
+	   buf(Z, A);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OAI33_X1 ( A1, A2, A3, B1, B2, B3, ZN); /* OAI33_X1 */
+ input A1;
+ input A2;
+ input A3;
+ input B1;
+ input B2;
+ input B3;
+output ZN;
+
+
+	    or(ZN, _7, _8);
+	   and(_7, _9, _10, _11);
+	   not(_9, A1);
+	   not(_10, A2);
+	   not(_11, A3);
+	   and(_8, _12, _13, _14);
+	   not(_12, B1);
+	   not(_13, B2);
+	   not(_14, B3);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module XNOR2_X2 ( A, B, ZN); /* XNOR2_X2 */
+ input A;
+ input B;
+output ZN;
+
+
+	  xnor(ZN, _3, _4);
+	   buf(_3, A);
+	   buf(_4, B);
+/* LOGDB */
+endmodule
+`endcelldefine
+`celldefine
+module OR4_X2 ( A1, A2, A3, A4, ZN); /* OR4_X2 */
+ input A1;
+ input A2;
+ input A3;
+ input A4;
+output ZN;
+
+
+	    or(ZN, _5, _6, _7, _8);
+	   buf(_5, A1);
+	   buf(_6, A2);
+	   buf(_7, A3);
+	   buf(_8, A4);
+/* LOGDB */
+endmodule
+`endcelldefine
+primitive SDFF_X1_4_X1_udp (Q, CK, SE, D, SI);
+  output Q;
+  input  CK, SE, D, SI;
+  reg Q;
+table 
+//CK(3)	SE(2)	D(0)	SI(1)	state(-3)	Q(4)	
+1	?	?	?	: 1 :	1	 ;
+1	?	?	?	: 0 :	0	 ;
+R	1	?	1	: ? :	1	 ;
+R	1	?	0	: ? :	0	 ;
+R	0	1	?	: ? :	1	 ;
+R	0	0	?	: ? :	0	 ;
+(?0)	?	?	?	: 1 :	1	 ;
+(?0)	?	?	?	: 0 :	0	 ;
+endtable
+endprimitive
+
+primitive SDFF_X1_5_X1_udp (QN, Q);
+  output QN;
+  input  Q;
+table 
+//Q(4)	state(-3)	QN(5)	
+1	 :	0	 ;
+0	 :	1	 ;
+endtable
+endprimitive
+
+`celldefine
+module SDFF_X1 ( D, SI, SE, CK, Q, QN); /* SDFF_X1 */
+ input D;
+ input SI;
+ input SE;
+ input CK;
+output Q;
+output QN;
+
+
+/* BDD */
+SDFF_X1_4_X1_udp _4_one (Q,  CK, SE, D, SI);
+
+SDFF_X1_5_X1_udp _5_one (QN,  Q);
+
+endmodule
+`endcelldefine
+

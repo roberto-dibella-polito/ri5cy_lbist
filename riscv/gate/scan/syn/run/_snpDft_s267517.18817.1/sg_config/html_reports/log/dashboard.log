@@ -1,0 +1,32 @@
+SpyGlass Predictive Analyzer(R) - SpyGlass_vR-2020.12
+All Rights Reserved. Use, disclosure or duplication 
+without prior written permission of Synopsys Inc. is prohibited.
+Technical support: email spyglass_support@synopsys.com 
+
+Creating 'dashboard' reports using project 'sg_config.prj'
+##cwd         : /home/s267517/assignment/riscv/gate/scan/syn/run/_snpDft_s267517.18817.1
+##system      : Linux po.polito.it 3.10.0-957.1.3.el7.x86_64 #1 SMP Thu Nov 29 14:49:43 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+##Date & Time : Fri Jan 14 13:22:54 2022
+Checkout 'dashboard' license at Fri Jan 14 13:22:54 2022 
+Checkout 'dashboard' license completed at Fri Jan 14 13:22:54 2022 
+Generating Dashboard report started at Fri Jan 14 13:22:54 2022 
+Checking project file /home/s267517/assignment/riscv/gate/scan/syn/run/_snpDft_s267517.18817.1/sg_config.prj at Fri Jan 14 13:22:54 2022 
+Processing Project File:/home/s267517/assignment/riscv/gate/scan/syn/run/_snpDft_s267517.18817.1/sg_config.prj 
+     Work Directory:/home/s267517/assignment/riscv/gate/scan/syn/run/_snpDft_s267517.18817.1/sg_config 
+     Top Name: riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800 
+     Group Mode: 0 
+     Methodology:/eda/synopsys/2020-21/RHELx86/SPYGLASS_2020.12/SPYGLASS_HOME/GuideWare/2020.12/block/rtl_handoff 
+    Goals executed: sg_dft_testpoint_analysis:: 
+  Goal sg_dft_testpoint_analysis run status: Running 
+No or invalid 'SUCCESS_CRITERIA_FILE_PATH' set in Config file.The report will use some of the SpyGlass default set values but it may be incomplete. 
+Adding data for block: riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800, from project: /home/s267517/assignment/riscv/gate/scan/syn/run/_snpDft_s267517.18817.1/sg_config.prj 
+Generating data for block 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800' 
+Didn't find active or archived goal run results for top 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800'. The  corresponding Design Objectives and Quality sections in the report may show empty. 
+Report Dashboard creation completed at Fri Jan 14 13:22:54 2022 
+Checkin 'dashboard' license at Fri Jan 14 13:22:54 2022 
+----------------------------------------------------------------
+Report 'dashboard' created.
+  File: /home/s267517/assignment/riscv/gate/scan/syn/run/_snpDft_s267517.18817.1/sg_config/html_reports/dashboard.html 
+----------------------------------------------------------------
+
+SpyGlass Exit Code 0

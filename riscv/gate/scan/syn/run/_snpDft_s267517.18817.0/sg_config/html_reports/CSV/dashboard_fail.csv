@@ -1,0 +1,13 @@
+SpyGlass DashBoard,,,,,,,,,,,,,, 
+Created: Fri Jan 14 13:07:36 CET 2022 by s267517,,,,,,,,,,,,,, 
+riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800,,,,,,,,,,,
+,Category,Run status,Design objective,,,,,Success criteria,Pass/Fail status,Graph
+,Summary,Not completed,,,,,,Failed objectives = 2,Fail
+,DFT,Completed,Random pattern fault coverage = 58.9%,,,,,,Random pattern fault coverage > 80%,Fail
+,DFT,Completed,Random pattern test coverage = 60.3%,,,,,,Random pattern test coverage > 80%,Fail
+
+,Quality goals,Run status,Unresolved Messages,,,Waived Messages,,Success criteria,Pass/Fail status,Graph
+,,,FATAL,ERROR,WARNING,ERROR,WARNING,,,,
+,Summary,Completed,,,,,,Failed goals = 0,Pass
+
+ Note: The SpyGlass configuration file used to collect data for this report is: <NA>,,,,,,,,,,,,,,

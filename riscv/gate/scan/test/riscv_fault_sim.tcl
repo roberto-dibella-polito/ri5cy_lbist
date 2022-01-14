@@ -7,14 +7,14 @@ read_netlist ../../syn/techlib/NangateOpenCellLibrary.v -library -insensitive
 read_netlist ../../syn/output/riscv_core_scan.v -master
 run_build_model riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
 
-run_drc ../../syn/output/riscv_core_scancompress.spf
+run_drc ../../syn/output/riscv_core_scan.spf
 
 set_patterns -random
-set_random_patterns -length 99
+set_random_patterns -length 1000000
 #run_simulation -sequential
 add_faults -all
 
-run_fault_simulation
+run_fault_sim
 
 # Reports
 set_faults -summary verbose -fault_coverage

@@ -1,0 +1,19 @@
+Date Created     : 14-01-2022 13:41:58
+SpyGlass Version : SpyGlass_vR-2020.12
+Project Name     : sg_config
+Goal Name        : sg_dft_testpoint_analysis
+Scenario Name    : default_scenario
+Top              : riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
+
+Message Summary
+Severity   Non-Waived  Waived
+FATAL           0         0
+ERROR           0         0
+WARNING         0         0
+INFO           22         0
+
+-dashboard_data random_pattern_fault 58.9%
+-dashboard_data random_pattern_test 60.3%
+-dashboard_data stuck_at_fault 97.6%
+-dashboard_data stuck_at_test 100.0%
+-dashboard_data scannable_flops 100.0%

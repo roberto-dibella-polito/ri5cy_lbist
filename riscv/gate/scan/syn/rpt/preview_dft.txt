@@ -5,224 +5,53 @@ Warning: Violations occurred during test design rule checking. (TEST-124)
 Information: Test design rule checking completed. (TEST-123)
 Warning: No valid test points found in test point file for target 'x_blocking'.
 Information: DFT core wrapping client disabled; banking anticipates no core wrapping. (TEST-1290)
-Architecting Scan Compression structures
-Warning: The max_length specification takes precedence over the chain_count specification for the ScanCompression_mode test mode. (TEST-1465)
   Architecting Scan Chains
-Architecting scan compression mode ScanCompression_mode with base mode Internal_scan
-Architecting Load Decompressor (version 5.8)
-  Number of inputs/chains/internal modes = 7/31/2
-Architecting Unload compressor (version 5.8)
-  Number of outputs/chains = 7/31
-  Warning: Compressor will have default x-tolerance
 
 ****************************************
 Preview_dft report
 For    : 'Insert_dft' command
 Design : riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
 Version: R-2020.09-SP2
-Date   : Thu Jan 13 17:12:30 2022
+Date   : Fri Jan 14 13:42:35 2022
 ****************************************
 
-
-
-****************************************
-
-Current mode: Internal_scan
-****************************************
-
-Number of chains: 7
+Number of chains: 10
 Scan methodology: full_scan
 Scan style: multiplexed_flip_flop
 Clock domain: no_mix
 Scan enable: test_en_i (no hookup pin)
 
 
-Scan chain '1' (test_si1 --> test_so1) contains 434 cells
-  Active in modes: Internal_scan 
+Scan chain '1' (test_si1 --> test_so1) contains 304 cells
 
 
-Scan chain '2' (test_si2 --> test_so2) contains 434 cells
-  Active in modes: Internal_scan 
+Scan chain '2' (test_si2 --> test_so2) contains 304 cells
 
 
-Scan chain '3' (test_si3 --> test_so3) contains 434 cells
-  Active in modes: Internal_scan 
+Scan chain '3' (test_si3 --> test_so3) contains 304 cells
 
 
-Scan chain '4' (test_si4 --> test_so4) contains 434 cells
-  Active in modes: Internal_scan 
+Scan chain '4' (test_si4 --> test_so4) contains 304 cells
 
 
-Scan chain '5' (test_si5 --> test_so5) contains 434 cells
-  Active in modes: Internal_scan 
+Scan chain '5' (test_si5 --> irq_id_o[4]) contains 304 cells
 
 
-Scan chain '6' (test_si6 --> test_so6) contains 434 cells
-  Active in modes: Internal_scan 
+Scan chain '6' (test_si6 --> test_so6) contains 304 cells
 
 
-Scan chain '7' (test_si7 --> test_so7) contains 433 cells
-  Active in modes: Internal_scan 
+Scan chain '7' (test_si7 --> test_so7) contains 304 cells
 
 
+Scan chain '8' (test_si8 --> test_so8) contains 303 cells
 
 
-****************************************
+Scan chain '9' (test_si9 --> test_so9) contains 303 cells
 
-Current mode: ScanCompression_mode
-****************************************
 
-Number of chains: 31
-Scan methodology: full_scan
-Scan style: multiplexed_flip_flop
-Clock domain: no_mix
-Scan enable: test_en_i (no hookup pin)
+Scan chain '10' (test_si10 --> test_so10) contains 303 cells
 
 
-Scan chain '1' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '2' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '3' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '4' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '5' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '6' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '7' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '8' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '9' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '10' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '11' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '12' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '13' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '14' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '15' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '16' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '17' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '18' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '19' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '20' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '21' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '22' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '23' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '24' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '25' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '26' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '27' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '28' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '29' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '30' contains 98 cells
-  Active in modes: ScanCompression_mode 
-
-
-Scan chain '31' contains 97 cells
-  Active in modes: ScanCompression_mode 
-
-
-
-
-ScanDataIn Ports:
-test_si1
-test_si2
-test_si3
-test_si4
-test_si5
-test_si6
-test_si7
-
-
-ScanDataOut Ports:
-test_so1
-test_so2
-test_so3
-test_so4
-test_so5
-test_so6
-test_so7
 
 ****************** Test Point Summary *******************
  Number of testability control_0 test points:       28
@@ -233,24 +62,5 @@ test_so7
  Total number of test points:                       2376
  Total number of DFT-inserted test point registers: 10
 **********************************************************
-
-
-================================
-Test Mode Controller Information
-================================
-
-Test Mode Controller Ports
---------------------------
-test_mode: test_mode
-
-Test Mode Controller Index (MSB --> LSB)
-----------------------------------------
-test_mode
-
-Control signal value - Test Mode
---------------------------------
-0 Internal_scan - InternalTest
-
-1 ScanCompression_mode - InternalTest
 
 1
