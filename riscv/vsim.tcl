@@ -35,7 +35,7 @@ if { $env(RUN_GATE) == 1 } {
 #run 167772200 ns
 
 # 10k random patterns
-#run 111140 ns
+run 111140 ns
 
 if { $env(RUN_GUI) != 1 } {
 	quit

@@ -44,19 +44,19 @@ module tb_top
     logic [31:0]            exit_value;
 	
 	logic 			go_nogo;
-	logic			test_over = 'b0;
+	logic			test_over;
 
     // signals for ri5cy
     logic                   fetch_enable;
 	logic			test_mode;
 	logic			normal_test;
-
+	logic			test_mode_tp;
     // make the core start fetching instruction immediately
     assign fetch_enable = '1;
 	assign clock_en 	= '1;
 	assign test_mode	= '1;	// Test mode in ScanCompression mode
-	//assign normal_test	= '0;
-
+	assign test_mode_tp	= '1;	// Test points enabled
+	
     // allow vcd dump
     initial begin
         if ($test$plusargs("vcd")) begin
@@ -112,6 +112,8 @@ module tb_top
 	initial begin: test_control
 		normal_test = 1'b0;
 		#START_TEST_CYCLES normal_test = 1'b1;
+		#15 normal_test = 1'b0;
+		
 	end: test_control
 	/***********************************************/
 
@@ -176,6 +178,7 @@ module tb_top
          .rst_ni         ( rst_n        ),
          .fetch_enable_i ( fetch_enable ),
 	.test_mode_i 	( test_mode 	),
+	.test_mode_tp_i	( test_mode_tp	),
 	.clock_en_i( clock_en	),
 	.normal_test_i	( normal_test	),
 	.go_nogo_o	( go_nogo	),

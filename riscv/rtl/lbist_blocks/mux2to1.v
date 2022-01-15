@@ -13,7 +13,7 @@ module mux2to1_n
 	output wire [N-1:0] dout
 );
 
-	always @ (d1 or d2 or sel)
+	always @ (d0 or d1 or sel)
 	begin
 		case(sel)
 			0:	assign dout = d0;

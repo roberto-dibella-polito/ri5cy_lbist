@@ -14,7 +14,7 @@ entity output_evaluator is
 	port(
 		clk, rst_n, en	: in std_logic;
 		din			: in std_logic_vector(N-1 downto 0);
-		dout			: out std_logic_vector(N downto 0);
+		--dout			: out std_logic_vector(N downto 0);
 		sign_ok			: out std_logic
 	);
 end output_evaluator;
@@ -40,7 +40,7 @@ begin
 	--------------------------------------------------------
 	-- EXPECTED SIGNATURE TO BE UPDATED HERE
 	--EXPECTED_SIGNATURE <= x"3B155ADC4DFCDC4DFCDC4DFCDC4DFC0C11F2B0EC4F492990C7C7F0AF891A";
-	EXPECTED_SIGNATURE <= x"BFC63BC36406C36406C36406C3640643DC1A002391A1D8D4F5AB3624EDCA";
+	EXPECTED_SIGNATURE <= x"820EE3C36406C36406C36406C364066E944D18A9CDF1356B315E3E640447";
 	--------------------------------------------------------
 	
 	tmp_in <= din(N-1) & din;	
@@ -61,5 +61,5 @@ begin
 		end if;
 	end process;
 	
-	dout <= tmp_out;	
+	--dout <= tmp_out;	
 end structure;		

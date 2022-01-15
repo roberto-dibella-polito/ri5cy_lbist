@@ -1,7 +1,0 @@
-current_design "riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800"
-define_sgdc_severity_class -value ERROR
-no_test_point -name test_en_i -fanout_logic
-no_test_point -name clk_i -fanout_logic
-no_test_point -name rst_ni -fanout_logic
-no_test_point -name test_mode_tp -fanout_logic
-end_sgdc_severity_class

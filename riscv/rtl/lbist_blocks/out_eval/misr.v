@@ -25,7 +25,7 @@ module misr
 	begin 
     	if (rst_n == 1'b0)
         	r_reg <= SEED;  // use this or uncomment below two line
-    	else if (clk == 1'b1 & en == 1'b1)
+    	else if (en == 1'b1)
         	r_reg <= r_next;
 	end
 
@@ -36,23 +36,29 @@ module misr
 		case (N)
 			// Cases
 			23: 	// x[23]+x[5]+1
-					for( i=2; i<=N; i=i+1 ) begin
-						if( i==5)
+				begin : gen_block_1
+					for( i=2; i<=N; i=i+1 ) begin : gen_block_1
+						if( i==5) begin: gen_block_1
 							assign r_next[i] = r_reg[i-1] ~^ din[i-1] ~^ r_reg[N];
-						else
+						end else begin: gen_block_1
 							assign r_next[i] = r_next[i-1] ~^ din[i-1];
+						end
 					end
+				end
 
  			24: 	// x[24]+x[7]+x[2]+x[1]
-					for( i=2; i<=N; i=i+1 ) begin
-						if( i==7 | i==2 | i == 1)
+				begin: gen_block_1
+					for( i=2; i<=N; i=i+1 ) begin : gen_block_1
+						if( i==7 | i==2 | i == 1) begin: gen_block_1
 							assign r_next[i] = r_reg[i-1] ~^ din[i-1] ~^ r_reg[N];
-						else
+						end else begin: gen_block_1
 							assign r_next[i] = r_reg[i-1] ~^ din[i-1]; 
-					end
+						end
+					end	
+				end
  
 			default: 
-				begin
+				begin: gen_block_1
 		 			initial
 						$display("Missing N=%d in the LFSR code, please implement it!", N);
 						//illegal missing_case("please implement");

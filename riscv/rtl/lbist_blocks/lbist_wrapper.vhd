@@ -71,26 +71,36 @@ architecture structure of riscv_lbist is
 	end component;
 
 	-- TEST PATTERN GENERATOR
-	component lfsr
-		generic( 
-			N : integer := 20;
-			SEED : integer := 1
-		);
+	--component lfsr
+	--	generic( 
+	--		N : integer := 20;
+	--		SEED : integer := 1
+	--	);
+	--	port(
+	--		clk, rst_n, en	: in std_logic;
+	--		dout		: out std_logic_vector(N-1 downto 0)
+	--	);
+	--end component;
+
+	--component phase_shifter
+	--	generic(
+	--		N_IN : integer := 24;
+	--		N_OUT : integer := 267
+	--	);
+	--	port(
+	--		din	: in std_logic_vector(N_IN-1 downto 0);
+	--		dout	: out std_logic_vector(N_OUT-1 downto 0)
+	--	);
+	--end component;
+
+	--module tpg
+	--(     input wire clk, en, rst_n,
+        --	output wire [266:0] dout    
+	--	 );
+	component tpg
 		port(
 			clk, rst_n, en	: in std_logic;
-			dout		: out std_logic_vector(N-1 downto 0)
-		);
-	end component;
-
-	component phase_shifter
-		generic(
-			N_IN : integer := 24;
-			N_OUT : integer := 267
-		);
-		port(
-			din	: in std_logic_vector(N_IN-1 downto 0);
-			dout	: out std_logic_vector(N_OUT-1 downto 0)
-		);
+			dout		: out std_logic_vector(266 downto 0) );
 	end component;
 
 	-- OUTPUT EVALUATOR
@@ -102,7 +112,7 @@ architecture structure of riscv_lbist is
 		port(
 			clk, rst_n, en	: in std_logic;
 			din		: in std_logic_vector(N-1 downto 0);
-			dout		: out std_logic_vector(N downto 0);
+			--dout		: out std_logic_vector(N downto 0);
 			sign_ok		: out std_logic
 		);
 	end component;
@@ -145,18 +155,27 @@ begin
 	);		
 	
 	-- LFSR
-	lfsr_i: lfsr generic map( N => 24, SEED => 1) port map(
-		clk	=> clk_i,
-		rst_n	=> tpg_rst_n_i,
-		en	=> tpg_en_i,
-		dout	=> lfsr_patterns_i
-	);
+	--lfsr_i: lfsr generic map( N => 24, SEED => 1) port map(
+	--	clk	=> clk_i,
+	--	rst_n	=> tpg_rst_n_i,
+	--	en	=> tpg_en_i,
+	--		dout	=> lfsr_patterns_i
+	--);
 	
 	-- Phase Shifter
-	phsh: phase_shifter generic map( N_IN => 24, N_OUT => 267 ) port map (
-		din	=> lfsr_patterns_i,
-		dout	=> test_patterns_i
-	);
+	--phsh: phase_shifter generic map( N_IN => 24, N_OUT => 267 ) port map (
+	--	din	=> lfsr_patterns_i,
+	--	dout	=> test_patterns_i
+	--);
+
+	-- TEST PATTERN GENERATOR
+	patterns_generator: tpg port map(
+		clk	=> clk_i, 
+		rst_n	=> tpg_rst_n_i,
+		en	=> tpg_en_i,
+		dout	=> test_patterns_i );
+
+
 
 	-- BIST CONTROLLER
 	controller: bist_controller port map(
@@ -195,7 +214,7 @@ begin
 		rst_n	=> signature_rst_i,
 		en	=> out_eval_en_i,
 		din	=> pos,
-		dout	=> signature_i,
+		--dout	=> signature_i,
 		sign_ok => signature_check_i
 	);
 end structure;

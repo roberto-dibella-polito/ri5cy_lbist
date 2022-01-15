@@ -27,7 +27,7 @@ vcom -93 -work work_gate \
 
 vlog -work work_gate \
 	${root_dir}/rtl/lbist_blocks/tpg/lfsr/lfsr.v \
-	${root_dir}/rtl/lbist_blocks/tpg/phase_shifter/phase_shifter.v \
+	${root_dir}/rtl/lbist_blocks/tpg/tpg.v \
 	${root_dir}/rtl/lbist_blocks/out_eval/misr.v \
 	${root_dir}/gate/scan/syn/output/riscv_core_scan.v 
 

@@ -25,6 +25,7 @@ module riscv_wrapper
     	input logic	test_mode_i,
      	input logic	clock_en_i,
 	input logic	normal_test_i,
+	input logic	test_mode_tp_i,
 		
 	output logic	go_nogo_o,
 	output logic	test_over_o,	
@@ -79,7 +80,7 @@ module riscv_wrapper
 	.normal_test_i		( normal_test_i		),
 	.go_nogo_o		( go_nogo_o		),
 	.test_over_o		( test_over_o		),
-
+	.test_mode_tp_i		( test_mode_tp_i	),
          .boot_addr_i            ( BOOT_ADDR             ),
          .core_id_i              ( 4'h0                  ),
          .cluster_id_i           ( 6'h0                  ),

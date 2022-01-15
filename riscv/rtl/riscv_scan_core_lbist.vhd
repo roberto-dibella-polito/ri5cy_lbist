@@ -28,7 +28,7 @@ entity riscv_core is
   		irq_id_o		: out std_logic_vector(4 downto 0);
   		ext_perf_counters_i	: in std_logic_vector(1 to 2);
  	 	
-		clk_i, rst_ni, clock_en_i, test_mode_i, fetch_enable_i, normal_test_i		: in std_logic;
+		clk_i, rst_ni, clock_en_i, test_mode_i, fetch_enable_i, normal_test_i, test_mode_tp_i	: in std_logic;
 		
 		-- 1-bit primary inputs
 		fregfile_disable_i, instr_gnt_i, instr_rvalid_i, data_gnt_i, data_rvalid_i	: in std_logic;
@@ -67,7 +67,7 @@ architecture structure of riscv_core is
   			ext_perf_counters_i	: in std_logic_vector(1 to 2);
 			
 			-- Signals for the top-level entity
- 	 		clk_i, rst_ni, clock_en_i, test_en_i, test_mode, fetch_enable_i			: in std_logic;
+ 	 		clk_i, rst_ni, clock_en_i, test_en_i, test_mode, fetch_enable_i, test_mode_tp	: in std_logic;
 			
 			-- 1-bit primary inputs
 			fregfile_disable_i, instr_gnt_i, instr_rvalid_i, data_gnt_i, data_rvalid_i	: in std_logic;
@@ -167,6 +167,7 @@ begin
 			test_en_i		=> testing, 
 			test_mode		=> test_mode_i,
 			fetch_enable_i		=> fetch_en,
+			test_mode_tp		=> test_mode_tp_i,
 			
 			-- 1-bit primary inputs
 			fregfile_disable_i	=> pis_selected_i(255), 

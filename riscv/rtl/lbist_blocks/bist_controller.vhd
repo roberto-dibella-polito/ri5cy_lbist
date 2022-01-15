@@ -32,7 +32,7 @@ end entity;
 architecture bhv of bist_controller is 
    
 	type TYPE_STATE is (
-		RESET, IDLE, START_TEST, TEST, EVALUATION, TEST_RESULT
+		RESET, IDLE, START_TEST, TEST, EVALUATION, FLUSHP_1, FLUSHP_2, FLUSHP_3
 	);
 	signal CURRENT_STATE : TYPE_STATE := RESET;
 	signal NEXT_STATE : TYPE_STATE := IDLE;
@@ -80,9 +80,17 @@ begin
 				end if;
 			
 			when EVALUATION =>
-				NEXT_STATE <= RESET;
+				NEXT_STATE <= FLUSHP_1;
 		
-	
+			when FLUSHP_1 =>
+				NEXT_STATE <= FLUSHP_2;
+
+			when FLUSHP_2 =>
+				NEXT_STATE <= FLUSHP_3;
+
+			when FLUSHP_3 =>
+				NEXT_STATE <= RESET;
+			
 			when others => 
 				NEXT_STATE <= RESET;
 
@@ -147,7 +155,40 @@ begin
 				testing			<= '1'; 
 				test_over		<= '1'; 
 			
-			when others => 
+			when FLUSHP_1 =>
+				test_mux_sel		<= '0'; 
+				out_eval_en		<= '0';
+				tpg_en			<= '0';
+				count_enable		<= '0';
+				rst_test_counter_n	<= '1';
+				rst_tpg_n		<= '1';
+				rst_out_eval_n		<= '1';
+				testing			<= '1'; 
+				test_over		<= '1'; 
+				
+			when FLUSHP_2 =>
+				test_mux_sel		<= '0'; 
+				out_eval_en		<= '0';
+				tpg_en			<= '0';
+				count_enable		<= '0';
+				rst_test_counter_n	<= '1';
+				rst_tpg_n		<= '1';
+				rst_out_eval_n		<= '1';
+				testing			<= '1'; 
+				test_over		<= '1'; 
+
+			when FLUSHP_3 =>
+				test_mux_sel		<= '0'; 
+				out_eval_en		<= '0';
+				tpg_en			<= '0';
+				count_enable		<= '0';
+				rst_test_counter_n	<= '1';
+				rst_tpg_n		<= '1';
+				rst_out_eval_n		<= '1';
+				testing			<= '1'; 
+				test_over		<= '1'; 
+			
+			when others =>  
 				test_mux_sel		<= '0'; 
 				out_eval_en		<= '0';
 				tpg_en			<= '0';

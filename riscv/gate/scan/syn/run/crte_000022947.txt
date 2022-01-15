@@ -1,0 +1,215 @@
+CRTE_SNAPSHOT_START
+
+SECTION_CRTE_VERSION
+3.0
+
+SECTION_PID
+22947
+
+SECTION_POLLING_INTERVAL
+5
+
+SECTION_DATE_TIME
+Sat Jan 15 02:11:40 CET 2022 (1642209100)
+
+SECTION_OS_VERSION
+osname: Linux
+hostname: po.polito.it
+arch: x86_64
+release_version: 3.10.0-957.1.3.el7.x86_64
+
+SECTION_IPC_INFO
+Error: command <ipcs -msq 2>/dev/null> can not be executed.
+SECTION_ULIMIT
+Error: command <sh -c "ulimit -a"> can not be executed.
+SECTION_SYSCONF
+_SC_THREAD_SAFE_FUNCTIONS= 200809
+_SC_CLK_TCK= 100
+_SC_OPEN_MAX= 4096
+_SC_PAGE_SIZE= 4096
+_SC_ARG_MAX= 4611686018427387903
+_SC_CHILD_MAX= 4096
+_SC_LINE_MAX= 2048
+
+SECTION_FULL_COMMAND
+/eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/linux64/syn/bin/common_shell_exec -shell dc_shell -r /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2 -f ../bin/bist_nangate.tcl
+
+SECTION_CPUINFO
+total_core: 8
+
+model_name:  AMD EPYC Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm art rep_good nopl xtopology extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ssbd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 virt_ssbd arat
+cpu_family: 23
+core_frequency_mhz: 2195
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD EPYC Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm art rep_good nopl xtopology extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ssbd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 virt_ssbd arat
+cpu_family: 23
+core_frequency_mhz: 2195
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD EPYC Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm art rep_good nopl xtopology extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ssbd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 virt_ssbd arat
+cpu_family: 23
+core_frequency_mhz: 2195
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD EPYC Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm art rep_good nopl xtopology extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ssbd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 virt_ssbd arat
+cpu_family: 23
+core_frequency_mhz: 2195
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD EPYC Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm art rep_good nopl xtopology extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ssbd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 virt_ssbd arat
+cpu_family: 23
+core_frequency_mhz: 2195
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD EPYC Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm art rep_good nopl xtopology extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ssbd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 virt_ssbd arat
+cpu_family: 23
+core_frequency_mhz: 2195
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD EPYC Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm art rep_good nopl xtopology extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ssbd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 virt_ssbd arat
+cpu_family: 23
+core_frequency_mhz: 2195
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD EPYC Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm art rep_good nopl xtopology extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ssbd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 virt_ssbd arat
+cpu_family: 23
+core_frequency_mhz: 2195
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 512
+ht: 0
+
+SECTION_OS_RELEASE_VERSION
+Error: command <cat /etc/redhat-release> can not be executed.
+
+SECTION_SYS/VM
+Error: command <grep '' /proc/sys/vm/* 2> /dev/null> can not be executed.
+
+SECTION_SWAP
+swap_partition: /dev/sda2
+size_gb: 3
+
+CRTE_SNAPSHOT_END
+
+CRTE_PERIODIC_START 1 1642209100612
+
+SECTION_MPSTAT
+total_core: 8
+
+CPU     %user   %kernel %wait   %idle   
+all   17.355652 1.488462 0.643835 80.512047
+0     13.817731 1.314413 0.414578 84.453278
+1     15.187070 1.263864 0.822297 82.726768
+2     18.153458 1.625915 0.680180 79.540443
+3     13.888868 1.636907 0.675645 83.798584
+4     28.078520 1.538492 0.394176 69.988815
+5     13.745158 1.610376 0.558673 84.085793
+6     21.115000 1.480823 1.161754 76.242432
+7     14.849218 1.436894 0.443653 83.270241
+SECTION_LOADAVG
+19.18 20.00 20.52 22/3210 31122
+
+SECTION_PID_STATUS
+name: common_shell_ex
+state: 1
+vmsize: 2040008
+vmrss: 322948
+vmdata: 1430000
+vmstk: 232
+vmexe: 363884
+vmlib: 120216
+threads: 1
+
+SECTION_PROCESS_CPU_UTIL
+pid: 22947
+cpu_total_time: 4429902979
+cpu_used_time: 6898
+cpu_p: 
+
+SECTION_SYSTEM_CPU_UTIL
+sys_cpu_p: 
+
+SECTION_MEMINFO
+memtotal: 16264564
+memfree: 359608
+cached: 2122860
+swapcached: 58668
+active: 12243136
+swaptotal: 4194300
+swapfree: 0
+
+SECTION_SMAPS
+shared_kb: 42708
+private_kb: 280256
+
+SECTION_DF
+Filesystem  Size  Used Avail Use%
+filesystem        487G  310G  157G    66
+
+Filesystem    Inodes   IUsed   IFree   IUse%
+filesystem          32417840  4004896 28412944   4294966687
+
+SECTION_CWD
+Filesystem  Size  Used Avail Use%
+filesystem        487G  310G  157G    66
+
+Filesystem    Inodes   IUsed   IFree   IUse%
+filesystem          32417840  4004896 28412944   4294966687
+
+SECTION_SWAP_RATE
+blk_read: 9466400
+blk_wrtn: 21559560
+swap_in_rate: 
+swap_out_rate: 
+swap_in_rate: 
+swap_out_rate: 
+
+SECTION_FD_SIZE
+files: 13
+total_size: 282451
+
+SECTION_NET_INTERFACE
+total_eth_avbl: 3
+
+name net_rx_err net_rx_drp net_tx_err net_tx_drp 
+  eth0:         0        64        0        0
+    lo:         0        0        0        0
+virbr0-nic:               0        0        0        0
+
+SECTION_NFSSTAT
+Error: Could not collect the data.
+
+SECTION_THREAD_CPU_UTIL
+22947 : 22947 (common_shell_ex) R 22942 22942 13001 34821 22942 8192 245525 50056 2 1 2664 80 4135 20 20 0 1 0 555283196 2088968192 80737 18446744073709551615 4194304 376807449 140737488346000 140737488333720 46912507610848 0 0 67112960 1132490495 0 0 0 17 3 0 0 46 0 0 378904976 393267631 1616424960 140737488346842 140737488347014 140737488347014 140737488351144 0
+
+CRTE_PERIODIC_END 1 1642209100612

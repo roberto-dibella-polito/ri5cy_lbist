@@ -17,6 +17,7 @@ sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/clk \
 sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/rst_n \
 sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/normal_test \
 sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/pis \
+sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/test_patterns_i \
 sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/pos \
 sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/pi_selected \
 sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/go_nogo \
@@ -43,5 +44,5 @@ sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/test_cnt/cnt_i \
 sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/test_cnt/test_started \
 sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/test_cnt/test_finished \
 -divider "Output Evaluator" \
-sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/out_eval/dout \
+sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/out_eval/tmp_out \
 sim:/tb_top/riscv_wrapper_i/riscv_core_i/lbist/out_eval/en

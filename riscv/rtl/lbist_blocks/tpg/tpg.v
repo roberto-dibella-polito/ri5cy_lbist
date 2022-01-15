@@ -12,32 +12,30 @@
 
 module tpg
 (	input wire clk, en, rst_n,
-	output wire [259:0] pi_dout, 
-	output wire [6:0] sc_dout );
-
+	output wire [266:0] dout 
+ );
+	
+	wire [266:0] tmp_dout;
 	// Generate the LFSRs for PI
 	
 	genvar i;
-	
 	generate
-		for(i=0; i < 260; i = i+20) begin
-			lfsr #( .N(20), .SEED(i) )
+		for(i=0; i<260; i=i+24) begin : gen_block_1
+			lfsr #( .N(24), .SEED(i) )
 			lfsr_i (
 				.clk(clk),
 				.en(en),
 				.rst_n(rst_n),
-				.dout( pi_dout[i+19:i] )
+				.dout( tmp_dout[i+23:i] )
 			);
 		end
 	endgenerate
-  
-	// LFSR for scan chains
-	
-	lfsr #( .N(7), .SEED(1) )
-	lfsr_sc (
-		.clk(clk),
-		.en(en),
-		.rst_n(rst_n),
-		.dout(sc_dout)
-	);
+
+	generate
+		for(i=0; i<3; i=i+1) begin : gen_block_2
+			assign tmp_dout[264+i] = tmp_dout[263] ~^ tmp_dout[262-i];
+		end
+	endgenerate		
+ 
+	assign dout = tmp_dout; 
 endmodule

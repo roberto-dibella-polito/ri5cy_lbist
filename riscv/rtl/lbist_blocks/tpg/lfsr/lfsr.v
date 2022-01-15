@@ -21,22 +21,22 @@ module lfsr
 );
 
 
-// Register is indexed backwards for compliancy with taps
-// indication given during the course.
-reg [1:N] r_reg;
-wire [1:N] r_next;
-wire feedback_value;
+	// Register is indexed backwards for compliancy with taps
+	// indication given during the course.
+	reg [1:N] r_reg;
+	wire [1:N] r_next;
+	wire feedback_value;
                         
-always @(posedge clk,negedge rst_n)
-begin 
-    if (rst_n == 1'b0)
-        r_reg <= SEED;  // use this or uncomment below two line
-    else if (clk == 1'b1 & en == 1'b1)
-        r_reg <= r_next;
-end
+	always @(posedge clk,negedge rst_n)
+	begin 
+    	if (rst_n == 1'b0)
+        	r_reg <= SEED;  // use this or uncomment below two line
+   	else if (en == 1'b1)
+        	r_reg <= r_next;
+	end
 
-generate
-case (N)
+	generate
+	case (N)
 /*
 3:	//// Feedback polynomial : x^3 + x^1 + 1
 	////total sequences (maximum) : 2^3 - 1 = 7
@@ -59,23 +59,31 @@ case (N)
 19: 	assign feedback_value = r_reg[19] ~^ r_reg[5] ~^ r_reg[2] ~^ r_reg[1] ~^ r_reg[0];
 
 20: 	assign feedback_value = r_reg[20] ~^ r_reg[3] ~^ r_reg[0];
-*/
+*/		
 
-7: 	assign feedback_value = r_reg[7] ~^ r_reg[3];
+	7:  	begin : gen_block_1
+		assign feedback_value = r_reg[7] ~^ r_reg[3];
+		end
 
-19: 	assign feedback_value = r_reg[19] ~^ r_reg[5] ~^ r_reg[2] ~^ r_reg[1];
+	19: 	begin: gen_block_1
+		assign feedback_value = r_reg[19] ~^ r_reg[5] ~^ r_reg[2] ~^ r_reg[1];
+		end	
+	
+	20: 	begin : gen_block_1
+		assign feedback_value = r_reg[20] ~^ r_reg[3];
+		end
 
-20: 	assign feedback_value = r_reg[20] ~^ r_reg[3];
+	24: 	begin : gen_block_1
+		assign feedback_value = r_reg[24] ~^ r_reg[7] ~^ r_reg[2] ~^ r_reg[1];
+		end
 
-24: 	assign feedback_value = r_reg[24] ~^ r_reg[7] ~^ r_reg[2] ~^ r_reg[1];
-
-default: 
-	begin
-		 initial
-			$display("Missing N=%d in the LFSR code, please implement it!", N);
-		//illegal missing_case("please implement");
-	end		
-endcase
+	default: 
+		begin : gen_block_1
+			 initial
+				$display("Missing N=%d in the LFSR code, please implement it!", N);
+			//illegal missing_case("please implement");
+		end		
+	endcase
 endgenerate
 
 
