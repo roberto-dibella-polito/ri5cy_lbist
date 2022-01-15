@@ -12,50 +12,9 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-vlib work
-vlog -work ./work ../mux2to1.v
-# QuestaSim-64 vlog 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 08:52:52 on Jan 11,2022
-# vlog -reportprogress 300 -work ./work ../mux2to1.v 
-# -- Compiling module mux2to1_n
-# ** Error: (vlog-13069) ../mux2to1.v(16): near "always": syntax error, unexpected always, expecting ';'.
-# End time: 08:52:53 on Jan 11,2022, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vlog failed.
-vlog -work ./work ../mux2to1.v
-# QuestaSim-64 vlog 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 08:55:27 on Jan 11,2022
-# vlog -reportprogress 300 -work ./work ../mux2to1.v 
-# -- Compiling module mux2to1_n
-# ** Error: (vlog-13069) ../mux2to1.v(16): near "always": syntax error, unexpected always, expecting ';'.
-# End time: 08:55:27 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vlog failed.
-vlog -work ./work ../mux2to1.v
-# QuestaSim-64 vlog 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 08:55:47 on Jan 11,2022
-# vlog -reportprogress 300 -work ./work ../mux2to1.v 
-# -- Compiling module mux2to1_n
-# ** Error: ../mux2to1.v(19): LHS in procedural continuous assignment may not be a net: dout.
-# ** Error: ../mux2to1.v(20): LHS in procedural continuous assignment may not be a net: dout.
-# End time: 08:55:47 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vlog failed.
-vcom -93 -work ./work ../mux2to1.vhd
+source lbist_simulation_script.tcl
 # QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:01:41 on Jan 11,2022
-# vcom -reportprogress 300 -93 -work ./work ../mux2to1.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# ** Error: ../mux2to1.vhd(7): near "mux2to1_n": syntax error
-# End time: 09:01:42 on Jan 11,2022, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vcom failed.
-vcom -93 -work ./work ../mux2to1.vhd
-# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:02:14 on Jan 11,2022
+# Start time: 17:23:30 on Jan 15,2022
 # vcom -reportprogress 300 -93 -work ./work ../mux2to1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -63,72 +22,41 @@ vcom -93 -work ./work ../mux2to1.vhd
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux2to1_n
 # -- Compiling architecture bhv of mux2to1_n
-# ** Error: ../mux2to1.vhd(28): near "process": (vcom-1576) expecting IF.
-# End time: 09:02:14 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vcom failed.
-vcom -93 -work ./work ../mux2to1.vhd
+# End time: 17:23:30 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:02:41 on Jan 11,2022
-# vcom -reportprogress 300 -93 -work ./work ../mux2to1.vhd 
+# Start time: 17:23:32 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../tpg_2/lfsr.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity mux2to1_n
-# -- Compiling architecture bhv of mux2to1_n
-# End time: 09:02:41 on Jan 11,2022, Elapsed time: 0:00:00
+# -- Compiling entity lfsr
+# -- Compiling architecture structure of lfsr
+# End time: 17:23:32 on Jan 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -work ./work ../tpg/lfsr/lfsr.v
-# QuestaSim-64 vlog 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:03:46 on Jan 11,2022
-# vlog -reportprogress 300 -work ./work ../tpg/lfsr/lfsr.v 
-# -- Compiling module lfsr
-# 
-# Top level modules:
-# 	lfsr
-# End time: 09:03:46 on Jan 11,2022, Elapsed time: 0:00:00
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:23:33 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../tpg_2/tpg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tpg
+# -- Compiling architecture structure of tpg
+# End time: 17:23:33 on Jan 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -work ./work ../tpg/phase_shifter/phase_shifter.v
 # QuestaSim-64 vlog 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:04:04 on Jan 11,2022
-# vlog -reportprogress 300 -work ./work ../tpg/phase_shifter/phase_shifter.v 
-# -- Compiling module phase_shifter
-# 
-# Top level modules:
-# 	phase_shifter
-# End time: 09:04:04 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work ./work ../out_eval/misr.v
-# QuestaSim-64 vlog 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:04:22 on Jan 11,2022
+# Start time: 17:23:34 on Jan 15,2022
 # vlog -reportprogress 300 -work ./work ../out_eval/misr.v 
 # -- Compiling module misr
 # 
 # Top level modules:
 # 	misr
-# End time: 09:04:22 on Jan 11,2022, Elapsed time: 0:00:00
+# End time: 17:23:34 on Jan 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vcom -93 -work ./work ../out_eval/out_eval.vhd
 # QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:04:47 on Jan 11,2022
-# vcom -reportprogress 300 -93 -work ./work ../out_eval/out_eval.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity output_evaluator
-# ** Error: ../out_eval/out_eval.vhd(12): (vcom-1396) Object "N" cannot appear within the same interface list in which it is declared.
-# ** Error: ../out_eval/out_eval.vhd(12): ** Error: (vcom-1591) Bad expression in left bound of range expression.
-# ** Error: ../out_eval/out_eval.vhd(12): Type error in range expression.
-# ** Warning: ../out_eval/out_eval.vhd(13): (vcom-1346) Default expression of interface object is not globally static.
-# ** Error: ../out_eval/out_eval.vhd(20): VHDL Compiler exiting
-# End time: 09:04:47 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 1
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vcom failed.
-vcom -93 -work ./work ../out_eval/out_eval.vhd
-# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:10:04 on Jan 11,2022
+# Start time: 17:23:35 on Jan 15,2022
 # vcom -reportprogress 300 -93 -work ./work ../out_eval/out_eval.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -136,25 +64,10 @@ vcom -93 -work ./work ../out_eval/out_eval.vhd
 # -- Loading package NUMERIC_STD
 # -- Compiling entity output_evaluator
 # -- Compiling architecture structure of output_evaluator
-# ** Error: ../out_eval/out_eval.vhd(47): near "generate": syntax error
-# End time: 09:10:04 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vcom failed.
-vcom -93 -work ./work ../out_eval/out_eval.vhd
-# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:10:38 on Jan 11,2022
-# vcom -reportprogress 300 -93 -work ./work ../out_eval/out_eval.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity output_evaluator
-# -- Compiling architecture structure of output_evaluator
-# End time: 09:10:38 on Jan 11,2022, Elapsed time: 0:00:00
+# End time: 17:23:35 on Jan 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vcom -93 -work ./work ../test_counter/counter.vhd
 # QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:11:52 on Jan 11,2022
+# Start time: 17:23:36 on Jan 15,2022
 # vcom -reportprogress 300 -93 -work ./work ../test_counter/counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -164,11 +77,10 @@ vcom -93 -work ./work ../test_counter/counter.vhd
 # -- Loading package NUMERIC_STD
 # -- Compiling entity counter
 # -- Compiling architecture beh of counter
-# End time: 09:11:52 on Jan 11,2022, Elapsed time: 0:00:00
+# End time: 17:23:36 on Jan 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vcom -93 -work ./work ../test_counter/test_counter.vhd
 # QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:12:01 on Jan 11,2022
+# Start time: 17:23:37 on Jan 15,2022
 # vcom -reportprogress 300 -93 -work ./work ../test_counter/test_counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -176,25 +88,10 @@ vcom -93 -work ./work ../test_counter/test_counter.vhd
 # -- Loading package NUMERIC_STD
 # -- Compiling entity test_counter
 # -- Compiling architecture structure of test_counter
-# End time: 09:12:01 on Jan 11,2022, Elapsed time: 0:00:00
+# End time: 17:23:37 on Jan 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vcom -93 -work ./work ../bist_controller.vhd
 # QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:12:13 on Jan 11,2022
-# vcom -reportprogress 300 -93 -work ./work ../bist_controller.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity bist_controller
-# ** Error: ../bist_controller.vhd(27): near ")": (vcom-1576) expecting IDENTIFIER.
-# End time: 09:12:13 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vcom failed.
-vcom -93 -work ./work ../bist_controller.vhd
-# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:12:48 on Jan 11,2022
+# Start time: 17:23:38 on Jan 15,2022
 # vcom -reportprogress 300 -93 -work ./work ../bist_controller.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -203,14 +100,119 @@ vcom -93 -work ./work ../bist_controller.vhd
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity bist_controller
 # -- Compiling architecture bhv of bist_controller
-# ** Error: ../bist_controller.vhd(77): near "when": (vcom-1576) expecting END.
-# ** Error: ../bist_controller.vhd(144): VHDL Compiler exiting
-# End time: 09:12:48 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vcom failed.
-vcom -93 -work ./work ../bist_controller.vhd
+# End time: 17:23:38 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:13:18 on Jan 11,2022
+# Start time: 17:23:39 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../lbist_wrapper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity riscv_lbist
+# -- Compiling architecture structure of riscv_lbist
+# End time: 17:23:39 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:23:40 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../tb/clk_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity clk_gen
+# -- Compiling architecture bhv of clk_gen
+# End time: 17:23:40 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:23:41 on Jan 15,2022
+# vlog -reportprogress 300 -work work ../tb/tb_lbist_wrapper.v 
+# -- Compiling module tb_lbist
+# ** Error: ../tb/tb_lbist_wrapper.v(51): (vlog-2110) Illegal reference to net "pis_i".
+# End time: 17:23:41 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vlog failed.
+source lbist_simulation_script.tcl
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:24:08 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../mux2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_n
+# -- Compiling architecture bhv of mux2to1_n
+# End time: 17:24:08 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:24:09 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../tpg_2/lfsr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity lfsr
+# -- Compiling architecture structure of lfsr
+# End time: 17:24:09 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:24:10 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../tpg_2/tpg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tpg
+# -- Compiling architecture structure of tpg
+# End time: 17:24:10 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:24:11 on Jan 15,2022
+# vlog -reportprogress 300 -work ./work ../out_eval/misr.v 
+# -- Compiling module misr
+# 
+# Top level modules:
+# 	misr
+# End time: 17:24:11 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:24:12 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../out_eval/out_eval.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity output_evaluator
+# -- Compiling architecture structure of output_evaluator
+# End time: 17:24:12 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:24:13 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../test_counter/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture beh of counter
+# End time: 17:24:13 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:24:14 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../test_counter/test_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity test_counter
+# -- Compiling architecture structure of test_counter
+# End time: 17:24:14 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:24:15 on Jan 15,2022
 # vcom -reportprogress 300 -93 -work ./work ../bist_controller.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -219,11 +221,10 @@ vcom -93 -work ./work ../bist_controller.vhd
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity bist_controller
 # -- Compiling architecture bhv of bist_controller
-# End time: 09:13:18 on Jan 11,2022, Elapsed time: 0:00:00
+# End time: 17:24:15 on Jan 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vcom -93 -work ./work ../lbist_wrapper.vhd
 # QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:13:39 on Jan 11,2022
+# Start time: 17:24:16 on Jan 15,2022
 # vcom -reportprogress 300 -93 -work ./work ../lbist_wrapper.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -231,96 +232,31 @@ vcom -93 -work ./work ../lbist_wrapper.vhd
 # -- Loading package NUMERIC_STD
 # -- Compiling entity riscv_lbist
 # -- Compiling architecture structure of riscv_lbist
-# ** Error: ../lbist_wrapper.vhd(42): near ")": (vcom-1576) expecting IDENTIFIER.
-# End time: 09:13:39 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vcom failed.
-vcom -93 -work ./work ../lbist_wrapper.vhd
-# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:14:07 on Jan 11,2022
-# vcom -reportprogress 300 -93 -work ./work ../lbist_wrapper.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity riscv_lbist
-# -- Compiling architecture structure of riscv_lbist
-# ** Error: ../lbist_wrapper.vhd(74): near ")": (vcom-1576) expecting FUNCTION or PROCEDURE or IMPURE or PURE.
-# End time: 09:14:07 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vcom failed.
-vcom -93 -work ./work ../lbist_wrapper.vhd
-# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:14:40 on Jan 11,2022
-# vcom -reportprogress 300 -93 -work ./work ../lbist_wrapper.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity riscv_lbist
-# -- Compiling architecture structure of riscv_lbist
-# ** Error: ../lbist_wrapper.vhd(83): near ",": (vcom-1576) expecting ';' or ')'.
-# End time: 09:14:40 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vcom failed.
-vcom -93 -work ./work ../lbist_wrapper.vhd
-# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:14:58 on Jan 11,2022
-# vcom -reportprogress 300 -93 -work ./work ../lbist_wrapper.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity riscv_lbist
-# -- Compiling architecture structure of riscv_lbist
-# ** Error: ../lbist_wrapper.vhd(89): near ")": (vcom-1576) expecting IDENTIFIER.
-# End time: 09:14:58 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vcom failed.
-vcom -93 -work ./work ../lbist_wrapper.vhd
-# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:15:20 on Jan 11,2022
-# vcom -reportprogress 300 -93 -work ./work ../lbist_wrapper.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity riscv_lbist
-# -- Compiling architecture structure of riscv_lbist
-# ** Error: ../lbist_wrapper.vhd(97): near ")": (vcom-1576) expecting FUNCTION or PROCEDURE or IMPURE or PURE.
-# End time: 09:15:20 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vcom failed.
-vcom -93 -work ./work ../lbist_wrapper.vhd
-# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:15:47 on Jan 11,2022
-# vcom -reportprogress 300 -93 -work ./work ../lbist_wrapper.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity riscv_lbist
-# -- Compiling architecture structure of riscv_lbist
-# ** Error: ../lbist_wrapper.vhd(136): (vcom-1136) Unknown identifier "din".
-# ** Error: ../lbist_wrapper.vhd(193): VHDL Compiler exiting
-# End time: 09:15:47 on Jan 11,2022, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# /eda/mentor/2016-17/RHELx86/QUESTA-CORE-PRIME_10.5c-4/questasim/linux_x86_64/vcom failed.
-vcom -93 -work ./work ../lbist_wrapper.vhd
-# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:16:36 on Jan 11,2022
-# vcom -reportprogress 300 -93 -work ./work ../lbist_wrapper.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity riscv_lbist
-# -- Compiling architecture structure of riscv_lbist
-# End time: 09:16:36 on Jan 11,2022, Elapsed time: 0:00:00
+# End time: 17:24:16 on Jan 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.riscv_lbist
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:24:17 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../tb/clk_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity clk_gen
+# -- Compiling architecture bhv of clk_gen
+# End time: 17:24:17 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:24:18 on Jan 15,2022
+# vlog -reportprogress 300 -work work ../tb/tb_lbist_wrapper.v 
+# -- Compiling module tb_lbist
+# 
+# Top level modules:
+# 	tb_lbist
+# End time: 17:24:18 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vsim work.riscv_lbist 
-# Start time: 09:17:01 on Jan 11,2022
+# Start time: 17:24:19 on Jan 15,2022
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
@@ -329,103 +265,122 @@ vsim work.riscv_lbist
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading work.riscv_lbist(structure)#1
-# Loading work.lfsr(fast)
-# Loading work.phase_shifter(fast)
-# ** Fatal: (vsim-3348) Port length (241) does not match actual length (240) for port "/riscv_lbist/out_eval/dout".
-#    Time: 0 ns  Iteration: 0  Instance: /riscv_lbist/out_eval File: ../out_eval/out_eval.vhd Line: 17
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 09:17:07 on Jan 11,2022, Elapsed time: 0:00:06
+# Loading work.misr(fast)
+# (vish-4014) No objects found matching '/tb_lbist/DUT/*'.
+quit -sim
+# End time: 17:26:38 on Jan 15,2022, Elapsed time: 0:02:19
 # Errors: 1, Warnings: 0
-vsim work.riscv_lbist
-# vsim work.riscv_lbist 
-# Start time: 09:18:33 on Jan 11,2022
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+vsim work.tb_lbist
+# vsim work.tb_lbist 
+# Start time: 17:26:49 on Jan 15,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tb_lbist(fast)
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.riscv_lbist(structure)#1
-# Loading work.lfsr(fast)
-# Loading work.phase_shifter(fast)
-# ** Fatal: (vsim-3348) Port length (241) does not match actual length (240) for port "/riscv_lbist/out_eval/dout".
-#    Time: 0 ns  Iteration: 0  Instance: /riscv_lbist/out_eval File: ../out_eval/out_eval.vhd Line: 17
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 09:18:37 on Jan 11,2022, Elapsed time: 0:00:04
-# Errors: 1, Warnings: 0
-vsim work.riscv_lbist
-# vsim work.riscv_lbist 
-# Start time: 09:19:49 on Jan 11,2022
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
+# Loading work.clk_gen(bhv)#1
 # Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
 # Loading work.riscv_lbist(structure)#1
-# Loading work.lfsr(fast)
-# Loading work.phase_shifter(fast)
-# ** Fatal: (vsim-3348) Port length (241) does not match actual length (240) for port "/riscv_lbist/out_eval/dout".
-#    Time: 0 ns  Iteration: 0  Instance: /riscv_lbist/out_eval File: ../out_eval/out_eval.vhd Line: 17
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 09:19:57 on Jan 11,2022, Elapsed time: 0:00:08
-# Errors: 1, Warnings: 0
-vlog -work ./work ../tpg/phase_shifter/phase_shifter.v
+# Loading work.misr(fast)
+add wave -group LBIST sim:/tb_lbist/DUT/*
+run 2000 ns
+quit -sim
+# End time: 17:36:21 on Jan 15,2022, Elapsed time: 0:09:32
+# Errors: 0, Warnings: 0
+source lbist_simulation_script.tcl
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:37:10 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../mux2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_n
+# -- Compiling architecture bhv of mux2to1_n
+# End time: 17:37:11 on Jan 15,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:37:14 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../tpg_2/lfsr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity lfsr
+# -- Compiling architecture structure of lfsr
+# End time: 17:37:14 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:37:16 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../tpg_2/tpg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tpg
+# -- Compiling architecture structure of tpg
+# End time: 17:37:16 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:20:16 on Jan 11,2022
-# vlog -reportprogress 300 -work ./work ../tpg/phase_shifter/phase_shifter.v 
-# -- Compiling module phase_shifter
+# Start time: 17:37:18 on Jan 15,2022
+# vlog -reportprogress 300 -work ./work ../out_eval/misr.v 
+# -- Compiling module misr
 # 
 # Top level modules:
-# 	phase_shifter
-# End time: 09:20:16 on Jan 11,2022, Elapsed time: 0:00:00
+# 	misr
+# End time: 17:37:18 on Jan 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.riscv_lbist
-# vsim work.riscv_lbist 
-# Start time: 09:20:20 on Jan 11,2022
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.riscv_lbist(structure)#1
-# Loading work.lfsr(fast)
-# Loading work.phase_shifter(fast)
-# ** Fatal: (vsim-3348) Port length (241) does not match actual length (240) for port "/riscv_lbist/out_eval/dout".
-#    Time: 0 ns  Iteration: 0  Instance: /riscv_lbist/out_eval File: ../out_eval/out_eval.vhd Line: 17
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 09:20:23 on Jan 11,2022, Elapsed time: 0:00:03
-# Errors: 1, Warnings: 0
-vsim work.riscv_lbist
-# vsim work.riscv_lbist 
-# Start time: 09:20:40 on Jan 11,2022
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.riscv_lbist(structure)#1
-# Loading work.lfsr(fast)
-# Loading work.phase_shifter(fast)
-# ** Fatal: (vsim-3348) Port length (241) does not match actual length (240) for port "/riscv_lbist/out_eval/dout".
-#    Time: 0 ns  Iteration: 0  Instance: /riscv_lbist/out_eval File: ../out_eval/out_eval.vhd Line: 17
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 09:20:44 on Jan 11,2022, Elapsed time: 0:00:04
-# Errors: 1, Warnings: 0
-vcom -93 -work ./work ../lbist_wrapper.vhd
 # QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:20:49 on Jan 11,2022
+# Start time: 17:37:19 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../out_eval/out_eval.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity output_evaluator
+# -- Compiling architecture structure of output_evaluator
+# End time: 17:37:19 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:37:20 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../test_counter/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture beh of counter
+# End time: 17:37:20 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:37:21 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../test_counter/test_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity test_counter
+# -- Compiling architecture structure of test_counter
+# End time: 17:37:21 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:37:22 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../bist_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity bist_controller
+# -- Compiling architecture bhv of bist_controller
+# End time: 17:37:22 on Jan 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:37:23 on Jan 15,2022
 # vcom -reportprogress 300 -93 -work ./work ../lbist_wrapper.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -433,53 +388,44 @@ vcom -93 -work ./work ../lbist_wrapper.vhd
 # -- Loading package NUMERIC_STD
 # -- Compiling entity riscv_lbist
 # -- Compiling architecture structure of riscv_lbist
-# End time: 09:20:49 on Jan 11,2022, Elapsed time: 0:00:00
+# End time: 17:37:24 on Jan 15,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-vsim work.riscv_lbist
-# vsim work.riscv_lbist 
-# Start time: 09:20:53 on Jan 11,2022
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.riscv_lbist(structure)#1
-# Loading work.lfsr(fast)
-# Loading work.phase_shifter(fast)
-# ** Fatal: (vsim-3348) Port length (239) does not match actual length (240) for port "/riscv_lbist/out_eval/din".
-#    Time: 0 ns  Iteration: 0  Instance: /riscv_lbist/out_eval File: ../out_eval/out_eval.vhd Line: 16
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 09:20:57 on Jan 11,2022, Elapsed time: 0:00:04
-# Errors: 1, Warnings: 0
-vcom -93 -work ./work ../lbist_wrapper.vhd
 # QuestaSim-64 vcom 10.5c_4 Compiler 2016.11 Nov 30 2016
-# Start time: 09:21:39 on Jan 11,2022
-# vcom -reportprogress 300 -93 -work ./work ../lbist_wrapper.vhd 
+# Start time: 17:37:24 on Jan 15,2022
+# vcom -reportprogress 300 -93 -work ./work ../tb/clk_gen.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity riscv_lbist
-# -- Compiling architecture structure of riscv_lbist
-# End time: 09:21:39 on Jan 11,2022, Elapsed time: 0:00:00
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity clk_gen
+# -- Compiling architecture bhv of clk_gen
+# End time: 17:37:25 on Jan 15,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-vsim work.riscv_lbist
-# vsim work.riscv_lbist 
-# Start time: 09:21:43 on Jan 11,2022
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# QuestaSim-64 vlog 10.5c_4 Compiler 2016.11 Nov 30 2016
+# Start time: 17:37:25 on Jan 15,2022
+# vlog -reportprogress 300 -work work ../tb/tb_lbist_wrapper.v 
+# -- Compiling module tb_lbist
+# 
+# Top level modules:
+# 	tb_lbist
+# End time: 17:37:26 on Jan 15,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim work.tb_lbist 
+# Start time: 17:37:26 on Jan 15,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tb_lbist(fast)
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(bhv)#1
+# Loading ieee.numeric_std(body)
 # Loading work.riscv_lbist(structure)#1
-# Loading work.lfsr(fast)
-# Loading work.phase_shifter(fast)
 # Loading work.misr(fast)
+run 2000 ns
+run 112000 ns 
 exit
-# End time: 09:23:12 on Jan 11,2022, Elapsed time: 0:01:29
+# End time: 17:41:38 on Jan 15,2022, Elapsed time: 0:04:12
 # Errors: 0, Warnings: 0

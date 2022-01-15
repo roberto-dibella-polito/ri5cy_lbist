@@ -1,0 +1,438 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/s267517/assignment/riscv/rtl/lbist_blocks/sim
+T_opt
+!s110 1642264647
+Vjf;@=ZJ9C3LP5BALR5_M23
+04 8 4 work tb_lbist fast 0
+=1-001a4ad32f1f-61e2f847-38f7c-139e
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.5c_4;63
+Ebist_controller
+Z2 w1642202886
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z7 8../bist_controller.vhd
+Z8 F../bist_controller.vhd
+l0
+L6
+V:9Uf^j>e36R1<8G9L?cA`2
+!s100 F@0Ik1S609`4:@j?flgie0
+Z9 OL;C;10.5c_4;63
+31
+Z10 !s110 1642264642
+!i10b 1
+Z11 !s108 1642264642.000000
+Z12 !s90 -reportprogress|300|-93|-work|./work|../bist_controller.vhd|
+Z13 !s107 ../bist_controller.vhd|
+!i113 0
+Z14 o-93 -work ./work
+Z15 tExplicit 1 CvgOpt 0
+Abhv
+R3
+R4
+R5
+R6
+DEx4 work 15 bist_controller 0 22 :9Uf^j>e36R1<8G9L?cA`2
+l40
+L32
+VoG]ThG278PgQoOz]CDV1`3
+!s100 V0ZcZNGJc6lh;:P:i0z0o2
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Eclk_gen
+Z16 w1641728985
+R4
+R3
+R5
+R6
+R0
+Z17 8../tb/clk_gen.vhd
+Z18 F../tb/clk_gen.vhd
+l0
+L15
+V2TjYP76<I4bGcQH6Rgi2Q3
+!s100 >E1L63YBXe22LaYd7h;CJ2
+R9
+31
+Z19 !s110 1642264645
+!i10b 1
+Z20 !s108 1642264644.000000
+Z21 !s90 -reportprogress|300|-93|-work|./work|../tb/clk_gen.vhd|
+Z22 !s107 ../tb/clk_gen.vhd|
+!i113 0
+R14
+R15
+Abhv
+R4
+R3
+R5
+R6
+DEx4 work 7 clk_gen 0 22 2TjYP76<I4bGcQH6Rgi2Q3
+l27
+L21
+VU::h9oOXR4f=[3M^5]z0`2
+!s100 Emfne0B?2`_a_0fAK:Ld_3
+R9
+31
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 0
+R14
+R15
+Ecounter
+Z23 w1641811430
+Z24 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R4
+R3
+R5
+R6
+R0
+Z25 8../test_counter/counter.vhd
+Z26 F../test_counter/counter.vhd
+l0
+L10
+Vn;_X2<;K[iln4M2`zRB2a3
+!s100 TR_KZ_CJNUIOPC]a]zz>>1
+R9
+31
+Z27 !s110 1642264640
+!i10b 1
+Z28 !s108 1642264640.000000
+Z29 !s90 -reportprogress|300|-93|-work|./work|../test_counter/counter.vhd|
+Z30 !s107 ../test_counter/counter.vhd|
+!i113 0
+R14
+R15
+Abeh
+R24
+R4
+R3
+R5
+R6
+DEx4 work 7 counter 0 22 n;_X2<;K[iln4M2`zRB2a3
+l25
+L21
+V_==<QARFE7NWROYBg[Yg91
+!s100 m7b:NQUQ9lMYN>2LN[4Cd2
+R9
+31
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 0
+R14
+R15
+Elfsr
+Z31 w1642264423
+R24
+R5
+R6
+R0
+Z32 8../tpg_2/lfsr.vhd
+Z33 F../tpg_2/lfsr.vhd
+l0
+L7
+VCWaQ3:Ah_la91<P@h@fbG2
+!s100 zASAoC97@cK@dH58i[`an3
+R9
+31
+Z34 !s110 1642264634
+!i10b 1
+Z35 !s108 1642264634.000000
+Z36 !s90 -reportprogress|300|-93|-work|./work|../tpg_2/lfsr.vhd|
+Z37 !s107 ../tpg_2/lfsr.vhd|
+!i113 0
+R14
+R15
+Astructure
+R24
+R5
+R6
+DEx4 work 4 lfsr 0 22 CWaQ3:Ah_la91<P@h@fbG2
+l21
+L16
+VzEB<TXnHDGhXX459n?WbE3
+!s100 i[RC_QTXCd:d@LDDl4K]a1
+R9
+31
+R34
+!i10b 1
+R35
+R36
+R37
+!i113 0
+R14
+R15
+vmisr
+!s110 1642264638
+!i10b 1
+!s100 [b;VPeYfBKT=Y8]@3c=^:2
+IgNKa[=fce`fZ0;[lhY5BU1
+Z38 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1642175540
+8../out_eval/misr.v
+F../out_eval/misr.v
+L0 8
+Z39 OL;L;10.5c_4;63
+r1
+!s85 0
+31
+!s108 1642264638.000000
+!s107 ../out_eval/misr.v|
+!s90 -reportprogress|300|-work|./work|../out_eval/misr.v|
+!i113 0
+o-work ./work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Emux2to1_n
+Z40 w1641888157
+R24
+R5
+R6
+R0
+Z41 8../mux2to1.vhd
+Z42 F../mux2to1.vhd
+l0
+L7
+VCCAe:eELQSZiad5i6OTLB1
+!s100 @Xni`=7aPm`MM=0VfBmL<3
+R9
+31
+Z43 !s110 1642264631
+!i10b 1
+Z44 !s108 1642264630.000000
+Z45 !s90 -reportprogress|300|-93|-work|./work|../mux2to1.vhd|
+Z46 !s107 ../mux2to1.vhd|
+!i113 0
+R14
+R15
+Abhv
+R24
+R5
+R6
+DEx4 work 9 mux2to1_n 0 22 CCAe:eELQSZiad5i6OTLB1
+l20
+L18
+VI4V[fUDD@?AOFlZ8CUn1m2
+!s100 ;@_NeQLV^l@i9V:eUmNT63
+R9
+31
+R43
+!i10b 1
+R44
+R45
+R46
+!i113 0
+R14
+R15
+Eoutput_evaluator
+Z47 w1642202764
+R24
+R5
+R6
+R0
+Z48 8../out_eval/out_eval.vhd
+Z49 F../out_eval/out_eval.vhd
+l0
+L9
+VCEFCfkUIz]E1SA2BeMk2o3
+!s100 lC7NbH^azbL7L4[2T6;i61
+R9
+31
+Z50 !s110 1642264639
+!i10b 1
+Z51 !s108 1642264639.000000
+Z52 !s90 -reportprogress|300|-93|-work|./work|../out_eval/out_eval.vhd|
+Z53 !s107 ../out_eval/out_eval.vhd|
+!i113 0
+R14
+R15
+Astructure
+R24
+R5
+R6
+DEx4 work 16 output_evaluator 0 22 CEFCfkUIz]E1SA2BeMk2o3
+l38
+L22
+VIFk[8mKDG>m;b5TPTA0]V3
+!s100 6Cj>T1WMCWl_?fBJQ`WFZ3
+R9
+31
+R50
+!i10b 1
+R51
+R52
+R53
+!i113 0
+R14
+R15
+Eriscv_lbist
+Z54 w1642260839
+R24
+R5
+R6
+R0
+Z55 8../lbist_wrapper.vhd
+Z56 F../lbist_wrapper.vhd
+l0
+L9
+VA;RObei=lMAb4O?bN4kVI3
+!s100 [kUPFPQ7UIMAAZT00]WM=2
+R9
+31
+Z57 !s110 1642264644
+!i10b 1
+Z58 !s108 1642264643.000000
+Z59 !s90 -reportprogress|300|-93|-work|./work|../lbist_wrapper.vhd|
+Z60 !s107 ../lbist_wrapper.vhd|
+!i113 0
+R14
+R15
+Astructure
+R24
+R5
+R6
+DEx4 work 11 riscv_lbist 0 22 A;RObei=lMAb4O?bN4kVI3
+l146
+L20
+VI96eZTIIeKo`mckKe8bOD0
+!s100 Pf1c30_b6PVVK?^GQMLCk2
+R9
+31
+R57
+!i10b 1
+R58
+R59
+R60
+!i113 0
+R14
+R15
+vtb_lbist
+!s110 1642264646
+!i10b 1
+!s100 X9;H<bzGZOzB=Bzin@7lH2
+IlT;b>Kekcb8WF^Am]>18n2
+R38
+R0
+w1642264619
+8../tb/tb_lbist_wrapper.v
+F../tb/tb_lbist_wrapper.v
+L0 3
+R39
+r1
+!s85 0
+31
+!s108 1642264645.000000
+!s107 ../tb/tb_lbist_wrapper.v|
+!s90 -reportprogress|300|-work|work|../tb/tb_lbist_wrapper.v|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Etest_counter
+Z61 w1641811620
+R24
+R5
+R6
+R0
+Z62 8../test_counter/test_counter.vhd
+Z63 F../test_counter/test_counter.vhd
+l0
+L6
+V@BI9gISf<QnhY<2ieGFH`1
+!s100 ^`5Y^E7Yj7A>_9=R_bfDe0
+R9
+31
+Z64 !s110 1642264641
+!i10b 1
+Z65 !s108 1642264641.000000
+Z66 !s90 -reportprogress|300|-93|-work|./work|../test_counter/test_counter.vhd|
+Z67 !s107 ../test_counter/test_counter.vhd|
+!i113 0
+R14
+R15
+Astructure
+R24
+R5
+R6
+DEx4 work 12 test_counter 0 22 @BI9gISf<QnhY<2ieGFH`1
+l32
+L17
+V2caggBCVPcAoBAaCh1V]J0
+!s100 FZg=Xaz]U`5Y<G?m<9bS91
+R9
+31
+R64
+!i10b 1
+R65
+R66
+R67
+!i113 0
+R14
+R15
+Etpg
+Z68 w1642258517
+R24
+R5
+R6
+R0
+Z69 8../tpg_2/tpg.vhd
+Z70 F../tpg_2/tpg.vhd
+l0
+L14
+V5SgF]N?K<i>@aL6V==fz;2
+!s100 3QN5B:40fbD7b?oKzSzYg2
+R9
+31
+Z71 !s110 1642264636
+!i10b 1
+Z72 !s108 1642264636.000000
+Z73 !s90 -reportprogress|300|-93|-work|./work|../tpg_2/tpg.vhd|
+Z74 !s107 ../tpg_2/tpg.vhd|
+!i113 0
+R14
+R15
+Astructure
+R24
+R5
+R6
+DEx4 work 3 tpg 0 22 5SgF]N?K<i>@aL6V==fz;2
+l37
+L21
+V97_AD<GKL5dY8n5c2IR>o1
+!s100 LP84QWL6KVn0WB7P?SOc[1
+R9
+31
+R71
+!i10b 1
+R72
+R73
+R74
+!i113 0
+R14
+R15

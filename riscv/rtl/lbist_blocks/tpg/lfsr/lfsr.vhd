@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use iee.numeric_std.all;
+use ieee.numeric_std.all;
 
 entity lfsr is
 	generic( 
@@ -33,5 +33,7 @@ begin
 	end generate;
 
 	r_next <= feedback_value & r_reg(1 to N-1);
+
+	dout <= r_reg;
 
 end structure;

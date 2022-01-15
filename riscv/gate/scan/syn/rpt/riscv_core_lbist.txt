@@ -3,7 +3,7 @@
 Report : area
 Design : riscv_core
 Version: R-2020.09-SP2
-Date   : Sat Jan 15 03:01:03 2022
+Date   : Sat Jan 15 20:07:16 2022
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -12,21 +12,21 @@ Library(s) Used:
 
     NangateOpenCellLibrary (File: /home/s267517/assignment/riscv/gate/scan/syn/techlib/NangateOpenCellLibrary_typical_ccs_scan.db)
 
-Number of ports:                        12516
-Number of nets:                         63310
-Number of cells:                        49330
-Number of combinational cells:          45375
-Number of sequential cells:              3667
+Number of ports:                        12489
+Number of nets:                         63348
+Number of cells:                        49485
+Number of combinational cells:          45645
+Number of sequential cells:              3643
 Number of macros/black boxes:               0
-Number of buf/inv:                       7092
+Number of buf/inv:                       7212
 Number of references:                       5
 
-Combinational area:              51318.582128
-Buf/Inv area:                     4026.176027
-Noncombinational area:           23472.106333
+Combinational area:              51568.090131
+Buf/Inv area:                     4087.356027
+Noncombinational area:           23291.758323
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:                 74790.688461
+Total cell area:                 74859.848454
 Total area:                 undefined
 1

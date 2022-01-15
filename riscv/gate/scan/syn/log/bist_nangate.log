@@ -57,16 +57,17 @@ Compiling Entity Declaration BIST_CONTROLLER
 Compiling Architecture BHV of BIST_CONTROLLER
 Presto compilation completed successfully.
 1
-analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v
+analyze -format vhdl -work work ../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd
 Running PRESTO HDLC
-Compiling source file ../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v
-Warning:  ../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v:82: The statements in initial blocks are ignored. (VER-281)
+Compiling Entity Declaration LFSR
+Compiling Architecture STRUCTURE of LFSR
 Presto compilation completed successfully.
 1
 #analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/phase_shifter/phase_shifter.v
-analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/tpg.v
+analyze -format vhdl -work work ../../../../rtl/lbist_blocks/tpg_2/tpg.vhd
 Running PRESTO HDLC
-Compiling source file ../../../../rtl/lbist_blocks/tpg/tpg.v
+Compiling Entity Declaration TPG
+Compiling Architecture STRUCTURE of TPG
 Presto compilation completed successfully.
 1
 analyze -format vhdl -work work ../../../../rtl/lbist_blocks/test_counter/counter.vhd
@@ -193,147 +194,147 @@ Presto compilation completed successfully. (riscv_core_0_128_1_16_1_1_0_0_0_0_0_
 Information: Building the design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DW01_decode_width1'. (HDL-193)
 Presto compilation completed successfully. (riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DW01_decode_width1)
 Information: Building the design 'lfsr' instantiated from design 'tpg' with
-	the parameters "N=24,SEED=0". (HDL-193)
+	the parameters "SEED=0". (HDL-193)
 
 Inferred memory devices in process
-	in routine lfsr_N24_SEED0 line 30 in file
-		'../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v'.
+	in routine lfsr_SEED0 line 23 in file
+		'../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      r_reg_reg      | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
-Presto compilation completed successfully. (lfsr_N24_SEED0)
+Presto compilation completed successfully. (lfsr_SEED0)
 Information: Building the design 'lfsr' instantiated from design 'tpg' with
-	the parameters "N=24,SEED=24". (HDL-193)
+	the parameters "SEED=1". (HDL-193)
 
 Inferred memory devices in process
-	in routine lfsr_N24_SEED24 line 30 in file
-		'../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v'.
+	in routine lfsr_SEED1 line 23 in file
+		'../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      r_reg_reg      | Flip-flop |  23   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      r_reg_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (lfsr_SEED1)
+Information: Building the design 'lfsr' instantiated from design 'tpg' with
+	the parameters "SEED=2". (HDL-193)
+
+Inferred memory devices in process
+	in routine lfsr_SEED2 line 23 in file
+		'../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      r_reg_reg      | Flip-flop |  23   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      r_reg_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (lfsr_SEED2)
+Information: Building the design 'lfsr' instantiated from design 'tpg' with
+	the parameters "SEED=3". (HDL-193)
+
+Inferred memory devices in process
+	in routine lfsr_SEED3 line 23 in file
+		'../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      r_reg_reg      | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
 |      r_reg_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
 ===============================================================================
-Presto compilation completed successfully. (lfsr_N24_SEED24)
+Presto compilation completed successfully. (lfsr_SEED3)
 Information: Building the design 'lfsr' instantiated from design 'tpg' with
-	the parameters "N=24,SEED=48". (HDL-193)
+	the parameters "SEED=4". (HDL-193)
 
 Inferred memory devices in process
-	in routine lfsr_N24_SEED48 line 30 in file
-		'../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v'.
+	in routine lfsr_SEED4 line 23 in file
+		'../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      r_reg_reg      | Flip-flop |  23   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      r_reg_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (lfsr_SEED4)
+Information: Building the design 'lfsr' instantiated from design 'tpg' with
+	the parameters "SEED=5". (HDL-193)
+
+Inferred memory devices in process
+	in routine lfsr_SEED5 line 23 in file
+		'../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      r_reg_reg      | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
 |      r_reg_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
 ===============================================================================
-Presto compilation completed successfully. (lfsr_N24_SEED48)
+Presto compilation completed successfully. (lfsr_SEED5)
 Information: Building the design 'lfsr' instantiated from design 'tpg' with
-	the parameters "N=24,SEED=72". (HDL-193)
+	the parameters "SEED=6". (HDL-193)
 
 Inferred memory devices in process
-	in routine lfsr_N24_SEED72 line 30 in file
-		'../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v'.
+	in routine lfsr_SEED6 line 23 in file
+		'../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      r_reg_reg      | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
 |      r_reg_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
 ===============================================================================
-Presto compilation completed successfully. (lfsr_N24_SEED72)
+Presto compilation completed successfully. (lfsr_SEED6)
 Information: Building the design 'lfsr' instantiated from design 'tpg' with
-	the parameters "N=24,SEED=96". (HDL-193)
+	the parameters "SEED=7". (HDL-193)
 
 Inferred memory devices in process
-	in routine lfsr_N24_SEED96 line 30 in file
-		'../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|      r_reg_reg      | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
-|      r_reg_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully. (lfsr_N24_SEED96)
-Information: Building the design 'lfsr' instantiated from design 'tpg' with
-	the parameters "N=24,SEED=120". (HDL-193)
-
-Inferred memory devices in process
-	in routine lfsr_N24_SEED120 line 30 in file
-		'../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|      r_reg_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
-|      r_reg_reg      | Flip-flop |   4   |  Y  | N  | N  | Y  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully. (lfsr_N24_SEED120)
-Information: Building the design 'lfsr' instantiated from design 'tpg' with
-	the parameters "N=24,SEED=144". (HDL-193)
-
-Inferred memory devices in process
-	in routine lfsr_N24_SEED144 line 30 in file
-		'../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|      r_reg_reg      | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
-|      r_reg_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully. (lfsr_N24_SEED144)
-Information: Building the design 'lfsr' instantiated from design 'tpg' with
-	the parameters "N=24,SEED=168". (HDL-193)
-
-Inferred memory devices in process
-	in routine lfsr_N24_SEED168 line 30 in file
-		'../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v'.
+	in routine lfsr_SEED7 line 23 in file
+		'../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      r_reg_reg      | Flip-flop |  21   |  Y  | N  | Y  | N  | N  | N  | N  |
 |      r_reg_reg      | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
 ===============================================================================
-Presto compilation completed successfully. (lfsr_N24_SEED168)
+Presto compilation completed successfully. (lfsr_SEED7)
 Information: Building the design 'lfsr' instantiated from design 'tpg' with
-	the parameters "N=24,SEED=192". (HDL-193)
+	the parameters "SEED=8". (HDL-193)
 
 Inferred memory devices in process
-	in routine lfsr_N24_SEED192 line 30 in file
-		'../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v'.
+	in routine lfsr_SEED8 line 23 in file
+		'../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      r_reg_reg      | Flip-flop |  23   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      r_reg_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (lfsr_SEED8)
+Information: Building the design 'lfsr' instantiated from design 'tpg' with
+	the parameters "SEED=9". (HDL-193)
+
+Inferred memory devices in process
+	in routine lfsr_SEED9 line 23 in file
+		'../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      r_reg_reg      | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
 |      r_reg_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
 ===============================================================================
-Presto compilation completed successfully. (lfsr_N24_SEED192)
+Presto compilation completed successfully. (lfsr_SEED9)
 Information: Building the design 'lfsr' instantiated from design 'tpg' with
-	the parameters "N=24,SEED=216". (HDL-193)
+	the parameters "SEED=10". (HDL-193)
 
 Inferred memory devices in process
-	in routine lfsr_N24_SEED216 line 30 in file
-		'../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v'.
+	in routine lfsr_SEED10 line 23 in file
+		'../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|      r_reg_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
-|      r_reg_reg      | Flip-flop |   4   |  Y  | N  | N  | Y  | N  | N  | N  |
+|      r_reg_reg      | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      r_reg_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
 ===============================================================================
-Presto compilation completed successfully. (lfsr_N24_SEED216)
-Information: Building the design 'lfsr' instantiated from design 'tpg' with
-	the parameters "N=24,SEED=240". (HDL-193)
-
-Inferred memory devices in process
-	in routine lfsr_N24_SEED240 line 30 in file
-		'../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|      r_reg_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
-|      r_reg_reg      | Flip-flop |   4   |  Y  | N  | N  | Y  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully. (lfsr_N24_SEED240)
+Presto compilation completed successfully. (lfsr_SEED10)
 Information: Building the design 'counter' instantiated from design 'test_counter_TEST_DURATION11100_TEST_START98' with
 	the parameters "N=24,RST_VALUE=0". (HDL-193)
 
@@ -614,7 +615,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     R-2020.09-SP2
-Date:        Sat Jan 15 02:26:38 2022
+Date:        Sat Jan 15 19:05:18 2022
 ****************************************
 
                    Name                                            Total
@@ -3231,10 +3232,24 @@ Information: State dependent leakage is now switched from on to off.
   Processing 'riscv_alu_SHARED_INT_DIV0_FPU0_test_1'
   Processing 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'
   Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800'
+  Processing 'riscv_prefetch_L0_buffer_test_1'
+  Processing 'alu_popcnt'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_DECOMPRESSOR'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_17'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_10'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_2'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_5'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_2'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_26'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_18'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_10'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_2'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_1'
   Processing 'riscv_hwloop_regs_N_REGS2_test_1'
   Processing 'riscv_compressed_decoder_FPU0'
-  Processing 'lfsr_N24_SEED240'
-  Processing 'lfsr_N24_SEED96'
+  Processing 'lfsr_SEED10'
+  Processing 'lfsr_SEED4'
   Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_COMPRESSOR'
   Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_1'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_33'
@@ -3253,13 +3268,17 @@ Information: State dependent leakage is now switched from on to off.
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_9'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_1'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_0'
-  Processing 'riscv_L0_buffer_RDATA_IN_WIDTH128_test_1'
-  Processing 'riscv_hwloop_controller_N_REGS2_test_1'
-  Processing 'misr_N24_SEED1_1'
-  Processing 'lfsr_N24_SEED72'
-  Processing 'test_counter_TEST_DURATION11100_TEST_START98'
-  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_0'
-  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_0'
+  Processing 'riscv_decoder_FPU0_FP_DIVSQRT0_PULP_SECURE1_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6_test_1'
+  Processing 'riscv_lbist'
+  Processing 'misr_N24_SEED1_6'
+  Processing 'misr_N24_SEED1_9'
+  Processing 'lfsr_SEED9'
+  Processing 'lfsr_SEED2'
+  Processing 'riscv_int_controller_PULP_SECURE1_test_1'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_2'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_25'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_21'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_15'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_8'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_0'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_11'
@@ -3270,9 +3289,17 @@ Information: State dependent leakage is now switched from on to off.
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_8'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_0'
   Processing 'cluster_clock_gating'
-  Processing 'riscv_prefetch_L0_buffer_test_1'
-  Processing 'alu_popcnt'
-  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_DECOMPRESSOR'
+  Processing 'riscv_if_stage_2_128_0_1a110800_test_1'
+  Processing 'riscv_controller_FPU0_test_1'
+  Processing 'counter_N24_RST_VALUE0'
+ Implement Synthetic for 'counter_N24_RST_VALUE0'.
+  Processing 'lfsr_SEED6'
+  Processing 'register_file_test_wrap_ADDR_WIDTH6_FPU0_Zfinx0_test_1'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_0'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_1'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_30'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_27'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_23'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_18'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_11'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_3'
@@ -3284,32 +3311,10 @@ Information: State dependent leakage is now switched from on to off.
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_11'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_3'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_2'
-  Processing 'riscv_if_stage_2_128_0_1a110800_test_1'
-  Processing 'riscv_controller_FPU0_test_1'
-  Processing 'counter_N24_RST_VALUE0'
- Implement Synthetic for 'counter_N24_RST_VALUE0'.
-  Processing 'lfsr_N24_SEED144'
-  Processing 'register_file_test_wrap_ADDR_WIDTH6_FPU0_Zfinx0_test_1'
-  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_0'
-  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_1'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_30'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_27'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_23'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_17'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_10'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_2'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_0'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_5'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_2'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_26'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_18'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_10'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_2'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_1'
   Processing 'riscv_alu_div_test_1'
   Processing 'mux2to1_n_N267'
   Processing 'bist_controller'
-  Processing 'lfsr_N24_SEED120'
+  Processing 'lfsr_SEED5'
   Processing 'alu_ff'
   Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_3'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_19'
@@ -3323,11 +3328,69 @@ Information: State dependent leakage is now switched from on to off.
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_12'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_4'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_0'
+  Processing 'riscv_core'
+  Processing 'output_evaluator_N239'
+  Processing 'misr_N24_SEED1_0'
+  Processing 'tpg'
+  Processing 'lfsr_SEED8'
+  Processing 'lfsr_SEED1'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_13'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_5'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_8'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_29'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_21'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_13'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_5'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_1'
+  Processing 'riscv_L0_buffer_RDATA_IN_WIDTH128_test_1'
+  Processing 'riscv_hwloop_controller_N_REGS2_test_1'
+  Processing 'misr_N24_SEED1_1'
+  Processing 'lfsr_SEED3'
+  Processing 'test_counter_TEST_DURATION11100_TEST_START98'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_0'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_7'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_load_store_unit_1'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_10'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_2'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_int_controller_PULP_SECURE1_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_23'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_15'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_7'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_if_stage_2_128_0_1a110800_0'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DW01_decode_width1'
   Processing 'riscv_load_store_unit_test_1'
   Processing 'riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'
   Processing 'misr_N24_SEED1_5'
-  Processing 'lfsr_N24_SEED168'
-  Processing 'lfsr_N24_SEED0'
+  Processing 'lfsr_SEED7'
+  Processing 'lfsr_SEED0'
+Information: The register 'r_reg_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'r_reg_reg[24]' is a constant and will be removed. (OPT-1206)
   Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_2'
   Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_31'
@@ -3344,47 +3407,10 @@ Information: State dependent leakage is now switched from on to off.
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_14'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_6'
   Processing 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_2'
-  Processing 'riscv_core'
-  Processing 'output_evaluator_N239'
-  Processing 'misr_N24_SEED1_0'
-  Processing 'tpg'
-  Processing 'lfsr_N24_SEED192'
-  Processing 'lfsr_N24_SEED24'
-  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_13'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_5'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_0'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_8'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_0'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_29'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_21'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_13'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_5'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_1'
-  Processing 'riscv_decoder_FPU0_FP_DIVSQRT0_PULP_SECURE1_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6_test_1'
-  Processing 'riscv_lbist'
-  Processing 'misr_N24_SEED1_6'
-  Processing 'misr_N24_SEED1_9'
-  Processing 'lfsr_N24_SEED216'
-  Processing 'lfsr_N24_SEED48'
-  Processing 'riscv_int_controller_PULP_SECURE1_test_1'
-  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_2'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_25'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_21'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_15'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_7'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_load_store_unit_1'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_10'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_2'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_int_controller_PULP_SECURE1_0'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_23'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_15'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_7'
-  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_if_stage_2_128_0_1a110800_0'
-  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DW01_decode_width1'
 
   Updating timing information
 Information: Updating design information... (UID-85)
+Information: Removing unused design 'lfsr_SEED0'. (OPT-1055)
 Information: Complementing port 'test_en_i' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800'.
 	 The new name of the port is 'test_en_i_BAR'. (OPT-319)
 Information: Complementing port 'testing' in design 'riscv_lbist'.
@@ -3977,8 +4003,8 @@ End Combinational loops breaking ...
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:16:22  106114.3      3.01    9714.9     437.4                           3060298.7500
-    0:16:38  105898.9      3.20    9832.6     622.0                           3053549.5000
+    0:27:10  108403.8      3.10   10244.0     358.5                           3186271.2500
+    0:27:33  108184.3      3.43   10516.9     513.2                           3179478.2500
 
   Beginning Constant Register Removal
   -----------------------------------
@@ -4025,46 +4051,46 @@ End Combinational loops breaking ...
 
   Beginning Delay Optimization
   ----------------------------
-    0:18:32   80781.8      2.95    7891.3     178.0                           1921808.2500
-    0:19:59   81368.1      1.71    5734.8     184.1                           1940265.7500
-    0:19:59   81368.1      1.71    5734.8     184.1                           1940265.7500
-    0:20:07   81358.8      1.71    5735.6     184.1                           1939953.8750
+    0:31:07   80634.4      2.94    7837.7     177.0                           1921333.3750
+    0:33:50   81251.6      1.74    5765.1     194.4                           1945389.0000
+    0:33:50   81251.6      1.74    5765.1     194.4                           1945389.0000
+    0:34:05   81306.1      1.74    5757.3     194.4                           1948538.5000
 Begin Combinational loops breaking ...
 	Number of combinational loops found: 0
 End Combinational loops breaking ...
-    0:20:30   81358.0      1.71    5735.6     184.1                           1939940.6250
-    0:20:37   81355.3      1.71    5736.0     184.1                           1939864.6250
+    0:34:59   81305.3      1.74    5757.3     194.4                           1948525.2500
+    0:35:30   81298.4      1.75    5757.4     194.4                           1948323.1250
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:21:21   80877.0      1.71    5646.7     172.1                           1906310.3750
-    0:21:30   80459.4      1.71    5629.3     160.2                           1881115.6250
-    0:21:34   80140.5      1.71    5623.4     159.7                           1869065.7500
-    0:21:41   78991.9      1.71    3597.0     114.4                           1814874.0000
-    0:21:41   78934.4      1.71    3596.9     114.4                           1812602.3750
-    0:21:49   78807.0      1.70    3548.5     112.3                           1802498.5000
-    0:21:57   78742.7      1.70    3541.5     112.3                           1797385.5000
-    0:21:58   78724.0      1.70    3540.7     112.3                           1795878.6250
-    0:21:58   78724.0      1.70    3540.7     112.3                           1795878.6250
-    0:22:09   77662.7      1.70    3529.8      99.4                           1719076.1250
-    0:22:09   77662.7      1.70    3529.8      99.4                           1719076.1250
-    0:22:51   78087.0      1.63    3457.3      95.4                           1734939.3750
-    0:22:51   78087.0      1.63    3457.3      95.4                           1734939.3750
-    0:22:52   78094.9      1.63    3453.3      95.4                           1735936.1250
-    0:22:52   78094.9      1.63    3453.3      95.4                           1735936.1250
-    0:24:20   78722.7      1.57    3353.8     169.9                           1758070.8750
-    0:24:20   78722.7      1.57    3353.8     169.9                           1758070.8750
-    0:24:38   78768.7      1.51    3251.3     178.2                           1761196.3750
-    0:24:38   78768.7      1.51    3251.3     178.2                           1761196.3750
-    0:24:56   78800.6      1.51    3247.7     178.2                           1762532.1250
-    0:24:56   78800.6      1.51    3247.7     178.2                           1762532.1250
-    0:25:16   78819.0      1.49    3223.7     178.2                           1763261.3750
-    0:25:16   78819.0      1.49    3223.7     178.2                           1763261.3750
-    0:25:28   78897.5      1.49    3222.7     179.7                           1766337.3750
-    0:25:28   78897.5      1.49    3222.7     179.7                           1766337.3750
-    0:25:30   78898.3      1.49    3222.6     179.7                           1766443.3750
-    0:25:30   78898.3      1.49    3222.6     179.7                           1766443.3750
-    0:25:42   78915.6      1.49    3221.2     179.7                           1766996.6250
+    0:37:09   80801.8      1.74    4705.1     182.4                           1913940.0000
+    0:37:29   80385.2      1.74    4694.5     176.5                           1887705.8750
+    0:37:46   80084.4      1.74    4685.1     176.0                           1876502.0000
+    0:38:08   78947.7      1.74    2965.8     128.9                           1822132.8750
+    0:38:10   78891.3      1.74    2965.8     128.8                           1819925.8750
+    0:38:35   78768.5      1.73    2907.4     122.5                           1809940.8750
+    0:38:51   78748.2      1.73    2902.7     122.5                           1808549.6250
+    0:38:55   78735.2      1.73    2901.8     122.5                           1807463.2500
+    0:38:56   78735.2      1.73    2901.8     122.5                           1807463.2500
+    0:39:23   77644.3      1.73    2896.8     112.6                           1728362.0000
+    0:39:24   77644.3      1.73    2896.8     112.6                           1728362.0000
+    0:44:23   79037.4      1.58    2689.4     223.4                           1777847.8750
+    0:44:24   79037.4      1.58    2689.4     223.4                           1777847.8750
+    0:44:26   79034.5      1.57    2678.1     223.4                           1777985.2500
+    0:44:27   79034.5      1.57    2678.1     223.4                           1777985.2500
+    0:45:39   79149.1      1.56    2658.7     223.4                           1782394.0000
+    0:45:39   79149.1      1.56    2658.7     223.4                           1782394.0000
+    0:46:49   79154.4      1.52    2599.8     211.0                           1782509.7500
+    0:46:50   79154.4      1.52    2599.8     211.0                           1782509.7500
+    0:46:57   79154.4      1.52    2599.8     211.0                           1782509.7500
+    0:46:57   79154.4      1.52    2599.8     211.0                           1782509.7500
+    0:46:59   79154.4      1.52    2599.8     211.0                           1782509.7500
+    0:46:59   79154.4      1.52    2599.8     211.0                           1782509.7500
+    0:47:06   79154.4      1.52    2599.8     211.0                           1782509.7500
+    0:47:06   79154.4      1.52    2599.8     211.0                           1782509.7500
+    0:47:09   79154.4      1.52    2599.8     211.0                           1782509.7500
+    0:47:09   79154.4      1.52    2599.8     211.0                           1782509.7500
+    0:47:17   79154.4      1.52    2599.8     211.0                           1782509.7500
 
 
   Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
@@ -4074,12 +4100,12 @@ End Combinational loops breaking ...
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:25:42   78915.6      1.49    3221.2     179.7                           1766996.6250
+    0:47:17   79154.4      1.52    2599.8     211.0                           1782509.7500
   Global Optimization (Phase 33)
   Global Optimization (Phase 34)
   Global Optimization (Phase 35)
-    0:25:56   78830.4      1.47    3183.3       0.0                           1760979.1250
-    0:26:03   78840.8      1.47    3183.3       0.0                           1761324.5000
+    0:47:46   79026.7      1.49    2554.7       0.0                           1772457.0000
+    0:48:35   79196.7      1.49    2552.5      10.5                           1778542.0000
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -4089,7 +4115,7 @@ End Combinational loops breaking ...
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:26:03   78840.8      1.47    3183.3       0.0                           1761324.5000
+    0:48:35   79196.7      1.49    2552.5      10.5                           1778542.0000
   Global Optimization (Phase 36)
   Global Optimization (Phase 37)
   Global Optimization (Phase 38)
@@ -4117,16 +4143,6 @@ Information: Complementing port 'illegal_c_insn_i' in design 'riscv_id_stage_N_H
 	 The new name of the port is 'illegal_c_insn_i_BAR'. (OPT-319)
 Information: Complementing port 'illegal_c_insn_id_o' in design 'riscv_if_stage_2_128_0_1a110800_test_1'.
 	 The new name of the port is 'illegal_c_insn_id_o_BAR'. (OPT-319)
-Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in' in design 'riscv_if_stage_2_128_0_1a110800_test_1'.
-	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in_BAR'. (OPT-319)
-Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in' in design 'riscv_load_store_unit_test_1'.
-	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in_BAR'. (OPT-319)
-Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in' in design 'riscv_prefetch_L0_buffer_test_1'.
-	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in_BAR'. (OPT-319)
-Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in' in design 'riscv_L0_buffer_RDATA_IN_WIDTH128_test_1'.
-	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in_BAR'. (OPT-319)
-Information: Complementing port 'CO_1' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_0'.
-	 The new name of the port is 'CO_1_BAR'. (OPT-319)
 Information: Complementing port 'is_subrot_i' in design 'riscv_alu_SHARED_INT_DIV0_FPU0_test_1'.
 	 The new name of the port is 'is_subrot_i_BAR'. (OPT-319)
 Information: Complementing port 'alu_is_subrot_i' in design 'riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
@@ -4139,15 +4155,45 @@ Information: Complementing port 'debug_ebreaku_i' in design 'riscv_id_stage_N_HW
 	 The new name of the port is 'debug_ebreaku_i_BAR'. (OPT-319)
 Information: Complementing port 'debug_ebreaku_o' in design 'riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_test_1'.
 	 The new name of the port is 'debug_ebreaku_o_BAR'. (OPT-319)
+Information: Complementing port 'data_err_i_BAR' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'data_err_i'. (OPT-319)
+Information: Complementing port 'lsu_err_i_BAR' in design 'riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'lsu_err_i'. (OPT-319)
+Information: Complementing port 'data_err_i_BAR' in design 'riscv_load_store_unit_test_1'.
+	 The new name of the port is 'data_err_i'. (OPT-319)
+Information: Complementing port 'data_err_i_BAR' in design 'riscv_controller_FPU0_test_1'.
+	 The new name of the port is 'data_err_i'. (OPT-319)
+Information: Complementing port 'data_err_o_BAR' in design 'riscv_pmp_N_PMP_ENTRIES16_test_1'.
+	 The new name of the port is 'data_err_o'. (OPT-319)
+Information: Complementing port 'is_decoding_i' in design 'riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_test_1'.
+	 The new name of the port is 'is_decoding_i_BAR'. (OPT-319)
+Information: Complementing port 'is_decoding_o' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'is_decoding_o_BAR'. (OPT-319)
+Information: Complementing port 'is_decoding_o' in design 'riscv_controller_FPU0_test_1'.
+	 The new name of the port is 'is_decoding_o_BAR'. (OPT-319)
+Information: Complementing port 'csr_access_i' in design 'riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'csr_access_i_BAR'. (OPT-319)
+Information: Complementing port 'csr_access_i' in design 'riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_test_1'.
+	 The new name of the port is 'csr_access_i_BAR'. (OPT-319)
+Information: Complementing port 'csr_access_ex_o' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'csr_access_ex_o_BAR'. (OPT-319)
+Information: Complementing port 'SI' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_2'.
+	 The new name of the port is 'SI_BAR'. (OPT-319)
+Information: Complementing port 'SO' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3'.
+	 The new name of the port is 'SO_BAR'. (OPT-319)
 Information: Complementing port 'alu_op_b_mux_sel_o[2]' in design 'riscv_decoder_FPU0_FP_DIVSQRT0_PULP_SECURE1_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6_test_1'.
 	 The new name of the port is 'alu_op_b_mux_sel_o[2]_BAR'. (OPT-319)
+Information: Complementing port 'hwloop_cnt_mux_sel_o' in design 'riscv_decoder_FPU0_FP_DIVSQRT0_PULP_SECURE1_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6_test_1'.
+	 The new name of the port is 'hwloop_cnt_mux_sel_o_BAR'. (OPT-319)
 Information: Complementing port 'alu_op_a_mux_sel_o[0]' in design 'riscv_decoder_FPU0_FP_DIVSQRT0_PULP_SECURE1_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6_test_1'.
 	 The new name of the port is 'alu_op_a_mux_sel_o[0]_BAR'. (OPT-319)
 Information: Complementing port 'bmask_a_mux_o[0]' in design 'riscv_decoder_FPU0_FP_DIVSQRT0_PULP_SECURE1_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6_test_1'.
 	 The new name of the port is 'bmask_a_mux_o[0]_BAR'. (OPT-319)
-Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in' in design 'riscv_int_controller_PULP_SECURE1_test_1'.
-	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_int_controller_PULP_SECURE1_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
 Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in' in design 'riscv_controller_FPU0_test_1'.
+	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in_BAR'. (OPT-319)
+Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in' in design 'riscv_int_controller_PULP_SECURE1_test_1'.
 	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in_BAR'. (OPT-319)
 Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in' in design 'register_file_test_wrap_ADDR_WIDTH6_FPU0_Zfinx0_test_1'.
 	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in_BAR'. (OPT-319)
@@ -4157,34 +4203,34 @@ Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6
 	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in_BAR'. (OPT-319)
 Information: Complementing port 'EN_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_27'.
 	 The new name of the port is 'EN'. (OPT-319)
-Information: Complementing port 'InVld_SI_BAR' in design 'riscv_alu_div_test_1'.
-	 The new name of the port is 'InVld_SI'. (OPT-319)
+Information: Complementing port 'fetch_valid_o' in design 'riscv_L0_buffer_RDATA_IN_WIDTH128_test_1'.
+	 The new name of the port is 'fetch_valid_o_BAR'. (OPT-319)
 Information: Complementing port 'EN_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_1'.
 	 The new name of the port is 'EN'. (OPT-319)
-    0:27:28   76737.3      1.45    3876.3       0.0 instr_req_o               1614258.8750
-    0:27:34   76764.9      1.43    3859.9       0.0 instr_req_o               1615116.6250
-    0:27:36   76771.1      1.43    3852.9       0.0                           1615301.2500
-    0:27:48   76809.6      1.43    3849.1       0.0                           1616687.3750
-    0:27:49   76809.6      1.43    3849.1       0.0                           1616687.3750
-    0:28:00   76279.5      1.43    3068.7       0.0                           1587790.0000
-    0:28:00   76279.5      1.43    3068.7       0.0                           1587790.0000
-    0:28:04   76279.5      1.43    3068.7       0.0                           1587790.0000
-    0:28:04   76279.5      1.43    3068.7       0.0                           1587790.0000
-    0:28:04   76279.5      1.43    3068.7       0.0                           1587790.0000
-    0:28:04   76279.5      1.43    3068.7       0.0                           1587790.0000
-    0:28:08   76279.5      1.43    3068.7       0.0                           1587790.0000
-    0:28:08   76279.5      1.43    3068.7       0.0                           1587790.0000
-    0:28:21   76337.5      1.42    3052.4       0.0                           1590464.5000
-    0:28:21   76337.5      1.42    3052.4       0.0                           1590464.5000
-    0:28:26   76347.6      1.42    3050.8       0.0                           1590765.1250
-    0:28:26   76347.6      1.42    3050.8       0.0                           1590765.1250
-    0:28:44   76400.3      1.41    3035.3      42.3                           1593553.7500
-    0:28:44   76400.3      1.41    3035.3      42.3                           1593553.7500
-    0:28:56   76432.4      1.41    3033.6      42.3                           1594784.0000
-    0:28:56   76432.4      1.41    3033.6      42.3                           1594784.0000
-    0:29:08   76415.7      1.40    2744.6      49.1                           1593750.5000
-    0:29:08   76415.7      1.40    2744.6      49.1                           1593750.5000
-    0:29:09   76415.7      1.40    2744.6      49.1                           1593750.5000
+    0:50:58   76369.1      1.46    2817.5       0.0 instr_req_o               1596140.1250
+    0:51:07   76381.9      1.45    2799.7       0.0 instr_req_o               1596471.6250
+    0:51:08   76387.5      1.45    2799.6       0.0                           1596589.1250
+    0:51:21   76429.5      1.44    2796.9       0.0                           1598103.5000
+    0:51:21   76429.5      1.44    2796.9       0.0                           1598103.5000
+    0:51:34   75956.6      1.44    2738.5       0.0                           1571516.5000
+    0:51:35   75956.6      1.44    2738.5       0.0                           1571516.5000
+    0:51:38   75956.6      1.44    2738.5       0.0                           1571516.5000
+    0:51:38   75956.6      1.44    2738.5       0.0                           1571516.5000
+    0:51:39   75963.0      1.44    2737.2       0.0                           1572061.8750
+    0:51:39   75963.0      1.44    2737.2       0.0                           1572061.8750
+    0:51:47   75963.7      1.44    2737.2       0.0                           1572199.7500
+    0:51:47   75963.7      1.44    2737.2       0.0                           1572199.7500
+    0:52:04   75991.7      1.43    2722.3       0.0                           1573390.1250
+    0:52:04   75991.7      1.43    2722.3       0.0                           1573390.1250
+    0:52:33   75994.9      1.43    2721.8       0.0                           1573462.0000
+    0:52:33   75994.9      1.43    2721.8       0.0                           1573462.0000
+    0:52:53   76017.5      1.42    2708.1       0.0                           1574959.8750
+    0:52:53   76017.5      1.42    2708.1       0.0                           1574959.8750
+    0:53:01   76026.3      1.42    2708.8       0.0                           1575298.2500
+    0:53:01   76026.3      1.42    2708.8       0.0                           1575298.2500
+    0:53:28   76071.7      1.42    2701.4       7.5                           1577735.1250
+    0:53:28   76071.7      1.42    2701.4       7.5                           1577735.1250
+    0:53:57   76123.6      1.41    2697.1       7.5                           1579636.3750
 Begin Combinational loops breaking ...
 	Number of combinational loops found: 0
 End Combinational loops breaking ...
@@ -4193,24 +4239,24 @@ End Combinational loops breaking ...
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:29:20   76412.8      1.40    2744.6      49.1                           1593682.2500
-    0:29:35   74825.5      1.42    2539.5      42.3                           1501489.8750
-    0:29:40   74821.3      1.42    2533.1      42.3                           1501311.3750
-    0:29:44   74818.9      1.42    2534.5      42.3                           1501249.2500
-    0:29:47   74811.4      1.42    2534.5      42.3                           1501122.1250
-    0:29:52   74808.5      1.42    2532.6      42.3                           1501047.3750
-    0:29:53   74800.3      1.42    2532.6      42.3                           1500926.1250
-    0:29:53   74800.3      1.42    2532.6      42.3                           1500926.1250
-    0:30:04   74804.0      1.42    2512.7      42.3                           1500945.7500
-    0:30:11   74778.2      1.42    2510.9       0.0                           1499972.8750
-    0:30:20   74751.1      1.42    2510.2       0.0                           1499018.6250
-    0:30:36   74798.4      1.40    2491.8       0.0                           1501804.2500
-    0:30:36   74798.4      1.40    2491.8       0.0                           1501804.2500
-    0:30:46   74809.0      1.40    2485.3       0.0                           1502417.0000
-    0:30:53   74810.1      1.40    2481.7       0.0                           1502552.7500
-    0:30:53   74810.1      1.40    2481.7       0.0                           1502552.7500
-    0:30:53   74810.9      1.40    2481.7       0.0                           1502612.7500
-    0:31:11   74790.7      1.40    2481.3       8.3                           1501465.8750
+    0:54:12   76120.7      1.41    2697.1       7.5                           1579568.1250
+    0:54:33   74918.9      1.43    2536.9       0.0                           1507188.3750
+    0:54:40   74926.6      1.43    2531.0       0.0                           1507510.0000
+    0:54:45   74920.0      1.43    2529.8       0.0                           1507354.2500
+    0:54:52   74918.1      1.43    2528.6       0.0                           1507374.7500
+    0:54:58   74915.4      1.43    2527.7       0.0                           1507321.0000
+    0:55:00   74905.3      1.43    2527.7       0.0                           1507096.6250
+    0:55:00   74905.3      1.43    2527.7       0.0                           1507096.6250
+    0:55:18   74887.0      1.43    2505.8       0.0                           1505963.7500
+    0:55:29   74864.4      1.43    2504.7       0.0                           1505308.8750
+    0:55:47   74835.6      1.43    2506.9       0.0                           1504487.0000
+    0:56:21   74884.3      1.41    2488.0       0.0                           1507689.0000
+    0:56:21   74884.3      1.41    2488.0       0.0                           1507689.0000
+    0:56:31   74901.9      1.41    2479.5       0.0                           1508563.5000
+    0:56:41   74902.4      1.41    2476.7       0.0                           1508657.7500
+    0:56:42   74902.4      1.41    2476.7       0.0                           1508657.7500
+    0:56:42   74902.4      1.41    2476.7       0.0                           1508657.7500
+    0:57:07   74859.8      1.41    2476.5      11.9                           1506236.7500
 Loading db file '/home/s267517/assignment/riscv/gate/scan/syn/techlib/NangateOpenCellLibrary_typical_ccs_scan.db'
 
 
@@ -4302,10 +4348,10 @@ Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MUL
 Warning: In the design riscv_load_store_unit_test_1, net 'data_we_ex_i' is connecting multiple ports. (UCN-1)
 Warning: In the design riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_test_1, net 'sec_lvl_o' is connecting multiple ports. (UCN-1)
 Warning: In the design riscv_pmp_N_PMP_ENTRIES16_test_1, net 'data_addr_i[20]' is connecting multiple ports. (UCN-1)
-Warning: In the design riscv_pmp_N_PMP_ENTRIES16_test_1, net 'data_addr_i[14]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_pmp_N_PMP_ENTRIES16_test_1, net 'data_addr_i[19]' is connecting multiple ports. (UCN-1)
 Warning: In the design riscv_pmp_N_PMP_ENTRIES16_test_1, net 'data_addr_i[1]' is connecting multiple ports. (UCN-1)
 Warning: In the design riscv_pmp_N_PMP_ENTRIES16_test_1, net 'data_addr_i[0]' is connecting multiple ports. (UCN-1)
-Warning: In the design riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_0, net 'CO_1_BAR' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_pmp_N_PMP_ENTRIES16_test_1, net 'data_err_o' is connecting multiple ports. (UCN-1)
 Warning: In the design riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_DECOMPRESSOR, net 'din[5]' is connecting multiple ports. (UCN-1)
 Warning: In the design riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_DECOMPRESSOR, net 'din[4]' is connecting multiple ports. (UCN-1)
 Warning: In the design riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_DECOMPRESSOR, net 'din[3]' is connecting multiple ports. (UCN-1)
@@ -4338,11 +4384,11 @@ write_sdc "${GATE_PATH}/${TOPLEVEL}_lbist.sdc"
 # write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}.spf"
 # write_tmax_library -path "${GATE_PATH}"
 #
-dc_shell> quit
+dc_shell> quis[Kt
 
-Memory usage for this session 377 Mbytes.
-Memory usage for this session including child processes 377 Mbytes.
-CPU usage for this session 1128 seconds ( 0.31 hours ).
-Elapsed time for this session 2194 seconds ( 0.61 hours ).
+Memory usage for this session 376 Mbytes.
+Memory usage for this session including child processes 376 Mbytes.
+CPU usage for this session 1206 seconds ( 0.34 hours ).
+Elapsed time for this session 3829 seconds ( 1.06 hours ).
 
 Thank you...

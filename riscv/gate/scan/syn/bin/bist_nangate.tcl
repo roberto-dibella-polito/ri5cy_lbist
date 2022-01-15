@@ -15,9 +15,9 @@ source ../bin/$TECH.dc_setup_scan.tcl
 
 analyze -format vhdl -work work ../../../../rtl/lbist_blocks/mux2to1.vhd
 analyze -format vhdl -work work ../../../../rtl/lbist_blocks/bist_controller.vhd
-analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v
+analyze -format vhdl -work work ../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd
 #analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/phase_shifter/phase_shifter.v
-analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/tpg.v
+analyze -format vhdl -work work ../../../../rtl/lbist_blocks/tpg_2/tpg.vhd
 analyze -format vhdl -work work ../../../../rtl/lbist_blocks/test_counter/counter.vhd
 analyze -format vhdl -work work ../../../../rtl/lbist_blocks/test_counter/test_counter.vhd
 analyze -format verilog -work work ../../../../rtl/lbist_blocks/out_eval/misr.v

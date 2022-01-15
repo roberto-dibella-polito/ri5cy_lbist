@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version R-2020.09-SP2 for linux64 -- Dec 03, 2020
-#@ # Date:   Sat Jan 15 02:25:53 2022
+#@ # Date:   Sat Jan 15 19:04:09 2022
 #@ # Run by: s267517@po.polito.it
 #@ 
 
@@ -6716,9 +6716,9 @@ source -echo -verbose /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/bi
 #@ 
 #@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/mux2to1.vhd
 #@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/bist_controller.vhd
-#@ analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v
+#@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/tpg_2/lfsr.vhd
 #@ #analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/phase_shifter/phase_shifter.v
-#@ analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/tpg.v
+#@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/tpg_2/tpg.vhd
 #@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/test_counter/counter.vhd
 #@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/test_counter/test_counter.vhd
 #@ analyze -format verilog -work work ../../../../rtl/lbist_blocks/out_eval/misr.v

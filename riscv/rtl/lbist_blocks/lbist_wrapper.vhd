@@ -98,9 +98,10 @@ architecture structure of riscv_lbist is
         --	output wire [266:0] dout    
 	--	 );
 	component tpg
-		port(
-			clk, rst_n, en	: in std_logic;
-			dout		: out std_logic_vector(266 downto 0) );
+        	port(
+                	clk, rst_n, en  : in std_logic;
+                	dout            : out std_logic_vector(266 downto 0)
+        	);
 	end component;
 
 	-- OUTPUT EVALUATOR
@@ -121,7 +122,7 @@ architecture structure of riscv_lbist is
 	signal clk_i 	: std_logic;
 	
 	-- Data
-	signal lfsr_patterns_i		: std_logic_vector(23 downto 0);
+	--signal lfsr_patterns_i		: std_logic_vector(23 downto 0);
 	signal test_patterns_i		: std_logic_vector(266 downto 0);
 	signal signature_i		: std_logic_vector(239 downto 0);
 	
@@ -174,8 +175,6 @@ begin
 		rst_n	=> tpg_rst_n_i,
 		en	=> tpg_en_i,
 		dout	=> test_patterns_i );
-
-
 
 	-- BIST CONTROLLER
 	controller: bist_controller port map(

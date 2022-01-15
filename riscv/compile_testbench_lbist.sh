@@ -12,12 +12,14 @@ cd ${run_dir}
 
 ### GATE LEVEL VERSION #########
 
-#rm -rf work_gate
+rm -rf work_gate
 
 vlib work_gate
 vlog -work work_gate +define+functional ${root_dir}/gate/NangateOpenCellLibrary.v
 vcom -93 -work work_gate \
 	${root_dir}/rtl/lbist_blocks/mux2to1.vhd \
+	${root_dir}/rtl/lbist_blocks/tpg_2/lfsr.vhd \
+	${root_dir}/rtl/lbist_blocks/tpg_2/tpg.vhd \
 	${root_dir}/rtl/lbist_blocks/out_eval/out_eval.vhd \
 	${root_dir}/rtl/lbist_blocks/test_counter/counter.vhd \
 	${root_dir}/rtl/lbist_blocks/test_counter/test_counter.vhd \
@@ -26,8 +28,6 @@ vcom -93 -work work_gate \
 	${root_dir}/rtl/riscv_scan_core_lbist.vhd 
 
 vlog -work work_gate \
-	${root_dir}/rtl/lbist_blocks/tpg/lfsr/lfsr.v \
-	${root_dir}/rtl/lbist_blocks/tpg/tpg.v \
 	${root_dir}/rtl/lbist_blocks/out_eval/misr.v \
 	${root_dir}/gate/scan/syn/output/riscv_core_scan.v 
 
