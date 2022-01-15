@@ -49,14 +49,12 @@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/mux2to1.vhd
 Running PRESTO HDLC
 Compiling Entity Declaration MUX2TO1_N
 Compiling Architecture BHV of MUX2TO1_N
-Warning:  ../../../../rtl/lbist_blocks/mux2to1.vhd:18: The architecture bhv has already been analyzed. It is being replaced. (VHD-4)
 Presto compilation completed successfully.
 1
 analyze -format vhdl -work work ../../../../rtl/lbist_blocks/bist_controller.vhd
 Running PRESTO HDLC
 Compiling Entity Declaration BIST_CONTROLLER
 Compiling Architecture BHV of BIST_CONTROLLER
-Warning:  ../../../../rtl/lbist_blocks/bist_controller.vhd:32: The architecture bhv has already been analyzed. It is being replaced. (VHD-4)
 Presto compilation completed successfully.
 1
 analyze -format verilog -work work ../../../../rtl/lbist_blocks/tpg/lfsr/lfsr.v
@@ -75,14 +73,12 @@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/test_counter/counte
 Running PRESTO HDLC
 Compiling Entity Declaration COUNTER
 Compiling Architecture BEH of COUNTER
-Warning:  ../../../../rtl/lbist_blocks/test_counter/counter.vhd:21: The architecture beh has already been analyzed. It is being replaced. (VHD-4)
 Presto compilation completed successfully.
 1
 analyze -format vhdl -work work ../../../../rtl/lbist_blocks/test_counter/test_counter.vhd
 Running PRESTO HDLC
 Compiling Entity Declaration TEST_COUNTER
 Compiling Architecture STRUCTURE of TEST_COUNTER
-Warning:  ../../../../rtl/lbist_blocks/test_counter/test_counter.vhd:17: The architecture structure has already been analyzed. It is being replaced. (VHD-4)
 Presto compilation completed successfully.
 1
 analyze -format verilog -work work ../../../../rtl/lbist_blocks/out_eval/misr.v
@@ -95,14 +91,12 @@ analyze -format vhdl -work work ../../../../rtl/lbist_blocks/out_eval/out_eval.v
 Running PRESTO HDLC
 Compiling Entity Declaration OUTPUT_EVALUATOR
 Compiling Architecture STRUCTURE of OUTPUT_EVALUATOR
-Warning:  ../../../../rtl/lbist_blocks/out_eval/out_eval.vhd:22: The architecture structure has already been analyzed. It is being replaced. (VHD-4)
 Presto compilation completed successfully.
 1
 analyze -format vhdl -work work ../../../../rtl/lbist_blocks/lbist_wrapper.vhd
 Running PRESTO HDLC
 Compiling Entity Declaration RISCV_LBIST
 Compiling Architecture STRUCTURE of RISCV_LBIST
-Warning:  ../../../../rtl/lbist_blocks/lbist_wrapper.vhd:20: The architecture structure has already been analyzed. It is being replaced. (VHD-4)
 Presto compilation completed successfully.
 1
 analyze -format verilog -work work ../output/riscv_core_scan.v
@@ -114,7 +108,6 @@ analyze -format vhdl -work work ../../../../rtl/riscv_scan_core_lbist.vhd
 Running PRESTO HDLC
 Compiling Entity Declaration RISCV_CORE
 Compiling Architecture STRUCTURE of RISCV_CORE
-Warning:  ../../../../rtl/riscv_scan_core_lbist.vhd:46: The architecture structure has already been analyzed. It is being replaced. (VHD-4)
 Presto compilation completed successfully.
 1
 elaborate ${TOPLEVEL} -work work
@@ -621,7 +614,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     R-2020.09-SP2
-Date:        Sat Jan 15 02:09:57 2022
+Date:        Sat Jan 15 02:26:38 2022
 ****************************************
 
                    Name                                            Total
@@ -3209,7 +3202,8 @@ compile_ultra -no_autoungroup
 Loading db file '/eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/libraries/syn/dw_foundation.sldb'
 Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
 Information: Performing power optimization. (PWR-850)
-Alib files are up-to-date.
+Analyzing: "/home/s267517/assignment/riscv/gate/scan/syn/techlib/NangateOpenCellLibrary_typical_ccs_scan.db"
+Library analysis succeeded.
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
 ============================================================================
@@ -3232,69 +3226,1123 @@ Information: State dependent leakage is now switched from on to off.
   ------------------------
   Processing 'riscv_pmp_N_PMP_ENTRIES16_test_1'
   Processing 'riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_test_1'
+  Processing 'riscv_mult_SHARED_DSP_MULT0_test_1'
+  Processing 'riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_test_1'
+  Processing 'riscv_alu_SHARED_INT_DIV0_FPU0_test_1'
+  Processing 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800'
+  Processing 'riscv_hwloop_regs_N_REGS2_test_1'
+  Processing 'riscv_compressed_decoder_FPU0'
+  Processing 'lfsr_N24_SEED240'
+  Processing 'lfsr_N24_SEED96'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_COMPRESSOR'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_1'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_33'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_32'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_29'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_26'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_22'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_16'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_9'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_1'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_12'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_4'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_1'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_25'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_17'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_9'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_1'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_0'
+  Processing 'riscv_L0_buffer_RDATA_IN_WIDTH128_test_1'
+  Processing 'riscv_hwloop_controller_N_REGS2_test_1'
+  Processing 'misr_N24_SEED1_1'
+  Processing 'lfsr_N24_SEED72'
+  Processing 'test_counter_TEST_DURATION11100_TEST_START98'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_0'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_8'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_11'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_3'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_24'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_16'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_8'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_0'
+  Processing 'cluster_clock_gating'
+  Processing 'riscv_prefetch_L0_buffer_test_1'
+  Processing 'alu_popcnt'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_DECOMPRESSOR'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_18'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_11'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_3'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_1'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_6'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_3'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_27'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_19'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_11'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_3'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_2'
+  Processing 'riscv_if_stage_2_128_0_1a110800_test_1'
+  Processing 'riscv_controller_FPU0_test_1'
+  Processing 'counter_N24_RST_VALUE0'
+ Implement Synthetic for 'counter_N24_RST_VALUE0'.
+  Processing 'lfsr_N24_SEED144'
+  Processing 'register_file_test_wrap_ADDR_WIDTH6_FPU0_Zfinx0_test_1'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_0'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_1'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_30'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_27'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_23'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_17'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_10'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_2'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_5'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_2'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_26'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_18'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_10'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_2'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_1'
+  Processing 'riscv_alu_div_test_1'
+  Processing 'mux2to1_n_N267'
+  Processing 'bist_controller'
+  Processing 'lfsr_N24_SEED120'
+  Processing 'alu_ff'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_3'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_19'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_12'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_4'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_2'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_7'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_4'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_28'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_20'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_12'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_4'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_0'
+  Processing 'riscv_load_store_unit_test_1'
+  Processing 'riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'
+  Processing 'misr_N24_SEED1_5'
+  Processing 'lfsr_N24_SEED168'
+  Processing 'lfsr_N24_SEED0'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_2'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_31'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_28'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_24'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_20'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_14'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_6'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_load_store_unit_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_9'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_1'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_30'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_22'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_14'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_6'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_2'
+  Processing 'riscv_core'
+  Processing 'output_evaluator_N239'
+  Processing 'misr_N24_SEED1_0'
+  Processing 'tpg'
+  Processing 'lfsr_N24_SEED192'
+  Processing 'lfsr_N24_SEED24'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_13'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_5'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_8'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_29'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_21'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_13'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_5'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_1'
+  Processing 'riscv_decoder_FPU0_FP_DIVSQRT0_PULP_SECURE1_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6_test_1'
+  Processing 'riscv_lbist'
+  Processing 'misr_N24_SEED1_6'
+  Processing 'misr_N24_SEED1_9'
+  Processing 'lfsr_N24_SEED216'
+  Processing 'lfsr_N24_SEED48'
+  Processing 'riscv_int_controller_PULP_SECURE1_test_1'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_2'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_25'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_21'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_15'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_7'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_load_store_unit_1'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_10'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_2'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_int_controller_PULP_SECURE1_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_23'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_15'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_7'
+  Processing 'SNPS_CLOCK_GATE_HIGH_riscv_if_stage_2_128_0_1a110800_0'
+  Processing 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DW01_decode_width1'
 
-Error: Insufficient virtual memory.  Please increase swap space, or reduce other processes on this host. (OPT-1603)
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Complementing port 'test_en_i' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800'.
+	 The new name of the port is 'test_en_i_BAR'. (OPT-319)
+Information: Complementing port 'testing' in design 'riscv_lbist'.
+	 The new name of the port is 'testing_BAR'. (OPT-319)
+Information: Complementing port 'test_en_i' in design 'cluster_clock_gating'.
+	 The new name of the port is 'test_en_i_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_if_stage_2_128_0_1a110800_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_load_store_unit_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_pmp_N_PMP_ENTRIES16_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'SE' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3'.
+	 The new name of the port is 'SE_BAR'. (OPT-319)
+Information: Complementing port 'SE' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_2'.
+	 The new name of the port is 'SE_BAR'. (OPT-319)
+Information: Complementing port 'SE' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_0'.
+	 The new name of the port is 'SE_BAR'. (OPT-319)
+Information: Complementing port 'SE' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7'.
+	 The new name of the port is 'SE_BAR'. (OPT-319)
+Information: Complementing port 'SE' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_3'.
+	 The new name of the port is 'SE_BAR'. (OPT-319)
+Information: Complementing port 'SE' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_2'.
+	 The new name of the port is 'SE_BAR'. (OPT-319)
+Information: Complementing port 'SE' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_1'.
+	 The new name of the port is 'SE_BAR'. (OPT-319)
+Information: Complementing port 'SE' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_0'.
+	 The new name of the port is 'SE_BAR'. (OPT-319)
+Information: Complementing port 'SE' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_0'.
+	 The new name of the port is 'SE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_0'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_1'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_2'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_3'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_4'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_5'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_6'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_7'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_8'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_9'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_10'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_11'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_12'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_13'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_14'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_15'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_16'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_17'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_18'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_19'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_20'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_21'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_22'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_23'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_24'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_25'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_26'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_27'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_28'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_29'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_30'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_31'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_32'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_33'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_load_store_unit_0'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_load_store_unit_1'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_alu_SHARED_INT_DIV0_FPU0_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_mult_SHARED_DSP_MULT0_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_0'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'register_file_test_wrap_ADDR_WIDTH6_FPU0_Zfinx0_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_controller_FPU0_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_int_controller_PULP_SECURE1_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_hwloop_regs_N_REGS2_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_0'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_1'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_2'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_3'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_4'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_5'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_6'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_7'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_8'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_9'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_10'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_11'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_12'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'SE' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_1'.
+	 The new name of the port is 'SE_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_prefetch_L0_buffer_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_if_stage_2_128_0_1a110800_0'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_alu_div_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_0'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_1'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_2'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_3'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_4'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_int_controller_PULP_SECURE1_0'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'test_se' in design 'riscv_L0_buffer_RDATA_IN_WIDTH128_test_1'.
+	 The new name of the port is 'test_se_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_0'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_1'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_2'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_0'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_1'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_2'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_0'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_1'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_2'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_3'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_4'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_5'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_6'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_7'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_8'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_9'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_10'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_11'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_12'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_13'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_14'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_15'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_16'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_17'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_18'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_19'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_20'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_21'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_22'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_23'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_24'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_25'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_26'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_27'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_28'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_29'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_30'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_0'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_1'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'TE' in design 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_2'.
+	 The new name of the port is 'TE_BAR'. (OPT-319)
+Information: Complementing port 'testing' in design 'bist_controller'.
+	 The new name of the port is 'testing_BAR'. (OPT-319)
+Information: Complementing port 'test_en_i_BAR' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800'.
+	 The new name of the port is 'test_en_i'. (OPT-319)
+Information: Complementing port 'testing_BAR' in design 'riscv_lbist'.
+	 The new name of the port is 'testing'. (OPT-319)
+Information: Complementing port 'test_en_i_BAR' in design 'cluster_clock_gating'.
+	 The new name of the port is 'test_en_i'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_if_stage_2_128_0_1a110800_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_load_store_unit_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_pmp_N_PMP_ENTRIES16_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'SE_BAR' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3'.
+	 The new name of the port is 'SE'. (OPT-319)
+Information: Complementing port 'SE_BAR' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_2'.
+	 The new name of the port is 'SE'. (OPT-319)
+Information: Complementing port 'SE_BAR' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_0'.
+	 The new name of the port is 'SE'. (OPT-319)
+Information: Complementing port 'SE_BAR' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7'.
+	 The new name of the port is 'SE'. (OPT-319)
+Information: Complementing port 'SE_BAR' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_3'.
+	 The new name of the port is 'SE'. (OPT-319)
+Information: Complementing port 'SE_BAR' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_2'.
+	 The new name of the port is 'SE'. (OPT-319)
+Information: Complementing port 'SE_BAR' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_1'.
+	 The new name of the port is 'SE'. (OPT-319)
+Information: Complementing port 'SE_BAR' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_test_0'.
+	 The new name of the port is 'SE'. (OPT-319)
+Information: Complementing port 'SE_BAR' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_7_0'.
+	 The new name of the port is 'SE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_0'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_1'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_2'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_3'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_4'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_5'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_6'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_7'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_8'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_9'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_10'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_11'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_12'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_13'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_14'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_15'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_16'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_17'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_18'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_19'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_20'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_21'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_22'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_23'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_24'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_25'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_26'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_27'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_28'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_29'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_30'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_31'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_32'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_33'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_load_store_unit_0'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_load_store_unit_1'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_alu_SHARED_INT_DIV0_FPU0_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_mult_SHARED_DSP_MULT0_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_0'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'register_file_test_wrap_ADDR_WIDTH6_FPU0_Zfinx0_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_controller_FPU0_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_int_controller_PULP_SECURE1_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_hwloop_regs_N_REGS2_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_0'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_1'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_2'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_3'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_4'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_5'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_6'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_7'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_8'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_9'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_10'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_11'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_12'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'SE_BAR' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_1'.
+	 The new name of the port is 'SE'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_prefetch_L0_buffer_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_if_stage_2_128_0_1a110800_0'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_alu_div_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_0'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_1'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_2'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_3'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_hwloop_regs_N_REGS2_4'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_int_controller_PULP_SECURE1_0'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'test_se_BAR' in design 'riscv_L0_buffer_RDATA_IN_WIDTH128_test_1'.
+	 The new name of the port is 'test_se'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_0'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_1'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_prefetch_L0_buffer_2'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_0'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_1'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_2'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_0'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_1'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_2'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_3'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_4'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_5'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_6'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_7'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_8'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_9'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_10'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_11'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_12'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_13'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_14'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_15'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_16'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_17'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_18'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_19'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_20'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_21'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_22'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_23'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_24'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_25'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_26'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_27'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_28'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_29'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_30'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_0'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_1'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'TE_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_L0_buffer_RDATA_IN_WIDTH128_2'.
+	 The new name of the port is 'TE'. (OPT-319)
+Information: Complementing port 'testing_BAR' in design 'bist_controller'.
+	 The new name of the port is 'testing'. (OPT-319)
+Information: Complementing port 'clpx_img_i' in design 'riscv_mult_SHARED_DSP_MULT0_test_1'.
+	 The new name of the port is 'clpx_img_i_BAR'. (OPT-319)
+Information: Complementing port 'mult_clpx_img_i' in design 'riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'mult_clpx_img_i_BAR'. (OPT-319)
+Information: Complementing port 'mult_clpx_img_ex_o' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'mult_clpx_img_ex_o_BAR'. (OPT-319)
+Information: Complementing port 'data_err_ack_i_BAR' in design 'riscv_pmp_N_PMP_ENTRIES16_test_1'.
+	 The new name of the port is 'data_err_ack_i'. (OPT-319)
+Information: Complementing port 'data_err_ack_o_BAR' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'data_err_ack_o'. (OPT-319)
+Information: Complementing port 'data_err_ack_o_BAR' in design 'riscv_controller_FPU0_test_1'.
+	 The new name of the port is 'data_err_ack_o'. (OPT-319)
+Information: Complementing port 'csr_save_ex_o_BAR' in design 'riscv_controller_FPU0_test_1'.
+	 The new name of the port is 'csr_save_ex_o'. (OPT-319)
+Information: Complementing port 'csr_save_ex_i_BAR' in design 'riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_test_1'.
+	 The new name of the port is 'csr_save_ex_i'. (OPT-319)
+Information: Complementing port 'csr_save_ex_o_BAR' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'csr_save_ex_o'. (OPT-319)
+Information: Complementing port 'csr_access_i_BAR' in design 'riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'csr_access_i'. (OPT-319)
+Information: Complementing port 'csr_access_i_BAR' in design 'riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_test_1'.
+	 The new name of the port is 'csr_access_i'. (OPT-319)
+Information: Complementing port 'csr_access_ex_o_BAR' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'csr_access_ex_o'. (OPT-319)
+Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in' in design 'riscv_alu_SHARED_INT_DIV0_FPU0_test_1'.
+	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in_BAR'. (OPT-319)
+Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in' in design 'riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in_BAR'. (OPT-319)
+Information: Complementing port 'CO_1' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_2'.
+	 The new name of the port is 'CO_1_BAR'. (OPT-319)
+Information: Complementing port 'ctrl_kill_i' in design 'riscv_int_controller_PULP_SECURE1_test_1'.
+	 The new name of the port is 'ctrl_kill_i_BAR'. (OPT-319)
+Information: Complementing port 'exc_kill_o' in design 'riscv_controller_FPU0_test_1'.
+	 The new name of the port is 'exc_kill_o_BAR'. (OPT-319)
+Information: Complementing port 'EN' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_27'.
+	 The new name of the port is 'EN_BAR'. (OPT-319)
+Information: Complementing port 'first_one_o[4]' in design 'alu_ff'.
+	 The new name of the port is 'first_one_o[4]_BAR'. (OPT-319)
+Information: Complementing port 'InVld_SI' in design 'riscv_alu_div_test_1'.
+	 The new name of the port is 'InVld_SI_BAR'. (OPT-319)
+Information: Complementing port 'EN' in design 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_1'.
+	 The new name of the port is 'EN_BAR'. (OPT-319)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'counter_N24_RST_VALUE0'. (DDB-72)
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+Information: Added key list 'DesignWare' to design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'. (DDB-72)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 7)
+  Mapping Optimization (Phase 8)
+  Mapping Optimization (Phase 9)
+  Mapping Optimization (Phase 10)
+  Mapping Optimization (Phase 11)
+  Mapping Optimization (Phase 12)
+  Mapping Optimization (Phase 13)
+  Mapping Optimization (Phase 14)
+  Mapping Optimization (Phase 15)
+  Mapping Optimization (Phase 16)
+  Mapping Optimization (Phase 17)
+  Mapping Optimization (Phase 18)
+  Mapping Optimization (Phase 19)
+  Mapping Optimization (Phase 20)
+  Mapping Optimization (Phase 21)
+  Mapping Optimization (Phase 22)
+Information: Added key list 'DesignWare' to design 'riscv_load_store_unit_test_1'. (DDB-72)
+  Mapping Optimization (Phase 23)
+  Mapping Optimization (Phase 24)
+  Mapping Optimization (Phase 25)
+Information: Added key list 'DesignWare' to design 'riscv_mult_SHARED_DSP_MULT0_test_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'alu_popcnt'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'riscv_alu_SHARED_INT_DIV0_FPU0_test_1'. (DDB-72)
+Begin Combinational loops breaking ...
+	Number of combinational loops found: 0
+End Combinational loops breaking ...
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:16:22  106114.3      3.01    9714.9     437.4                           3060298.7500
+    0:16:38  105898.9      3.20    9832.6     622.0                           3053549.5000
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:18:32   80781.8      2.95    7891.3     178.0                           1921808.2500
+    0:19:59   81368.1      1.71    5734.8     184.1                           1940265.7500
+    0:19:59   81368.1      1.71    5734.8     184.1                           1940265.7500
+    0:20:07   81358.8      1.71    5735.6     184.1                           1939953.8750
+Begin Combinational loops breaking ...
+	Number of combinational loops found: 0
+End Combinational loops breaking ...
+    0:20:30   81358.0      1.71    5735.6     184.1                           1939940.6250
+    0:20:37   81355.3      1.71    5736.0     184.1                           1939864.6250
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:21:21   80877.0      1.71    5646.7     172.1                           1906310.3750
+    0:21:30   80459.4      1.71    5629.3     160.2                           1881115.6250
+    0:21:34   80140.5      1.71    5623.4     159.7                           1869065.7500
+    0:21:41   78991.9      1.71    3597.0     114.4                           1814874.0000
+    0:21:41   78934.4      1.71    3596.9     114.4                           1812602.3750
+    0:21:49   78807.0      1.70    3548.5     112.3                           1802498.5000
+    0:21:57   78742.7      1.70    3541.5     112.3                           1797385.5000
+    0:21:58   78724.0      1.70    3540.7     112.3                           1795878.6250
+    0:21:58   78724.0      1.70    3540.7     112.3                           1795878.6250
+    0:22:09   77662.7      1.70    3529.8      99.4                           1719076.1250
+    0:22:09   77662.7      1.70    3529.8      99.4                           1719076.1250
+    0:22:51   78087.0      1.63    3457.3      95.4                           1734939.3750
+    0:22:51   78087.0      1.63    3457.3      95.4                           1734939.3750
+    0:22:52   78094.9      1.63    3453.3      95.4                           1735936.1250
+    0:22:52   78094.9      1.63    3453.3      95.4                           1735936.1250
+    0:24:20   78722.7      1.57    3353.8     169.9                           1758070.8750
+    0:24:20   78722.7      1.57    3353.8     169.9                           1758070.8750
+    0:24:38   78768.7      1.51    3251.3     178.2                           1761196.3750
+    0:24:38   78768.7      1.51    3251.3     178.2                           1761196.3750
+    0:24:56   78800.6      1.51    3247.7     178.2                           1762532.1250
+    0:24:56   78800.6      1.51    3247.7     178.2                           1762532.1250
+    0:25:16   78819.0      1.49    3223.7     178.2                           1763261.3750
+    0:25:16   78819.0      1.49    3223.7     178.2                           1763261.3750
+    0:25:28   78897.5      1.49    3222.7     179.7                           1766337.3750
+    0:25:28   78897.5      1.49    3222.7     179.7                           1766337.3750
+    0:25:30   78898.3      1.49    3222.6     179.7                           1766443.3750
+    0:25:30   78898.3      1.49    3222.6     179.7                           1766443.3750
+    0:25:42   78915.6      1.49    3221.2     179.7                           1766996.6250
 
 
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
 
-The tool has just encountered a fatal error:
-
-If you encountered this fatal error when using the most recent
-Synopsys release, submit this stack trace and a test case that
-reproduces the problem to the Synopsys Support Center by using
-Enter A Call at http://solvnet.synopsys.com/EnterACall.
-
-* For information about the latest software releases, go to the Synopsys
-  SolvNet Release Library at http://solvnet.synopsys.com/ReleaseLibrary.
-
-* For information about required Operating System patches, go to
-  http://www.synopsys.com/support
-
-
-Release = 'R-2020.09-SP2'  Architecture = 'linux64'  Program = 'dc_shell'
-Exec = '/eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/linux64/syn/bin/common_shell_exec'
-
-'7379173 220987971 220990314 221151001 55918471 55931410 55932191 49517151 49549871 51526426 51529424 43795787 43797215 42468279 214940772 215082797 285434133 285453782 285461424 215206272 214981623 215016762 215082797 285434133 285453782 215067577 215079383 37767398 37811453 37812123 37813849 7395948 5954505 46912547746773'
-
-Stack trace for crashing thread
--------------------------------
-SNPSee_72fe6ee5e6adf88ac107a01d196ffb8ed40842348ffb0f8b+36
-SNPSee_f1ee00d2049be34bc9fa2aabd0709c661b77ea09a2cd7785+272
-SNPSee_b0111077a1564ec2f03c23d0bb102089295fca3df69878e1+195
-SNPSee_b0111077a1564ec2f03c23d0bb10208996f73d5da3bdb873ca1599303c3fe6ce+26
-SNPSee_984d05116d5adeee0148d0ab050fb14e+9
-SNPSee_faa31cede3d62524584056cfda141eb0b82b0453d3aa6d20f8d88f3c6a5a1c2a+1191
-SNPSee_faa31cede3d62524853843a1d247e879daf8888490d5a7c3e7dded17b6a52b7483b3ea82794e89f1+178
-SNPSee_fcdb81ed5f211dc144f5a00af02b73bb+543
-SNPSee_a38b227dfbddfaa0ab8db87583d2840756b8663053fe5155+2207
-SNPSee_c0e751d30aa20b45684bdc5b2846d4f3+2943
-SNPSee_c330831c9ba47c526c742232f8ebb119321b436bc7e1e723+794
-SNPSee_1eaa922d28a29934f4138043617d5259759cfa0e803d9131+96
-SNPSee_491529b53ce409253333d38c1284bc7c02bed1d340622c72280c34dc4b711545+27691
-SNPSee_491529b53ce4092515211491aa51eeaa46b71dc67acaee2c+79
-SNPSee_800cfa09c4312a2a658022cd459e34616900e8f99890a5ed+3319
-SNPSee_7ea007f17721baa8c52712154029f5e48c5b42d17487296853bec6f509fb5cd7fb8e3aecaf9a59df5ceaf3227abcdf276664c5bfd5ca6b006d34e6f6d0022bb5aa6a0546020548c042f868058edbb564+116
-SNPSee_18ae1188a5a6482452f3b67abbc891010269f13ce0e30d67+3165
-SNPSee_57415c5b07ec5e8b8118f96e6212a2c42c69fd3f49376c0d+133
-SNPSee_1ac40924fdff8310f5184d6eb67c5798036a89169a27d790+70
-SNPSee_a00aeeb47fd325df3eff4946e57739a1+1296
-SNPSee_5b9e0c983f97901fa4e0af164abe7efeb24c5f4c6136879c869b2b88ca4e26329cbb10d1a609855d+336
-SNPSee_59511b0144537c36c6614840eb25b067+1255
-SNPSee_dfcfd18c870f576645dec230cc55940481eea9a4962927b3b2419a5f9f3803d6e6d6151e8a6657b75c63db485ae230e97b8a0dd27c2cdfedd6e7ab8b3504080f+1450
-SNPSee_18ae1188a5a6482452f3b67abbc891010269f13ce0e30d67+3165
-SNPSee_57415c5b07ec5e8b8118f96e6212a2c42c69fd3f49376c0d+133
-SNPSee_1ac40924fdff8310f5184d6eb67c5798036a89169a27d790+70
-SNPSee_eb883b8643ac3618e46fbd7d90d84cd1d9cf41f1ea1de2433ad64196cf3fcc2ce0cf4135a98ecf06+1129
-SNPSee_c9aef8ff45700e7498f09e7fe7ec58c036cd580d7ddf92c3+167
-SNPSee_d188ae5ca31ec51f7cba18dffac171b0221ec425774837558df4ddc3322fc732e06cbd83d58883e1+278
-SNPSee_3221a15a6f1a35304e1e2a6725c055e64954ed411c02b8fea588b35e0540b178b78986c80d1d5eb53d84afadfe38b7c2+381
-SNPSee_3221a15a6f1a3530a06e6740411df9e026698cb37d965801c2f87fce0f07c0f8+347
-SNPSee_76d6cca1ef29382ca84b036280d53dca+73
-SNPSee_a8c67c391924da59bb0a6e836c77e2d8+5436
-SNPSee_5a24f30b88271223+9
-__libc_start_main+245
-SNPSee_d06eed713327be76+41
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:25:42   78915.6      1.49    3221.2     179.7                           1766996.6250
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+    0:25:56   78830.4      1.47    3183.3       0.0                           1760979.1250
+    0:26:03   78840.8      1.47    3183.3       0.0                           1761324.5000
 
 
-A snapshot of runtime data has been captured in /home/s267517/assignment/riscv/gate/scan/syn/run/crte_000022947.txt
-dcfarm: detected bad exit for parent -- terminating all child jobs now...
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:26:03   78840.8      1.47    3183.3       0.0                           1761324.5000
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+  Global Optimization (Phase 51)
+  Global Optimization (Phase 52)
+Information: Complementing port 'core_ctrl_firstfetch_o' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'core_ctrl_firstfetch_o_BAR'. (OPT-319)
+Information: Complementing port 'first_fetch_o' in design 'riscv_controller_FPU0_test_1'.
+	 The new name of the port is 'first_fetch_o_BAR'. (OPT-319)
+Information: Complementing port 'illegal_c_insn_i' in design 'riscv_decoder_FPU0_FP_DIVSQRT0_PULP_SECURE1_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6_test_1'.
+	 The new name of the port is 'illegal_c_insn_i_BAR'. (OPT-319)
+Information: Complementing port 'illegal_c_insn_i' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'illegal_c_insn_i_BAR'. (OPT-319)
+Information: Complementing port 'illegal_c_insn_id_o' in design 'riscv_if_stage_2_128_0_1a110800_test_1'.
+	 The new name of the port is 'illegal_c_insn_id_o_BAR'. (OPT-319)
+Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in' in design 'riscv_if_stage_2_128_0_1a110800_test_1'.
+	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in_BAR'. (OPT-319)
+Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in' in design 'riscv_load_store_unit_test_1'.
+	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in_BAR'. (OPT-319)
+Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in' in design 'riscv_prefetch_L0_buffer_test_1'.
+	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in_BAR'. (OPT-319)
+Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in' in design 'riscv_L0_buffer_RDATA_IN_WIDTH128_test_1'.
+	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_in_BAR'. (OPT-319)
+Information: Complementing port 'CO_1' in design 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_0'.
+	 The new name of the port is 'CO_1_BAR'. (OPT-319)
+Information: Complementing port 'is_subrot_i' in design 'riscv_alu_SHARED_INT_DIV0_FPU0_test_1'.
+	 The new name of the port is 'is_subrot_i_BAR'. (OPT-319)
+Information: Complementing port 'alu_is_subrot_i' in design 'riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'alu_is_subrot_i_BAR'. (OPT-319)
+Information: Complementing port 'alu_is_subrot_ex_o' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'alu_is_subrot_ex_o_BAR'. (OPT-319)
+Information: Complementing port 'debug_ebreaku_i' in design 'riscv_controller_FPU0_test_1'.
+	 The new name of the port is 'debug_ebreaku_i_BAR'. (OPT-319)
+Information: Complementing port 'debug_ebreaku_i' in design 'riscv_id_stage_N_HWLP2_PULP_SECURE1_APU0_FPU0_Zfinx0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1'.
+	 The new name of the port is 'debug_ebreaku_i_BAR'. (OPT-319)
+Information: Complementing port 'debug_ebreaku_o' in design 'riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_test_1'.
+	 The new name of the port is 'debug_ebreaku_o_BAR'. (OPT-319)
+Information: Complementing port 'alu_op_b_mux_sel_o[2]' in design 'riscv_decoder_FPU0_FP_DIVSQRT0_PULP_SECURE1_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6_test_1'.
+	 The new name of the port is 'alu_op_b_mux_sel_o[2]_BAR'. (OPT-319)
+Information: Complementing port 'alu_op_a_mux_sel_o[0]' in design 'riscv_decoder_FPU0_FP_DIVSQRT0_PULP_SECURE1_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6_test_1'.
+	 The new name of the port is 'alu_op_a_mux_sel_o[0]_BAR'. (OPT-319)
+Information: Complementing port 'bmask_a_mux_o[0]' in design 'riscv_decoder_FPU0_FP_DIVSQRT0_PULP_SECURE1_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6_test_1'.
+	 The new name of the port is 'bmask_a_mux_o[0]_BAR'. (OPT-319)
+Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in' in design 'riscv_int_controller_PULP_SECURE1_test_1'.
+	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in_BAR'. (OPT-319)
+Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in' in design 'riscv_controller_FPU0_test_1'.
+	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in_BAR'. (OPT-319)
+Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in' in design 'register_file_test_wrap_ADDR_WIDTH6_FPU0_Zfinx0_test_1'.
+	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in_BAR'. (OPT-319)
+Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in' in design 'riscv_hwloop_regs_N_REGS2_test_1'.
+	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in_BAR'. (OPT-319)
+Information: Complementing port 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in' in design 'riscv_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_Zfinx0_test_1'.
+	 The new name of the port is 'riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_test_mode_tp_in_BAR'. (OPT-319)
+Information: Complementing port 'EN_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_27'.
+	 The new name of the port is 'EN'. (OPT-319)
+Information: Complementing port 'InVld_SI_BAR' in design 'riscv_alu_div_test_1'.
+	 The new name of the port is 'InVld_SI'. (OPT-319)
+Information: Complementing port 'EN_BAR' in design 'SNPS_CLOCK_GATE_HIGH_riscv_alu_div_1'.
+	 The new name of the port is 'EN'. (OPT-319)
+    0:27:28   76737.3      1.45    3876.3       0.0 instr_req_o               1614258.8750
+    0:27:34   76764.9      1.43    3859.9       0.0 instr_req_o               1615116.6250
+    0:27:36   76771.1      1.43    3852.9       0.0                           1615301.2500
+    0:27:48   76809.6      1.43    3849.1       0.0                           1616687.3750
+    0:27:49   76809.6      1.43    3849.1       0.0                           1616687.3750
+    0:28:00   76279.5      1.43    3068.7       0.0                           1587790.0000
+    0:28:00   76279.5      1.43    3068.7       0.0                           1587790.0000
+    0:28:04   76279.5      1.43    3068.7       0.0                           1587790.0000
+    0:28:04   76279.5      1.43    3068.7       0.0                           1587790.0000
+    0:28:04   76279.5      1.43    3068.7       0.0                           1587790.0000
+    0:28:04   76279.5      1.43    3068.7       0.0                           1587790.0000
+    0:28:08   76279.5      1.43    3068.7       0.0                           1587790.0000
+    0:28:08   76279.5      1.43    3068.7       0.0                           1587790.0000
+    0:28:21   76337.5      1.42    3052.4       0.0                           1590464.5000
+    0:28:21   76337.5      1.42    3052.4       0.0                           1590464.5000
+    0:28:26   76347.6      1.42    3050.8       0.0                           1590765.1250
+    0:28:26   76347.6      1.42    3050.8       0.0                           1590765.1250
+    0:28:44   76400.3      1.41    3035.3      42.3                           1593553.7500
+    0:28:44   76400.3      1.41    3035.3      42.3                           1593553.7500
+    0:28:56   76432.4      1.41    3033.6      42.3                           1594784.0000
+    0:28:56   76432.4      1.41    3033.6      42.3                           1594784.0000
+    0:29:08   76415.7      1.40    2744.6      49.1                           1593750.5000
+    0:29:08   76415.7      1.40    2744.6      49.1                           1593750.5000
+    0:29:09   76415.7      1.40    2744.6      49.1                           1593750.5000
+Begin Combinational loops breaking ...
+	Number of combinational loops found: 0
+End Combinational loops breaking ...
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:29:20   76412.8      1.40    2744.6      49.1                           1593682.2500
+    0:29:35   74825.5      1.42    2539.5      42.3                           1501489.8750
+    0:29:40   74821.3      1.42    2533.1      42.3                           1501311.3750
+    0:29:44   74818.9      1.42    2534.5      42.3                           1501249.2500
+    0:29:47   74811.4      1.42    2534.5      42.3                           1501122.1250
+    0:29:52   74808.5      1.42    2532.6      42.3                           1501047.3750
+    0:29:53   74800.3      1.42    2532.6      42.3                           1500926.1250
+    0:29:53   74800.3      1.42    2532.6      42.3                           1500926.1250
+    0:30:04   74804.0      1.42    2512.7      42.3                           1500945.7500
+    0:30:11   74778.2      1.42    2510.9       0.0                           1499972.8750
+    0:30:20   74751.1      1.42    2510.2       0.0                           1499018.6250
+    0:30:36   74798.4      1.40    2491.8       0.0                           1501804.2500
+    0:30:36   74798.4      1.40    2491.8       0.0                           1501804.2500
+    0:30:46   74809.0      1.40    2485.3       0.0                           1502417.0000
+    0:30:53   74810.1      1.40    2481.7       0.0                           1502552.7500
+    0:30:53   74810.1      1.40    2481.7       0.0                           1502552.7500
+    0:30:53   74810.9      1.40    2481.7       0.0                           1502612.7500
+    0:31:11   74790.7      1.40    2481.3       8.3                           1501465.8750
+Loading db file '/home/s267517/assignment/riscv/gate/scan/syn/techlib/NangateOpenCellLibrary_typical_ccs_scan.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'riscv_core' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'core/ex_stage_i/alu_i/int_div_div_i/Rst_RBI': 3035 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+report_area > "${REPORT_PATH}/${TOPLEVEL}_lbist.txt"
+change_names -hierarchy -rules verilog
+Warning: In the design riscv_core, net 'apu_master_req_o' is connecting multiple ports. (UCN-1)
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+Warning: In the design bist_controller, net 'count_enable' is connecting multiple ports. (UCN-1)
+Warning: In the design bist_controller, net 'rst_out_eval_n' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[31]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[30]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[29]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[28]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[27]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[26]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[25]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[24]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[23]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[22]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[21]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[20]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[19]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[18]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[17]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[16]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[15]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[14]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[13]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[12]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[11]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[10]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[9]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[8]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[7]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[6]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[5]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'alu_operand_c_i[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[31]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[30]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[29]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[28]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[27]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[26]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[25]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[24]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[23]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[22]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[21]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[20]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[19]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[18]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[17]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[16]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[15]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[14]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[13]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[12]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[11]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[10]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[9]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[8]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[7]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[6]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[5]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'lsu_rdata_i[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'regfile_alu_waddr_i[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'regfile_alu_waddr_i[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'regfile_alu_waddr_i[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'regfile_alu_waddr_i[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'regfile_alu_waddr_i[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_ex_stage_FPU0_FP_DIVSQRT0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1, net 'regfile_alu_we_i' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_load_store_unit_test_1, net 'data_we_ex_i' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE1_USE_PMP1_N_PMP_ENTRIES16_test_1, net 'sec_lvl_o' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_pmp_N_PMP_ENTRIES16_test_1, net 'data_addr_i[20]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_pmp_N_PMP_ENTRIES16_test_1, net 'data_addr_i[14]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_pmp_N_PMP_ENTRIES16_test_1, net 'data_addr_i[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_pmp_N_PMP_ENTRIES16_test_1, net 'data_addr_i[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_tp_sdtc_3_test_0, net 'CO_1_BAR' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_DECOMPRESSOR, net 'din[5]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_DECOMPRESSOR, net 'din[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_SCCOMP_DECOMPRESSOR, net 'din[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_DW01_decode_width1, net 'A[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_controller_FPU0_test_1, net 'irq_id_ctrl_i[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_controller_FPU0_test_1, net 'irq_id_ctrl_i[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_controller_FPU0_test_1, net 'irq_id_ctrl_i[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_controller_FPU0_test_1, net 'irq_id_ctrl_i[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_controller_FPU0_test_1, net 'irq_id_ctrl_i[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_controller_FPU0_test_1, net 'csr_cause_o_4_' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_controller_FPU0_test_1, net 'jr_stall_o' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_controller_FPU0_test_1, net 'perf_ld_stall_o' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_controller_FPU0_test_1, net 'irq_ack_o_BAR' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_controller_FPU0_test_1, net 'csr_save_ex_o' is connecting multiple ports. (UCN-1)
+Warning: In the design riscv_L0_buffer_RDATA_IN_WIDTH128_test_1, net 'instr_gnt_i' is connecting multiple ports. (UCN-1)
+1
+write -hierarchy -format verilog -output "${GATE_PATH}/${TOPLEVEL}_lbist.v"
+Writing verilog file '/home/s267517/assignment/riscv/gate/scan/syn/output/riscv_core_lbist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write -hierarchy -format ddc -output "${GATE_PATH}/${TOPLEVEL}_lbist.ddc"
+Writing ddc file '../output/riscv_core_lbist.ddc'.
+1
+write_sdf -version 3.0 "${GATE_PATH}/${TOPLEVEL}_lbist.sdf"
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/s267517/assignment/riscv/gate/scan/syn/output/riscv_core_lbist.sdf'. (WT-3)
+1
+write_sdc "${GATE_PATH}/${TOPLEVEL}_lbist.sdc"
+1
+# write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}.spf"
+# write_tmax_library -path "${GATE_PATH}"
+#
+dc_shell> quit
+
+Memory usage for this session 377 Mbytes.
+Memory usage for this session including child processes 377 Mbytes.
+CPU usage for this session 1128 seconds ( 0.31 hours ).
+Elapsed time for this session 2194 seconds ( 0.61 hours ).
+
+Thank you...

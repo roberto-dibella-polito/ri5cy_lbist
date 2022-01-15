@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version R-2020.09-SP2 for linux64 -- Dec 03, 2020
-#@ # Date:   Sat Jan 15 02:09:15 2022
+#@ # Date:   Sat Jan 15 02:25:53 2022
 #@ # Run by: s267517@po.polito.it
 #@ 
 
@@ -6752,3 +6752,17 @@ source -echo -verbose /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/bi
 #@ set_multicycle_path 2   -from            [get_ports   rst_ni]
 #@ 
 #@ compile_ultra -no_autoungroup
+#@ 
+#@ report_area > "${REPORT_PATH}/${TOPLEVEL}_lbist.txt"
+#@ 
+#@ change_names -hierarchy -rules verilog
+#@ write -hierarchy -format verilog -output "${GATE_PATH}/${TOPLEVEL}_lbist.v"
+#@ write -hierarchy -format ddc -output "${GATE_PATH}/${TOPLEVEL}_lbist.ddc"
+#@ write_sdf -version 3.0 "${GATE_PATH}/${TOPLEVEL}_lbist.sdf"
+#@ write_sdc "${GATE_PATH}/${TOPLEVEL}_lbist.sdc"
+#@ # write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}.spf"
+#@ # write_tmax_library -path "${GATE_PATH}"
+#@ #
+#@ # -- End source /home/s267517/assignment/riscv/gate/scan/syn/run/../bin/bist_nangate.tcl
+
+quit
