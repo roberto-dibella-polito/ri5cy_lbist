@@ -9,11 +9,20 @@ This project was carried out as *Hardware Assignment* for the course **Testing a
 ## Tools used
 The following tools were used:
 + [Synopsys Design Compiler](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/dc-ultra.html) for synthesis of the RI5CY architecture and automatic Design for Testability insertions (scan chains and test points) and synthesis of the complete architecture (RI5CY + LBIST)
-+ [Synopsys TestMAX]([https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/dc-ultra.html) for fault simulation
++ [Synopsys TestMAX](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/dc-ultra.html) for fault simulation
 + Modelsim for verification of the complete architecture.
 
 The LBIST circuit was entirely described in **VHDL**.
 
 ## Architecture
+![Block Diagram](/block_diagram.png)
 
+The complete architecture is composed of:
++ The RI5CY architecture including DfT inseertions
++ The BIST controller
++ A random Test Pattern Generator
++ A Test Counter
++ An Output Evaluator for error detection.
+
+## Structure of this repository
 
