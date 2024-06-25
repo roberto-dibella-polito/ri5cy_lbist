@@ -15,7 +15,9 @@ The following tools were used:
 The LBIST circuit was entirely described in **VHDL**.
 
 ## Architecture
-![Block Diagram](/block_diagram.png)
+<p align="center">
+  <img src="https://github.com/roberto-dibella-polito/ri5cy_lbist/blob/master/block_diagram.png" width="520">
+</p>
 
 The complete architecture is composed of:
 + The RI5CY architecture including DfT inseertions
@@ -25,4 +27,9 @@ The complete architecture is composed of:
 + An Output Evaluator for error detection.
 
 ## Structure of this repository
-
+While the `riscv/` folder includes the implementation of the RI5CY used, the `syn/` folder is structured as follows:
++ `gate/scan/syn/`: folder used for all the gate-level synthesis.
+  + `bin/`: scripts used for each synthesis
+  + `output/`: files produced by the Design Compiler, along with the gate-level netlists (`riscv_core_scan.v` for basic scan chain, `riscv_core_lbist.v` for the whole architecture
+  + `rpt/`: Area and DfT reports
++ `rtl/lbist_blocks/`: contains all RTL descriptions of the design blocks.
